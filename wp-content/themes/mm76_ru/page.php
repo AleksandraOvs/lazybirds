@@ -14,8 +14,6 @@ get_header();
 
 <section class="mt-40">
     <div class="cont">
-
-        <h1 class="title-page"><?php the_title(); ?></h1>
         <div class="breads">
             <?php
                 if ( function_exists('yoast_breadcrumb') ) {
@@ -23,6 +21,7 @@ get_header();
                 }
             ?>
         </div>
+        <h1 class="title-page"><?php the_title(); ?></h1>
 
     </div>
 </section>

@@ -4671,12 +4671,12 @@ img.product-mainThumb {
  }
  
  .woocommerce-cart .return-to-shop {
-     margin-top: 100px;
+     margin-top: 30px;
  }
  
  .woocommerce-cart .return-to-shop .button {
-     line-height: 60px;
-     min-width: 220px;
+     /* line-height: 60px; */
+     max-width: 300px;
  }
  
  table.cart {

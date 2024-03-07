@@ -447,10 +447,17 @@ function add_whish_in_profile( $menu_links ){
 /**
  * сообщение пустой корзины
  */
+// remove_action( 'woocommerce_cart_is_empty', 'wc_empty_cart_message', 10 );
+// add_action( 'woocommerce_cart_is_empty', 'custom_empty_cart_message', 10 );
+// function custom_empty_cart_message() {
+//     $html  = '<div class="col-12 offset-md-1 col-md-10"><p class="cart-empty">';
+//    echo '<img src="https://lazybirds.ru/wp-content/themes/konte/images/empty-bag.svg" width="150" alt="Корзина пуста">Твоя корзина пока пуста.';
+//     echo $html . '</p></div>';
+// }
+
 remove_action( 'woocommerce_cart_is_empty', 'wc_empty_cart_message', 10 );
 add_action( 'woocommerce_cart_is_empty', 'custom_empty_cart_message', 10 );
 function custom_empty_cart_message() {
-    $html  = '<div class="col-12 offset-md-1 col-md-10"><p class="cart-empty">';
-    $html .= '<img src="https://lazybirds.ru/wp-content/themes/konte/images/empty-bag.svg" width="150" alt="Корзина пуста">Твоя корзина пока пуста.';
-    echo $html . '</p></div>';
+    $html  = '<div class="col-12 offset-md-1 col-md-10"><p class="cart-empty">Твоя корзина пока пуста.</p></div>';
+    echo $html;
 }
