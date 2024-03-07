@@ -1,0 +1,11 @@
+examples
+vendor
+composer.lock
+.phpunit.cache
+coverage-report-html
+.pipeline
+.monitoring
+logs
+docker-data
+xdebug.log
+php_errors.log

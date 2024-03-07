@@ -1,0 +1,1913 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+////font-family: 'Montserrat Alternates', sans-serif
+
+html, body
+    padding: 0
+    margin: 0
+    *
+        font-family: 'Montserrat', sans-serif
+        box-sizing: border-box
+        position: relative
+
+=flex($fd, $jc, $ai)
+    display: flex
+    flex-direction: $fd
+    justify-content: $jc
+    align-items: $ai
+
+=back($url, $size: contain, $repeat: no-repeat, $pos: center)
+    background: url($url) $repeat $pos
+    background-size: $size
+
+=pic($bs: contain)
+    picture
+        width: 100%
+        height: 100%
+        *
+            object-fit: $bs
+            display: block
+            width: 100%
+            height: 100%
+
+a
+    text-decoration: none
+
+@for $i from 1 through 20
+    $side: $i * 10
+    .ml-#{$side}
+        margin-left: #{$side}px !important
+    .mt-#{$side}
+        margin-top: #{$side}px !important
+    .mr-#{$side}
+        margin-right: #{$side}px !important
+    .mb-#{$side}
+        margin-bottom: #{$side}px !important
+    .pl-#{$side}
+        padding-left: #{$side}px !important
+    .pt-#{$side}
+        padding-top: #{$side}px !important
+    .pr-#{$side}
+        padding-right: #{$side}px !important
+    .pb-#{$side}
+        padding-bottom: #{$side}px !important
+
+.cont
+    width: 1200px
+    margin: 0 auto
+    max-width: calc(100% - 30px)
+
+header
+    nav
+        margin: 30px 0
+        ul
+            list-style: none
+            margin: 0
+            padding: 0
+            +flex(row, center, center)
+            li
+                a
+                    display: block
+                    margin: 0 15px
+                    padding: 15px
+                    border-bottom: 2px solid rgba(0, 0, 255, 0.0)
+                    color: #222
+                    transition: border-bottom .3s
+                &:hover, &.current_page_item, &.current-menu-item
+                    a
+                        border-bottom: 2px solid #8ebcee
+                        transition: border-bottom .3s
+    .topper_header
+        background: #8ebcee
+        padding: 7px 0
+        text-align: center
+        color: #fff
+        font-weight: 600
+        text-transform: uppercase
+        .th-text
+            font-family: Montserrat Alternates
+            font-size: 13px
+            @media (max-width: 650px)
+                font-size: 10px
+    .header__content
+        margin: 15px 0
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        .header-left
+            +flex(row, flex-start, center)
+            .brg-menu-btn
+                width: 28px
+                margin-right: 20px
+                span
+                    display: block
+                    width: 100%
+                    height: 3px
+                    background-color: #8ebbed
+                    color: #8ebbed
+                    border-radius: 30px
+                    transition: all .14s linear
+                    margin: 6px 0
+                &:hover
+                    cursor: pointer
+            .search-icon-form
+                +flex(row, flex-start, center)
+                margin-left: 30px
+                .icon
+                    cursor: pointer
+                    display: block
+                    width: 30px
+                    height: 29px
+                    svg
+                        display: block
+                        width: 100%
+                        height: 100%
+                    &.is_active
+                        width: 20px
+                        height: 20px
+                .input__hidden
+                    display: none
+                    margin-left: 10px
+                    input
+                        font-size: 18px
+                        border: none
+                        //border-bottom: 1px solid #8ebbed
+                        border-bottom: none
+                        padding: 5px 10px
+                        outline: none
+                        padding-right: 30px
+                        background: #fff
+                    .btn-right
+                        display: none !important
+                        position: absolute
+                        font-size: 20px
+                        color: #8ebbed
+                        top: 2px
+                        right: 0px
+                        border: none
+                        background: none
+                        outline: none
+                        line-height: 100%
+                        padding: 0 10px 0 0
+        .header-center
+            .logotype
+                display: block
+                +pic()
+                width: 220px
+                height: 67px
+                margin: 0 auto
+        .header-right
+            +flex(row, flex-end, center)
+            a.icon
+                width: 30px
+                height: max-content
+                display: block
+                margin: 0 15px
+                &:last-child
+                    margin-right: 0
+                *
+                    width: 100%
+                    display: block
+                    height: 100%
+                .show_count
+                    +flex(row, center, center)
+                    border: 3px solid #fff
+                    width: 25px
+                    height: 25px
+                    border-radius: 50%
+                    background-color: #8ebbed
+                    position: absolute
+                    right: -10px
+                    top: -10px
+                    color: #fff
+                    font-size: 10px
+                    font-weight: 700
+
+body
+    background-color: #fffef8
+
+.top__section
+    .cont
+        +back('https://lazybirds.ru/wp-content/themes/lazybirds/assets/img/heart-decor.png', contain)
+        background-position: center bottom
+
+.cont__mini
+    width: 970px
+    margin: 0 auto
+
+.two__blocks_main
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 30px
+    .right_text-block
+        p
+            font-size: 16px
+            color: #737373
+            margin: 30px 0
+            line-height: 150%
+    .card-cat
+        width: 100%
+        +pic()
+        overflow: hidden
+        img
+            transition: transform .5s
+        .b-title
+            display: block
+            position: absolute
+            left: 0
+            top: 0
+            color: #fff
+            color: #fff
+            font-size: 16px
+            text-transform: uppercase
+            font-weight: 500
+            width: 100%
+            padding: 25px
+        &:hover
+            img
+                transform: scale(1.1)
+                transition: transform .5s
+
+.site-title
+    font-size: 32px !important
+    text-transform: uppercase
+    font-weight: 700
+    color: #8ebbed
+    &.center
+        text-align: center
+
+.container__four
+    margin: 0 -20px
+    display: grid
+    grid-template-columns: 25% 25% 25% 25%
+    & > *
+        padding: 0 20px
+
+.card-content
+    width: 100%
+    display: block
+    margin-bottom: 30px
+    .wishlist_card
+        position: absolute
+        top: 10px
+        right: 30px
+        z-index: 10
+        display: block
+        width: 24px
+        height: 24px
+    .swiperCardImages
+        transition: box-shadow .4s
+        width: 100%
+        height: 290px
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        .swiper-button-next
+            right: 0
+            background: #fff
+            width: 30px
+            height: 50px
+            &::after
+                font-size: 11px
+                color: #737374
+                font-weight: bold
+        .swiper-button-prev
+            left: 0
+            background: #fff
+            width: 30px
+            height: 50px
+            &::after
+                font-size: 11px
+                color: #737374
+                font-weight: bold
+        .swiper-button-next,
+        .swiper-button-prev
+            opacity: 0
+            transition: all .3s
+    .p-title
+        display: block
+        padding-top: 15px
+        font-weight: 500
+        color: #222
+        text-align: center
+        text-transform: uppercase
+        font-size: 14px
+    .p-price
+        display: block
+        padding-top: 0
+        text-align: center
+        color: #222
+        font-size: 14px
+        +flex(row-reverse, center, center)
+        *
+            text-align: center
+            font-size: 14px
+        del
+            color: #838889
+            font-size: 12px
+            margin-left: 7px
+            *
+                font-size: 12px
+    &:hover
+        .p-title, .p-price
+            background: #fff
+        .swiperCardImages
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1)
+            transition: box-shadow .4s
+            .swiper-button-next,
+            .swiper-button-prev
+                opacity: 1
+                transition: all .5s
+
+.text-align-center
+    text-align: center !important
+.text-align-left
+    text-align: left !important
+.text-align-right
+    text-align: right !important
+
+.btn
+    display: inline-block
+    outline: none
+    border: 2px solid #8ebcee
+    font-weight: 500
+    text-transform: uppercase
+    font-size: 14px
+    padding: 10px 40px
+    text-align: center
+    color: #8ebcee
+    background: #fff
+    transition: all .3s
+    &:hover
+        cursor: pointer
+        background: #8ebcee
+        color: #fff
+        transition: all .3s
+
+.container__three
+    display: grid
+    grid-template-columns: calc(100% / 3 - 20px) calc(100% / 3 - 20px) calc(100% / 3 - 20px)
+    grid-gap: 30px
+    &.fours
+        grid-template-columns: calc(100% / 4 - 15px) calc(100% / 4 - 15px) calc(100% / 4 - 15px) calc(100% / 4 - 15px)
+
+.card-collection
+    width: 100%
+    height: 415px
+    +pic(cover)
+    overflow: hidden
+    img
+        transition: all .5s
+    .btn-abs
+        position: absolute
+        bottom: 40px
+        left: 0
+        width: 100%
+        .btn
+            width: 70%
+            margin: 0 auto
+            display: block
+    &:hover
+        img
+            transform: scale(1.1)
+            transition: all .5s
+
+.form__feed
+    background: #8EBCEE
+    form
+        margin: 0 auto
+        width: 100%
+        max-width: 100%
+        background: #8ebbed
+        display: grid
+        grid-template-columns: 50% 50%
+        .l-form, .r-form
+            flex: none
+        .l-form
+            +pic(cover)
+        .r-form
+            padding: 40px 0 40px 65px
+            .f-title
+                color: #FFF
+                font-size: 32px
+                font-style: normal
+                font-weight: 600
+                line-height: normal
+                margin: 0
+                padding: 0
+            .f-descr
+                margin-top: 20px
+                color: #fff
+                font-size: 20px
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                span
+                    color: #F1EFAD
+                    font-weight: 600
+                    display: inline
+            .input-row
+                margin-top: 20px
+                input[type=text], input[type=email]
+                    width: 100%
+                    border: none
+                    border-bottom: 2px solid #FDFBEC
+                    background: none
+                    padding: 13px 0
+                    color: #fff
+                    font-size: 20px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+                    &::placeholder
+                        color: #fff
+            label
+                color: #FFFEF9
+                font-size: 15px
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                +flex(row, flex-start, flex-start)
+                input
+                    width: 21px
+                    height: 21px
+                    border: 0.5px solid #8EBCEE
+                    margin-right: 7px
+            .f-btn
+                margin-top: 20px
+                input
+                    padding: 7px 13px
+                    line-height: 100%
+            .f-ddescr
+                margin-top: 12px
+                color: #FFF
+                font-size: 20px
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                text-align: center
+            .f-small_descr
+                margin-top: 12px
+                color: #E4E6EA
+                font-size: 10px
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                text-align: center
+        .form-title
+            font-size: 24px
+            color: #fff
+            text-transform: uppercase
+            font-weight: 700
+        p
+            color: #fff
+            line-height: 150%
+            margin-top: 30px
+        /*span
+            display: block
+            width: 100%
+            margin-top: 30px
+            input
+                width: 100%
+                background: none
+                outline: none
+                border: none
+                border-bottom: 3px solid #fff
+                padding: 10px
+                font-size: 16px
+                color: #fff
+                &::placeholder
+                    color: #fff*/
+        input[type=submit]
+            padding: 20px 60px
+            background: #fff
+            font-size: 16px
+            text-transform: uppercase
+            color: #8ebbed
+            outline: none
+            border: none
+            margin: 0 auto
+            margin-top: 15px
+            font-weight: 700
+            display: block
+            width: max-content
+            border: 2px solid #fff
+            transition: all .3s
+            &:hover
+                cursor: pointer
+                background: #8ebbed
+                color: #fff
+                border: 2px solid #fff
+                transition: all .3s
+
+footer
+    border-top: 1px solid #d5d5d5
+    margin-top: 50px
+    .container__footer
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-gap: 15px
+        padding: 50px 0
+        .logo_footer
+            display: block
+            width: 210px
+            +pic()
+        .col
+            p
+                font-size: 14px
+                color: #5c5c5c
+                margin: 3px 0 !important
+                font-weight: 400
+            a
+                color: #2D2D2D
+                &:hover
+                    color: #9CC4EE
+
+.title-page
+    font-size: 36px
+    text-align: center
+    margin: 0
+    padding: 0
+    color: #7c7c7c
+    font-weight: 500
+
+.breads
+    text-align: left
+    margin-top: 10px
+    *
+        font-size: 16px
+        margin: 0
+        color: #838889
+        &.breadcrumb_last
+            font-weight: 600
+    a
+        color: #838889
+    &.left
+        text-align: left
+        *
+            text-align: left
+
+.text-block
+    & > *:nth-child(1)
+        margin-top: 0 !important
+    h1
+        font-style: normal
+        font-weight: 700 !important
+        font-size: 40px
+        line-height: 100%
+        color: #8EBCEE
+        font-family: Montserrat Alternates
+        text-transform: uppercase
+    h2
+        font-style: normal
+        font-weight: 700 !important
+        font-size: 32px
+        line-height: 100%
+        color: #8EBCEE
+        text-transform: uppercase
+    h2, h3, h4, h5
+        text-transform: uppercase
+        color: #8ebbed
+        font-weight: 700 !important
+    p
+        font-size: 16px
+        line-height: 150%
+        color: #353535
+    figure
+        max-width: 100%
+        width: 100% !important
+        height: auto
+        margin: 20px 0
+        *
+            display: block
+            width: 100%
+            height: auto
+        figcaption
+            margin-top: 10px
+            font-weight: 600
+            color: #222
+            text-align: right
+    ul:not(.mapplic-list-container)
+        list-style: none
+        padding-left: 0
+        margin: 30px 0
+        li
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 22px
+            color: #353535
+            margin-bottom: 15px
+            padding-left: 20px
+            &::before
+                content: ''
+                width: 8px
+                height: 8px
+                border-radius: 100px
+                background: #8ebcee
+                display: block
+                position: absolute
+                top: 8px
+                left: 0
+    ol
+        margin: 30px 0
+        padding-left: 20px
+        li
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 22px
+            color: #353535
+            margin-bottom: 15px
+            padding-left: 20px
+            &::marker
+                color: #8ebcee
+                font-weight: bold
+    table
+        border-collapse: collapse
+        border: 1px solid #F1F1F1
+        border-radius: 10px
+        overflow: hidden
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05)
+        td
+            padding: 10px 13px
+        tbody
+            tr
+                background: #fbfbfb
+                &:nth-child(2n+1)
+                    background: #DEF5F6
+    picture, img
+        border-radius: 10px
+        max-width: 100%
+        margin: 30px 0
+        height: auto
+    iframe
+        max-width: 100%
+        border: none
+        border-radius: 10px
+        margin: 0 7px
+    a
+        color: #8ebcee
+
+.wpcf7-spinner
+    position: absolute
+    width: 24px
+    height: 24px
+    margin: 0
+.wpcf7-not-valid-tip
+    margin-top: 10px !important
+    font-size: 14px
+    background: #dc3232
+    color: #fff
+    padding: 5px 10px
+    border-radius: 100px
+.wpcf7-not-valid
+    border-color: #dc3232 !important
+
+.product
+    display: grid
+    grid-template-columns: calc(50% - 30px) calc(50% - 30px)
+    grid-gap: 60px
+    .woocommerce-tabs
+        grid-column: 1 / 3
+    .related.products
+        grid-column: 1 / 3
+
+.summary.entry-summary .product_title.entry-title
+    font-size: 2rem
+    line-height: .9
+    font-weight: 800
+    color: #737374
+    margin-top: 0
+    margin-bottom: 0
+.product .price
+    font-weight: 400
+    font-size: 30px
+    color: #737374
+    margin-top: 20px
+    +flex(row-reverse, flex-end, center)
+    ins
+        margin-right: 15px
+        text-decoration: none
+        font-size: 30px
+    del
+        font-size: 30px
+    
+.entry-summary
+    margin-top: 0 !important
+
+.images_lists
+    &.left_images_mm76
+        position: absolute
+        top: 50%
+        left: 10px
+        +flex(row, center, center)
+        width: 30px
+        height: 30px
+        color: #fff
+        z-index: 30
+    &.right_images_mm76
+        position: absolute
+        top: 50%
+        right: 10px
+        +flex(row, center, center)
+        width: 30px
+        height: 30px
+        color: #fff
+        z-index: 30
+
+.woocommerce div.product .single_add_to_cart_button
+    min-width: 300px !important
+    background-color: #8ebcee !important
+    color: #fff !important
+    font-weight: 600 !important
+    text-transform: uppercase
+
+.variations
+    display: block
+    border-bottom: none !important
+    tbody
+        display: block
+        tr
+            display: block
+            +flex(column, flex-start, flex-start)
+            td
+                border-bottom: none !important
+            .label
+                font-size: .9375rem
+                border-bottom: 1px solid transparent
+                padding: 0
+                font-weight: 500
+                color: #737374
+            .value
+                +flex(row, flex-start, center)
+                .reset_variations
+                    margin-left: 10px
+            
+.wcboost-variation-swatches--round.wcboost-variation-swatches--button .wcboost-variation-swatches__item
+    height: 30px!important
+    width: 30px!important
+    padding: 0!important
+    margin: 0 0.54em 0 0!important
+    background-color: #fff!important
+    border-radius: 7px!important
+    overflow: hidden
+    &.selected
+        color: #8ebcee
+        border-color: #8ebcee !important
+.variations_form.cart .variations .wcboost-variation-swatches__wrapper
+    margin: 0.67em 0 0.47em 0!important
+
+.reset_variations
+    font-size: 14px
+    color: #8ebcee
+    text-decoration: underline
+
+.single_variation_wrap
+    .out-of-stock
+        margin: 0
+        margin-top: 10px
+        font-size: 14px
+        margin-bottom: 15px
+        color: #f35656
+        font-weight: 600
+
+.product
+    .quantity
+        display: none !important
+
+.single_add_to_cart_button
+    line-height: 60px
+    border: 0
+    min-width: 200px
+    vertical-align: top
+    min-width: 300px
+    background: #8ebcee
+    color: #fff
+    font-weight: 600
+    text-transform: uppercase
+    &:hover
+        cursor: pointer
+.woocommerce-variation-add-to-cart-disabled
+    .single_add_to_cart_button
+        opacity: .7 !important
+        &:hover
+            cursor: default
+
+.product-tab-entry-content
+    *
+        font-weight: 400
+
+.sizes_grid
+    margin-bottom: 20px
+    font-size: .75rem
+    border-bottom: 1px dashed #ccc
+    display: initial
+    cursor: pointer
+    color: #5b6e7a
+    width: 100%
+    max-width: 120px
+    &:hover
+        color: #8ebcee
+        transition: color .3s
+
+.single_variation_wrap
+    margin-top: 20px
+.product_meta
+    display: none !important
+
+.additional-product-information
+    list-style: none
+    margin: .56em 0
+    padding: 0
+
+.additional-product-information li,.additional-product-information li a
+    display: flex
+    align-items: center
+    color: #91bae5
+    font-size: .875rem
+
+.additional-product-information li a
+    border-bottom: 1px solid #91bae5
+
+.additional-product-information li span
+    width: 40px
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 1em 0 
+    margin-left: 0
+
+.button.add-to-wishlist-button
+    display: none !important
+.button.laz-wishlist
+    display: block !important
+    background: none
+    padding: 0
+    position: relative !important
+    top: unset
+
+.woocommerce-variation-add-to-cart
+    +flex(row-reverse, flex-end, center)
+    .button.laz-wishlist
+        margin-left: 15px
+
+.offer_perc
+    width: 35px
+    height: 35px
+    border-radius: 1000px
+    background: #F1EFA5
+    +flex(row, center, center)
+    color: #737374
+    font-size: 10px
+    font-weight: 500
+    position: absolute
+    top: 10px
+    left: 10px
+    z-index: 10
+.related.products
+    .offer_perc
+        left: 30px
+
+.onsale
+    display: none
+
+body
+    .woocommerce table.shop_table
+        border: none
+
+.text-block ul:not(.mapplic-list-container) li::before
+    display: none
+#billing_country_field,
+#billing_city_field,
+#billing_address_1_field
+    display: none !important
+
+.woocommerce-checkout
+    p.form-row 
+        +flex(column, flex-start, flex-start)
+        label
+            display: block
+            height: max-content
+            flex-basis: 100%
+            width: 100%
+        span
+            width: 100%
+
+.woocommerce-checkout-payment .payment_methods,
+.woocommerce-checkout-payment .place-order
+    margin-left: 0 !important
+.woocommerce-checkout-review-order-table
+    width: 100% !important
+
+.woocommerce-checkout-review-order-table
+    tr
+        .product-name
+            width: 50%
+
+.thwmscf-tabs
+    display: none !important
+
+.gallery-thumbs_mm76
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-gap: 0.76em
+    margin-top: 0.76em
+    a
+        display: block
+        height: 121px
+        opacity: 0.67
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+        &:hover
+            opacity: 1
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+    .clicked
+        a
+            opacity: 1
+            &:hover
+                cursor: pointer
+        &::before
+            z-index: 10
+            content: '+' attr(data-cols)
+            +flex(row, center, center)
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: rgba(0,0,0,.38)
+            color: #fff
+            font-size: 20px
+            font-weight: 600
+        &:hover
+            cursor: pointer
+    .thumb-closes
+        width: 100%
+        height: 100%
+        +flex(row, center, center)
+        &:hover
+            color: #8ebcee
+            cursor: pointer
+
+.product-content.wrapper
+    width: 100%
+    grid-column: 1 / 3
+
+.wpcf7-submit
+    line-height: 100% !important
+.wpcf7-form input[type=email], .wpcf7-form input[type=tel], .wpcf7-form input[type=text]
+    font-size: 1rem !important
+
+.right__box_hidden, .left__box_hidden
+    position: fixed
+    right: -500px
+    top: 0
+    width: 500px
+    background: #fff
+    z-index: 500
+    height: 100%
+    padding: 20px 35px
+    .rb-close
+        width: 35px
+        height: 35px
+        float: right
+        cursor: pointer
+    .rb-content
+        margin-top: 30px
+    .rb-title
+        margin-top: 40px
+        text-align: center
+        color: #98bbea
+        font-weight: 500
+        font-size: 1.5rem
+    .rb-content
+        .size-table
+            max-width: 100%
+        p
+            font-size: .9rem
+    &.left__box_hidden
+        width: 290px
+        right: unset
+        left: -290px
+        .menu
+            list-style: none
+            display: block
+            margin: 0
+            padding: 0
+            li
+                margin-bottom: 15px
+                a
+                    font-size: 16px
+                    font-weight: 500
+                    transition: all .2s
+                    &::before
+                        content: '- '
+                    &:hover
+                        color: #98bbea
+                        margin-left: 10px
+
+.overlay
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.6)
+    z-index: 20
+
+.login_form_container
+    .container
+        margin: 0 auto
+        width: 420px
+        max-width: calc(100% - 50px)
+    .titles
+        margin: 0
+        padding: 0
+        text-align: center
+        margin-top: 70px
+        color: #8EBCEE
+        font-family: Montserrat Alternates
+        font-size: 40px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
+        text-transform: uppercase
+    .mm76_login_form_tabs
+        margin-top: 60px
+        +flex(row, center, center)
+        border-bottom: 2px solid #8EBCEE
+        width: max-content
+        margin-left: auto
+        margin-right: auto
+        a
+            padding: 10px 20px
+            border-bottom: 2px solid rgba(0, 0, 255, 0.0)
+            display: block
+            color: #91BAE5
+            text-align: center
+            font-family: Montserrat
+            font-size: 20px
+            font-style: normal
+            font-weight: 600
+            line-height: normal
+            text-transform: uppercase
+            &.active, &:hover
+                border-bottom: 2px solid #8EBCEE
+    #loginform, #wp_signup_form
+        margin-top: 60px
+        p
+            margin: 0
+            margin-bottom: 45px
+            color: #737374
+            font-size: 22px
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+            text-align: center
+            input[type=password], input[type=text], input[type=email]
+                width: 100%
+                padding: 22px 15px
+                color: #737374
+                font-family: Montserrat
+                font-size: 20px
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                background: #FCFDFF
+                border: 1px solid #737374
+                display: block
+            &.login-username, &.login-password, &.login-mm76
+                span:not(.error):not(.tt-info)
+                    position: absolute
+                    z-index: 10
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: 15px
+                    color: #737374
+                    font-family: Montserrat
+                    font-size: 20px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+                    transition: all .3s
+                input:focus, input:active, input:valid
+                    & + span:not(.error):not(.tt-info)
+                        top: 0
+                        transform: translateY(calc(-100% - 7px))
+                        display: block !important
+                input:focus, input:active
+                    border-color: #8EBCEE
+                input:not(:valid):not(.input_empty), input.invalid
+                    background: #FFF6F8
+                    border: 1px solid #EF0101
+                .eye_pass
+                    position: absolute
+                    right: 22px
+                    top: 50%
+                    transform: translateY(-50%)
+                    cursor: pointer
+                    svg
+                        display: block
+            &.login-remember
+                text-align: left
+                label
+                    input
+                        margin-right: 10px
+                        width: 18px
+                        height: 18px
+                        box-shadow: 0px 0px 0px 2px #8EBCEE
+                        border-radius: 5px
+                        overflow: hidden
+                        appearance: none
+                        &:checked
+                            background: #8EBCEE
+                            border: 2px solid #fff
+            &.login-submit
+                margin-bottom: 0
+                input
+                    width: 100%
+                    text-align: center
+                    background: #8EBCEE
+                    color: #fff
+                    font-size: 22px
+                    font-style: normal
+                    font-weight: 600
+                    line-height: normal
+                    display: block
+                    padding: 22px
+                    text-transform: uppercase
+            &.text
+                color: #737374
+                font-size: 20px
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                a
+                    text-decoration-line: underline
+                    font-weight: 500
+
+
+$checkbox-width: 18px
+
+.form-checkbox
+    position: relative
+    display: block
+    input[type="checkbox"]
+        position: absolute
+        left: -9999px
+        & + label
+            position: relative
+            display: inline-block
+            padding: 6px 10px 6px ($checkbox-width + 10)
+            cursor: pointer
+            &:before
+                display: block
+                content: ""
+                position: absolute
+                left: 0
+                top: 50%
+                margin: (-$checkbox-width/2) 0 0
+                width: $checkbox-width
+                height: $checkbox-width
+            &:checked + label
+                &:before
+                    background-position: (-$checkbox-width) 0
+            &:disabled
+                & + label
+                    cursor: not-allowed
+                &:before
+                    background-position: (-$checkbox-width*2) 0
+                &:checked + label
+                    &:before
+                        background-position: (-$checkbox-width*3) 0
+
+a.forgot-password
+    text-align: center
+    display: block
+    width: max-content
+    margin: 0 auto
+    margin-top: 30px
+    color: #737374
+    font-size: 20px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    text-decoration-line: underline
+
+.register-info
+    margin-top: 40px
+    width: 420px
+    height: 121px
+    .text_info
+        position: absolute
+        top: 20px
+        left: 40px
+        right: 20px
+        bottom: 44px
+        color: #FFFEF8
+        font-size: 20px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
+
+.tt-info
+    background: #8EBCEE
+    border-radius: 25px
+    padding: 20px 25px 20px 35px
+    display: block
+    width: 100%
+    margin-bottom: 40px
+    color: #fffef8
+    font-size: 20px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    a
+        font-weight: 500
+        text-decoration-line: underline
+        color: #FFFEF8
+    &::before
+        content: ''
+        width: 20px
+        height: 20px
+        +back("data:image/svg+xml,%3Csvg width='22' height='23' viewBox='0 0 22 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.5 21L1.5 0.5H21L16.5 21Z' fill='%238EBCEE' stroke='%238EBCEE'/%3E%3C/svg%3E%0A")
+        position: absolute
+        display: block
+        bottom: -20px
+        right: 50px
+
+.container__success
+    margin: 0 auto
+    margin-top: 80px
+    *
+        text-align: center
+    .center-icon
+        width: max-content
+        margin: 0 auto
+        margin-bottom: 70px
+    .center-text
+        margin: 0 auto
+        text-align: center
+        width: 640px
+        max-width: 100%
+        color: #737374
+        text-align: center
+        font-size: 24px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+    .center-link
+        margin: 0 auto
+        width: max-content
+        margin-top: 60px
+        +flex(row, flex-start, center)
+        .text
+            margin-left: 18px
+            color: #8EBCEE
+            font-size: 20px
+            font-style: normal
+            font-weight: 500
+            line-height: normal
+            text-decoration-line: underline
+
+.woocommerce-account
+    .woocommerce
+        display: grid
+        grid-template-columns: 300px 1fr
+        grid-gap: 50px
+        .woocommerce-MyAccount-navigation
+            float: unset
+            width: 100%
+            ul
+                margin: 0
+        .woocommerce-MyAccount-content
+            float: unset
+            width: 80%
+
+.woocommerce div.product .summary, .woocommerce div.product .woocommerce-product-gallery
+    width: 100%
+.woocommerce div.product .summary
+    padding-left: 0 !important
+
+.woocommerce div.product .add-to-wishlist-button
+    background: none !important
+
+.shipping-calculator-button
+    display: none !important
+
+.input-text
+    color: #343434
+
+.edit-account
+    .row_2
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 67px
+        p.woocommerce-form-row, .row-2
+            display: block
+            label
+                color: #737374
+                font-size: 16px
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                display: block
+                margin-bottom: 7px
+                margin-top: 0
+            input.input-text
+                padding: 14px 20px
+                border: 1px solid #CCC
+                background: #FCFDFF
+                width: 100%
+                &:focus, &:active
+                    border: 1px solid #8EBCEE
+                    background: #F1F8FF
+                &.invalid
+                    background: #FFF6F8
+                    border: 1px solid #EF0101
+    .row_user
+        color: #737374
+        font-size: 14px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-top: 25px
+        a
+            font-weight: 500
+            line-height: normal
+            text-decoration-line: underline
+    .woocommerce-Button
+        margin-top: 25px
+        color: #8EBCEE
+        font-size: 18px
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+        border: 1px solid #8EBCEE
+        background: #FFFEF8
+        min-width: 360px
+        max-width: 100%
+        padding: 14px
+        text-transform: uppercase
+        &:hover
+            background: #8EBCEE
+            color: #fff
+    .row-2
+        display: grid !important
+        grid-template-columns: 1fr 1fr
+        grid-gap: 20px
+
+.section_edit_account
+    margin-top: 50px
+.sec-title
+    color: #8EBCEE
+    font-family: Montserrat Alternates
+    font-size: 23px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    text-transform: uppercase
+    margin-bottom: 20px
+
+.bfw_user_account_content
+    & > h2
+        display: none
+    .bonuses__container
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        grid-gap: 50px
+        .bonus_computy_account
+            .title_bca
+                text-align: center
+                color: #8EBCEE
+                font-size: 18px
+                font-style: normal
+                font-weight: 500
+                line-height: normal
+                display: block
+            .value_bca
+                margin-top: 15px
+                display: block
+                border-radius: 40px
+                background: #8EBCEE
+                +flex(row, center, center)
+                padding: 30px 10px
+                color: #FFFEF8
+                font-size: 20px
+                font-style: normal
+                font-weight: 700
+                line-height: normal
+    .bfw-progress-bar
+        margin-top: 70px
+        li
+            border-bottom: 4px solid #8EBCEE
+            &::before
+                background-color: #fff
+                background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='6.5' fill='%238EBCEE' stroke='%238EBCEE' stroke-width='3'/%3E%3C/svg%3E%0A")
+                background-size: 65%
+                background-repeat: no-repeat
+                background-position: center
+                border: 3px solid #8EBCEE
+                width: 22px
+                height: 22px
+            &.is-active
+                &::before
+                    width: 126px
+                    height: 126px
+                    display: block
+                    border: none
+                    +back("../img/lazybird.png")
+                    bottom: -63px
+                span
+                    display: none
+    .bfw-progressbar-block
+        margin-top: 70px
+    .bfw-progressbar-title
+        display: none
+    #bfw-progressbar
+        background: rgba(142, 188, 238, 0.00)
+        border: 3px solid #8EBCEE
+        & > div
+            height: 25px
+            & > span
+                color: #8EBCEE
+                font-size: 24px
+                font-style: normal
+                font-weight: 700
+                line-height: normal
+    .remaining-amount
+        display: block
+        margin-top: 30px
+        color: #8EBCEE
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
+
+.bfw-progress-bar li:first-child:before
+    left: -35px
+
+.woocommerce-MyAccount-content
+    .hello_users_account
+        color: #737374
+        font-size: 23px
+        font-style: normal
+        font-weight: 500
+        line-height: normal
+        font-family: 'Montserrat Alternates'
+        margin-top: 0
+        text-transform: uppercase
+        strong:first-child
+            color: #8EBCEE
+            font-weight: normal
+        a
+            color: #737374
+            text-decoration: underline
+
+.container__main_cards
+    margin-top: 40px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 35px
+    .card
+        display: block
+        width: 100%
+        height: 315px
+        +pic(cover)
+        overflow: hidden
+        border-radius: 30px
+        border: 1px solid #8EBCEE
+        img
+            margin: 0
+        .ctitle
+            text-align: center
+            z-index: 10
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            color: #FFFEF8
+            font-family: Montserrat Alternates
+            font-size: 14px
+            font-style: normal
+            font-weight: 700
+            line-height: normal
+            text-transform: uppercase
+            padding-top: 22px
+        &.note
+            +flex(column, center, center)
+            +pic(contain)
+            picture
+                width: 50%
+                height: 130px
+                margin: 0
+            .note-title
+                color: #8EBCEE
+                font-family: Montserrat Alternates
+                font-size: 20px
+                font-style: normal
+                font-weight: 500
+                line-height: normal
+                margin-bottom: 30px
+
+.woocommerce div.product .variations_button
+    +flex(row-reverse, flex-start, center)
+
+.woocommerce div.product .variations_button .button.laz-wishlist
+    align-self: center
+    height: max-content
+.elem-nav-console
+    display: none
+
+.for-mobile
+    display: none !important
+
+.feed_section
+    padding: 45px 0 45px 0 !important
+    background: #8EBCEE
+    .ff-title
+        color: #FFF
+        font-size: 22px
+        font-style: normal
+        font-weight: 600
+        line-height: normal
+    .container__mobile_form_main
+        margin-top: 30px
+        +flex(row, flex-start, flex-start)
+        .l
+            flex-grow: 1
+            .text
+                color: #fff
+                font-size: 13px
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                span
+                    color: #F1EFAD
+                    font-weight: 600
+            .t-btn
+                margin-top: 30px
+                a
+                    display: inline-block
+                    padding: 9px 10px
+                    background: #FFF
+                    border: 1px solid #8EBCEE
+                    color: #8EBCEE
+                    text-align: center
+                    font-size: 14px
+                    font-style: normal
+                    font-weight: 600
+                    line-height: normal
+        .r
+            width: 130px
+            +pic()
+            flex: none
+
+.swiperGallery_2
+    width: 100%
+    height: 775px
+    a
+        display: block
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+        +pic(cover)
+    .swiper-button-next, .swiper-button-prev
+        &::after
+            color: #fff
+.swiperGallery_1
+    .swiper-slide
+        display: block
+        height: 135px
+        +pic(cover)
+        opacity: .5
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+        &.swiper-slide-thumb-active
+            opacity: 1
+        &:hover
+            cursor: pointer
+            box-shadow: 1px 2px 29px 1px rgba(45,41,37,.18)
+            opacity: 1
+
+.variations_form.cart .variations .wcboost-variation-swatches__wrapper li
+    &.not-aviable
+        pointer-events: none
+        cursor: default
+        span
+            &::before
+                content: ''
+                width: 80px
+                height: 1px
+                background: #737374
+                transform: rotate(45deg)
+                position: absolute
+                left: -39px
+                top: 0
+
+.card-content .p-price
+    flex-wrap: wrap
+    .how_mach_bonus
+        display: none !important
+        flex-grow: 1
+        width: 100%
+        text-align: center
+
+.laz-wishlist
+    &.loading
+        &::before
+            width: 100%
+            height: 100%
+            position: absolute
+            content: ''
+
+.toast-top-right
+    *
+        font-family: 'Montserrat', sans-serif !important
+
+@media (max-width: 1440px)
+    .container__three.fours
+        grid-template-columns: calc(25% - 23px) calc(25% - 23px) calc(25% - 23px) calc(25% - 23px)
+
+@media (max-width: 1100px)
+    .cont__mini
+        width: 100%
+
+    .th-text
+        font-size: 12px
+    .card-content .p-title
+        font-size: 11px
+    .card-content .p-price
+        font-size: 11px
+
+    .form__feed form .form-title
+        font-size: 18px
+
+    .container__four
+        grid-template-columns: 50% 50%
+
+    .woocommerce-account .woocommerce .woocommerce-MyAccount-content
+        width: 100%
+
+    .bfw_user_account_content .bonuses__container
+        grid-template-columns: 1fr 1fr
+
+    .container__three.fours
+        grid-template-columns: calc(50% - 15px) calc(50% - 15px)
+
+@media (max-width: 992px)
+    .woocommerce div.product .variations_button .button.laz-wishlist
+        max-width: unset
+        position: relative
+        right: unset
+        top: unset
+        bottom: unset
+        left: unset
+        width: auto
+        margin-left: 15px
+    .woocommerce div.product .variations_button .single_add_to_cart_button
+        position: relative !important
+        max-width: unset !important
+
+    .for-pc
+        display: none !important
+    .for-mobile
+        display: block !important
+
+    .rb-content.for-mobile
+        .search-mobile
+            input[type=text]
+                width: 100%
+                padding: 15px 0
+                border-bottom: 1px solid #737374
+                font-size: 1.3rem
+                padding-left: 35px
+            .btn-left
+                background: none
+                width: max-content
+                height: max-content
+                color: #8ebcee
+                padding: 0
+                font-size: 22px
+                position: absolute
+                left: 0
+                top: 0
+        .menu-mainmenu-container
+            margin-top: 30px
+        .lk_mobile
+            list-style: none
+            margin: 0
+            padding: 0
+            li
+                margin-bottom: 15px
+                a
+                    +flex(row, space-between, center)
+                    width: 100%
+                    .icon
+                        width: 30px
+                        height: 30px
+                        *
+                            width: 100%
+                            height: 100%
+
+@media (max-width: 800px)
+    .two__blocks_main .card-cat .b-title
+        font-size: 12px
+    header .header__content .header-left .search-icon-form
+        display: none
+
+    .woocommerce-account .woocommerce
+        grid-template-columns: 100%
+
+    .breads *
+        font-size: 13px
+
+@media (max-width: 768px)
+    .container__three
+        grid-template-columns: 100%
+    footer .container__footer
+        grid-template-columns: 100%
+
+    .product
+        grid-template-columns: 100%
+    .product-content.wrapper
+        grid-column: 1 / 2
+    .product .related.products
+        grid-column: 1 / 2
+    
+    .login_form_container .titles
+        font-size: 22px !important
+    .login_form_container .mm76_login_form_tabs a
+        font-size: 14px
+    .login_form_container .mm76_login_form_tabs
+        margin-top: 25px
+
+    .login_form_container #loginform p.login-username span:not(.error):not(.tt-info), .login_form_container #loginform p.login-password span:not(.error):not(.tt-info), .login_form_container #loginform p.login-mm76 span:not(.error):not(.tt-info), .login_form_container #wp_signup_form p.login-username span:not(.error):not(.tt-info), .login_form_container #wp_signup_form p.login-password span:not(.error):not(.tt-info), .login_form_container #wp_signup_form p.login-mm76 span:not(.error):not(.tt-info)
+        font-size: 14px
+    .login_form_container #loginform p input[type=password], .login_form_container #loginform p input[type=text], .login_form_container #loginform p input[type=email], .login_form_container #wp_signup_form p input[type=password], .login_form_container #wp_signup_form p input[type=text], .login_form_container #wp_signup_form p input[type=email]
+        padding: 14px 16px
+        font-size: 14px
+
+    .tt-info
+        font-size: 14px
+    .login_form_container #loginform p, .login_form_container #wp_signup_form p
+        font-size: 14px
+    .login_form_container #loginform p.login-submit input, .login_form_container #wp_signup_form p.login-submit input
+        font-size: 14px
+    a.forgot-password
+        font-size: 14px
+
+    .login_form_container #loginform p.text, .login_form_container #wp_signup_form p.text
+        font-size: 14px
+
+    .container__success .center-link .text
+        font-size: 14px
+    .container__success .center-link .icon
+        width: 30px
+        height: 15px
+        *
+            width: 100%
+            height: 100%
+
+    .edit-account .row_2
+        grid-template-columns: 100%
+        grid-gap: 0px
+
+    .title-page
+        font-size: 24px !important
+
+    .woocommerce-MyAccount-navigation ul
+        max-height: unset
+        white-space: nowrap
+    .woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul
+        +flex(column, flex-start, flex-start)
+        li
+            margin-left: 0
+            margin-right: 0
+            padding-left: 0
+
+    #breadcrumbs
+        & > span
+            font-size: 0
+            & > *
+                display: none
+                &:nth-last-child(2)
+                    font-size: 16px
+                    +flex(row, flex-start, center)
+                    &::before
+                        content: ''
+                        +back("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 1L1 7L7 13' stroke='%238EBCEE' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+                        display: block
+                        width: 6px
+                        height: 12px
+                        margin-right: 7px
+
+    .right__box_hidden.left__box_hidden, .left__box_hidden.left__box_hidden
+        padding: 20px
+
+    .site-title
+        font-size: 16px !important
+
+    .lmp_load_more_button .lmp_button
+        font-size: 14px !important
+    .text-block p
+        font-size: 14px
+
+@media (max-width: 650px)
+    header .header__content .header-right a.icon
+        &:nth-child(1), &:nth-child(2)
+            display: none
+
+    header .header__content .header-center .logotype
+        width: 170px
+        height: 50px
+
+    .two__blocks_main
+        grid-template-columns: 100%
+
+    .right__box_hidden, .left__box_hidden
+        width: 100vw
+
+    .container__main_cards
+        grid-template-columns: 100%
+    .container__main_cards .card
+        height: 520px
+
+    .elem-nav-console
+        +flex(row, center, center)
+        z-index: 10
+    .two__blocks_main
+        .card-cat
+            &:last-child
+                display: none
+
+    .th-text
+        font-size: 9.8px
+    .container__four > *
+        padding: 0 10px
+    .container__four
+        margin: 0 -10px
+
+    .container__three.fours
+        grid-template-columns: calc(50% - 15px) calc(50% - 15px)
+        grid-gap: 20px
+    
+    .swiperGallery_2
+        height: 510px
+    .swiperGallery_1 .swiper-slide
+        height: 110px
+
+    .woocommerce div.product
+        grid-gap: 30px
+    .product-tabs
+        margin-top: 0
+
+    .single-product
+        .mt-40
+            margin-top: 20px !important
+
+    .related.products .offer_perc
+        left: 20px
+
+    .size-table li
+        padding: 1em 0.5em !important
+
+@media (max-width: 500px)
+    .card-content .p-title
+        font-size: 12px
+    .card-content .p-price
+        font-size: 12px
+
+    .gallery-thumbs_mm76 a
+        height: 85px
+    .edit-account .woocommerce-Button
+        min-width: unset
+        width: 100%
+
+    .bfw_user_account_content .bonuses__container .bonus_computy_account .value_bca
+        font-size: 14px
+    .bfw_user_account_content .bonuses__container .bonus_computy_account .title_bca
+        font-size: 14px
+    .bfw_user_account_content #bfw-progressbar > div > span
+        font-size: 14px
+    .bfw_user_account_content .remaining-amount
+        font-size: 14px
+    .bfw_user_account_content #bfw-progressbar > div
+        height: 16px
+
+@media (max-width: 390px)
+    .login_form_container .mm76_login_form_tabs
+        +flex(column, center, center)

@@ -1,0 +1,242 @@
+.order-status {
+	display: inline-flex;
+	line-height: 2.5em;
+	color: #777;
+	background: #e5e5e5;
+	border-radius: 4px;
+	border-bottom: 1px solid rgba(0,0,0,.05);
+	margin: -0.25em 0;
+	cursor: inherit!important;
+	white-space: nowrap;
+	max-width: 100%;
+}
+
+.order-status > span {
+	margin: 0 1em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.order-status.status-cdek-created,
+.order-status.status-cdek-accepted {
+	background: #c8d7e1;
+	color: #2e4453
+}
+
+.order-status.status-cdek-new {
+	background: #f8dda7;
+	color: #94660c
+}
+
+.order-status.status-cdek-canceled,
+.order-status.status-cdek-invalid,
+.order-status.status-cdek-not_delivered {
+	background: #eba3a3;
+	color: #761919
+}
+
+.order-status.status-cdek-delivered {
+	background: #c6e1c6;
+	color: #5b841b
+}
+
+.wc-edostavka-order-preview .order-status {
+	float: right;
+	margin-right: 54px;
+}
+.wc-edostavka-order-preview article table.widefat tbody td:first-child {
+	padding-left: 1em;
+}
+.wc-edostavka-order-preview article table.widefat tbody td:last-child {
+	text-align: left;
+	padding-right: 1em;
+}
+
+.wc-edostavka-orders-wrapper table.widefat th,
+.wc-edostavka-orders-wrapper table.widefat td {
+	vertical-align: middle;
+}
+
+.wc-edostavka-orders-wrapper table.widefat td .description {
+	display: block;
+	color: #999;
+	font-size: .9em;
+}
+
+.wc-edostavka-orders-wrapper table.widefat td .description.not-paid {
+	padding: 1px 5px;
+	background-color: var(--wc-primary);
+	color: var(--wc-primary-text);
+	border-radius: 3px;
+	margin-top: 5px;
+}
+
+.widefat .column-actions a.button {
+	display: block;
+	text-indent: 9999px;
+	margin: 2px 0 2px 4px;
+	position: relative;
+	height: 1em;
+	width: 1em;
+	display: inline-block;
+	padding: 0!important;
+	height: 2em!important;
+	width: 2em;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.widefat .column-actions a.button::after {
+	font-family: Dashicons;
+	speak: never;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	margin: 2px 0 0;
+	text-indent: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 1.85;
+}
+
+.widefat .column-actions .edostavka-export::after {
+	content: "\f317";
+}
+
+.widefat .column-actions .edostavka-update::after {
+	content: "\f463";
+}
+
+.widefat .column-actions .edostavka-waybill::after,
+.widefat .column-actions .edostavka-waybill-downloaded::after {
+	content: "\f121";
+}
+
+.widefat .column-actions .edostavka-barcode::after,
+.widefat .column-actions .edostavka-barcode-downloaded::after {
+	content: "\f193";
+}
+
+.widefat .column-actions .edostavka-waybill-downloaded,
+.widefat .column-actions .edostavka-barcode-downloaded {
+	border-color: var(--wc-highlight);
+}
+
+.widefat .column-actions .edostavka-waybill-downloaded::before,
+.widefat .column-actions .edostavka-barcode-downloaded::before {
+	position: absolute;
+	content: "";
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: var(--wc-highlight);
+	top: -6px;
+	right: -6px;
+}
+
+.widefat .column-actions .edostavka-cancel {
+	background-color: var(--wc-orange);
+}
+
+.widefat .column-actions .edostavka-cancel::after {
+	content: "\f14f";
+}
+
+.wc-edostavka-orders-wrapper table.widefat td .description.dashicons-before::before,
+.wc-edostavka-orders-wrapper table.widefat td .description .dashicons::before{
+	font-size: .9em;
+	vertical-align: baseline;
+	width: .9em;
+	height: .9em;
+}
+
+.wc-edostavka-orders-wrapper table.widefat td.column-customer .description {
+	margin-top: 7px;
+}
+
+.wp-list-table .order-preview {
+	float: right;
+	width: 16px;
+	padding: 20px 4px 4px 4px;
+	height: 0;
+	overflow: hidden;
+	position: relative;
+	border: 2px solid transparent;
+	border-radius: 4px;
+}
+
+.wp-list-table .order-preview::before {
+	font-family: WooCommerce;
+	speak: never;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	margin: 0;
+	text-indent: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	content: "\e010";
+	line-height: 16px;
+	font-size: 14px;
+	vertical-align: middle;
+	top: 4px;
+}
+
+.wp-list-table .order-preview.disabled::before {
+	content: "";
+	background: url('../../img/ui-anim_basic_16x16.gif') no-repeat center top;
+	background-size: 71%;
+}
+
+@media only screen and (min-width: 400px) {
+
+	.form-row.one-third {
+		display: block;
+		float: left;
+		width: 32.5%;
+		margin-right: 1%;
+		margin-top: 0;
+	}
+
+	.form-row.one-third:nth-last-child(2) {
+		margin-right: 0;
+	}
+}
+
+form .form-row .required {
+	color: var( --wc-red );
+	font-weight: 700;
+	border: 0 !important;
+	text-decoration: none;
+	visibility: hidden;
+}
+
+form .form-row.woocommerce-invalid .select2-container .select2-selection--multiple,
+form .form-row.woocommerce-invalid input.input-text,
+form .form-row.woocommerce-invalid select {
+	border-color: var( --wc-red );
+}
+
+form .form-row.woocommerce-validated input.input-text,
+form .form-row.woocommerce-validated .select2-container .select2-selection--multiple,
+form .form-row.woocommerce-validated select {
+	border-color: var( --wc-green );
+}
+
+.wc-edostavka-call-courier-content .woocommerce-message {
+	margin: 15px 0 0;
+}
+
+.wc-backbone-modal-main article.wc-edostavka-call-courier-content .woocommerce-message > p {
+	margin: 0.5em 0;
+	padding: 2px;
+}

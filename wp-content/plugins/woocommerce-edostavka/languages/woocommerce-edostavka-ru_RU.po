@@ -1,0 +1,1201 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Woocommerce edostavka\n"
+"POT-Creation-Date: 2022-12-05 14:00+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Maksim <maksim@martirosoff.ru>\n"
+"Language-Team: Woodev <info@woodev.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: woodev\n"
+
+#: api/class-wc-edostavka-dadata-api.php:84
+msgid "Invalid request type"
+msgstr "Неверный тип запроса"
+
+#: includes/admin/class-wc-edostavka-admin.php:64
+#: includes/admin/class-wc-edostavka-admin.php:72
+#: includes/admin/class-wc-edostavka-order-list-table.php:25
+msgid "CDEK Orders"
+msgstr "Заказы СДЭК"
+
+#: includes/admin/class-wc-edostavka-admin.php:110
+msgid "CDEK Order information"
+msgstr "Заказ СДЭК [Информация]"
+
+#: includes/admin/class-wc-edostavka-admin.php:162
+#, php-format
+msgid ""
+"Action \"%s\" have not been completed, because you have not selected any "
+"order."
+msgstr ""
+"Действие \"%s\" небыло выполенено, поскольку вы не выбрали ни одного заказа."
+
+#: includes/admin/class-wc-edostavka-admin.php:182
+#, php-format
+msgid "Order %s was successfully exported to CDEK"
+msgstr "Заказ %s был успешно экспортирован в СДЭК"
+
+#: includes/admin/class-wc-edostavka-admin.php:184
+#, php-format
+msgid "Order %s could not be exported."
+msgstr "Заказ %s не может быть экспортирован."
+
+#: includes/admin/class-wc-edostavka-admin.php:191
+#, php-format
+msgid "Order %s was successfully updated."
+msgstr "Заказ %s был успешно обновлён."
+
+#: includes/admin/class-wc-edostavka-admin.php:193
+#, php-format
+msgid "Order %s could not be updated."
+msgstr "Не удалось обновить заказ %s."
+
+#: includes/admin/class-wc-edostavka-admin.php:200
+#, php-format
+msgid "Order %s was successfully canceled."
+msgstr "Заказ %s был успешно отменён."
+
+#: includes/admin/class-wc-edostavka-admin.php:202
+#, php-format
+msgid "Order %s could not be canceled."
+msgstr "Заказ %s не может быть отменён."
+
+#: includes/admin/class-wc-edostavka-admin.php:257
+msgid "Manage CDEK Orders"
+msgstr "Управление заказами СДЭК"
+
+#: includes/admin/class-wc-edostavka-admin.php:259
+#, php-format
+msgid "Search results for \"%s\""
+msgstr "Результат поиска для \"%s\""
+
+#: includes/admin/class-wc-edostavka-admin.php:267
+msgid "Search Orders"
+msgstr "Найти заказы"
+
+#: includes/admin/class-wc-edostavka-admin.php:282
+msgid "CDEK Orders per page"
+msgstr "Кол-во заказов СДЭК на странице"
+
+#: includes/admin/class-wc-edostavka-admin.php:313
+#: includes/class-wc-edostavka-order.php:338
+#, php-format
+msgid "The order #%s was cancel by manager."
+msgstr "Заказ #%s был отменён менеджером."
+
+#: includes/admin/class-wc-edostavka-admin.php:319
+#, php-format
+msgid "Cannot cancel order #%s because it is not editable."
+msgstr ""
+"Невозможно отменить заказ №%s потому что он не доступен для редактирования."
+
+#: includes/admin/class-wc-edostavka-admin.php:348 includes/functions.php:930
+#, php-format
+msgid "Updated information for %d order."
+msgid_plural "Updated information for %d orders."
+msgstr[0] "Обновлена информация для %d заказа."
+msgstr[1] "Обновлена информация для %d заказов."
+msgstr[2] "Обновлена информация для %d заказов."
+
+#: includes/admin/class-wc-edostavka-admin.php:351
+msgid "Nothing to do."
+msgstr "Тут нечего делать."
+
+#: includes/admin/class-wc-edostavka-admin.php:371
+msgid "Insufficient privileges to export file."
+msgstr "Недостаточно прав для экспорта файла."
+
+#: includes/admin/class-wc-edostavka-admin.php:378
+#: includes/admin/class-wc-edostavka-admin.php:400
+msgid "Incorrect file type request."
+msgstr "Неверный запрос типа файла."
+
+#: includes/admin/class-wc-edostavka-admin.php:462
+#: includes/admin/class-wc-edostavka-order-list-table.php:227
+msgid "Preview"
+msgstr "Посмотреть"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:24
+msgid "CDEK Order"
+msgstr "Заказ СДЭК"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:36
+#: includes/admin/class-wc-edostavka-order-list-table.php:308
+msgid "Export to CDEK"
+msgstr "Экспортировать в СДЭК"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:37
+msgid "Update"
+msgstr "Обновить"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:38
+#: includes/admin/class-wc-edostavka-order-list-table.php:337
+msgid "Cancel"
+msgstr "Отменить"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:61
+msgid "All orders"
+msgstr "Все заказы"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:62
+msgid "New"
+msgstr "Новый"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:63
+msgid "Accepted"
+msgstr "Принят"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:64
+msgid "Created"
+msgstr "Создан"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:65
+msgid "Delivered"
+msgstr "Доставлен"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:66
+msgid "Canceled"
+msgstr "Отменён"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:110
+msgid "Order"
+msgstr "Заказ"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:111
+#: templates/views/html-order-delivery-status.php:22
+msgid "Status"
+msgstr "Статус"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:112
+msgid "Customer"
+msgstr "Покупатель"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:113
+msgid "Delivery"
+msgstr "Доставка"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:114
+msgid "Payment"
+msgstr "Оплата"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:115
+msgid "Tracking number"
+msgstr "Номер отслеживания"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:116
+msgid "Order Date"
+msgstr "Дата заказа"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:117
+msgid "Actions"
+msgstr "Действия"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:173
+#, php-format
+msgid "Address: %s"
+msgstr "Адресс: %s"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:218
+#: includes/admin/class-wc-edostavka-order-list-table.php:240
+#, php-format
+msgid "Order %s"
+msgstr "Заказ %s"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:226
+msgid "Preview this order"
+msgstr "Посмотерть этот заказ"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:239
+msgid "Edit this order"
+msgstr "Редактировать этот заказ"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:269
+#, php-format
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
+msgstr ""
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:273
+msgid "j M Y"
+msgstr ""
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:316
+msgid "Update order inform"
+msgstr "Обновить информацию заказа"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:324
+msgid "Get a waybill"
+msgstr "Создать квитанцию"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:330
+msgid "Get a barcode"
+msgstr "Создать ШК-места"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:404
+#: templates/views/html-call-courier-modal.php:12
+msgid "Call a courier"
+msgstr "Вызвать курьера"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:424
+#, php-format
+msgid "Order #%s [%s] [%s at %s]"
+msgstr "Заказ #%s [%s] [%s в %s]"
+
+#: includes/admin/class-wc-edostavka-order-list-table.php:479
+msgid "No CDEK orders found."
+msgstr "Не найден ни один заказ СДЭК."
+
+#: includes/class-wc-edostavka-ajax.php:222
+#, php-format
+msgid "The order %d was successfully exported to CDEK"
+msgstr "Заказ %d был успешно экспортирован в СДЭК"
+
+#: includes/class-wc-edostavka-ajax.php:224
+#, php-format
+msgid ""
+"Failed to export orders to CDEK. You can see the reason in the <a href=\"%s"
+"\" target=\"_blank\">notes to the order</a>."
+msgstr ""
+"Не удалось экспортировать заказы в СДЭК. Вы можете посмотреть причину в <a "
+"href=\"%s\" target=\"_blank\">заметках заказа</a>."
+
+#: includes/class-wc-edostavka-ajax.php:230
+#, php-format
+msgid "The order %d was successfully canceled"
+msgstr "Заказ %d был успешно отменён."
+
+#: includes/class-wc-edostavka-ajax.php:232
+msgid "Failed to cancel orders from CDEK."
+msgstr "Не удалось отменить заказ в СДЭК."
+
+#: includes/class-wc-edostavka-ajax.php:238
+#, php-format
+msgid "Information of order %d was updated"
+msgstr "Информация для заказа %d была обновлена"
+
+#: includes/class-wc-edostavka-ajax.php:263
+msgid "Need fill all required fields."
+msgstr "Нужно заполнить все обязательные поля."
+
+#: includes/class-wc-edostavka-ajax.php:268
+msgid "The date of intake couldn't be less than a current date."
+msgstr "Дата ожидания не может быть меньше чем текущая дата."
+
+#: includes/class-wc-edostavka-ajax.php:281
+msgid "Time to start awaiting a courier must be more or equal 09:00"
+msgstr "Время начала ожидания курьера должна быть больше или равна 09:00"
+
+#: includes/class-wc-edostavka-ajax.php:283
+msgid "Time to start awaiting a courier must be less or equal 21:59"
+msgstr "Время начала ожидания курьера должна быть меньше чем 21:59"
+
+#: includes/class-wc-edostavka-ajax.php:287
+msgid "Time to end awaiting a courier must be more or equal 09:01"
+msgstr "Время окончания ожидания курьера должно быть больше или равно 09:01"
+
+#: includes/class-wc-edostavka-ajax.php:289
+msgid "Time to end awaiting a courier must be less or equal 22:00"
+msgstr "Время окончания ожидания курьера должно быть меньше или равно 22:00"
+
+#: includes/class-wc-edostavka-ajax.php:293
+msgid ""
+"Time to end awaiting a courier can not be equal or less than time to start "
+"awaiting."
+msgstr ""
+"Время окончания ожидания курьера не может быть меньше чем время начала "
+"ожидания."
+
+#: includes/class-wc-edostavka-ajax.php:321
+#, php-format
+msgid "A courier was called on %s"
+msgstr "Заявка на вызов курьера была создана на %s"
+
+#: includes/class-wc-edostavka-ajax.php:323
+#, php-format
+msgid "A courier was called only to %d from %d orders."
+msgstr "Заявка на вызов курьера была создана только для %d из %d заказов."
+
+#: includes/class-wc-edostavka-box-packer.php:54
+msgid "Separately Box"
+msgstr "Индивидуальная упаковка"
+
+#: includes/class-wc-edostavka-checkout.php:93
+#: includes/class-wc-edostavka-checkout.php:116
+msgid "Enter text for find pick-up point"
+msgstr "Введите текст для поиска пункта выдачи"
+
+#: includes/class-wc-edostavka-checkout.php:94
+msgid "Select city"
+msgstr "Выберите город"
+
+#: includes/class-wc-edostavka-checkout.php:95
+msgid "Enter name of city"
+msgstr "Введите название города"
+
+#: includes/class-wc-edostavka-checkout.php:96
+msgid "You already selected this city"
+msgstr "Вы уже выбрали этот населённый пункт"
+
+#: includes/class-wc-edostavka-checkout.php:147
+msgid "Choose a suggestion or continue typing"
+msgstr "Выберите вариант из предложенного или продолжите ввод"
+
+#: includes/class-wc-edostavka-checkout.php:148
+msgid "Unknown address"
+msgstr "Неизвестный адрес"
+
+#: includes/class-wc-edostavka-checkout.php:281
+#, php-format
+msgctxt "кол-во дней доставки (от)"
+msgid "from %s"
+msgstr "от %s"
+
+#: includes/class-wc-edostavka-checkout.php:285
+#, php-format
+msgctxt "кол-во дней доставки (до)"
+msgid " to %s"
+msgstr " до %s"
+
+#: includes/class-wc-edostavka-checkout.php:292
+msgid "Delivery days count"
+msgstr "Кол-во дней доставки"
+
+#: includes/class-wc-edostavka-checkout.php:292
+msgid "day"
+msgid_plural "days"
+msgstr[0] "день"
+msgstr[1] "дня"
+msgstr[2] "дней"
+
+#: includes/class-wc-edostavka-checkout.php:403
+#: includes/class-wc-edostavka-checkout.php:488
+msgid "Pick-up"
+msgstr "Пункт выдачи"
+
+#: includes/class-wc-edostavka-checkout.php:403
+#: includes/class-wc-edostavka-checkout.php:488
+msgid "Postamat"
+msgstr "Постамат"
+
+#: includes/class-wc-edostavka-checkout.php:404
+#, php-format
+msgid "Choose %s point"
+msgstr "Выбрать %s"
+
+#: includes/class-wc-edostavka-checkout.php:414
+#, php-format
+msgid "Chosen %s point"
+msgstr "Выбранный %s"
+
+#: includes/class-wc-edostavka-checkout.php:415
+#, php-format
+msgid "Choose another %s point"
+msgstr "Выбрать другой %s"
+
+#: includes/class-wc-edostavka-checkout.php:422
+msgid "Pick-up point of CDEK"
+msgstr "Пункт выдачи СДЭК"
+
+#: includes/class-wc-edostavka-checkout.php:491
+#, php-format
+msgid ""
+"To continue with your order, please <strong>choose %s point</strong> or "
+"another shipping method."
+msgstr ""
+"Для продолжения оформления заказа, пожалуйста <strong>выберите %s</strong> "
+"или выберите другой метод доставки."
+
+#: includes/class-wc-edostavka-checkout.php:497
+#, php-format
+msgid ""
+"The total weight of your order is %d kg more than the maximum allowed weight "
+"is %d kg for your chosen %s point. %s"
+msgstr ""
+"Общий вес вашего заказа %d кг. больше чем максимально допустимый вес %d кг. "
+"для выбранного вами %s. %s"
+
+#: includes/class-wc-edostavka-checkout.php:508
+#, php-format
+msgid ""
+"The total volume of your order exceed the maximum allowed volume to chosen "
+"%s. %s"
+msgstr ""
+"Общий объём товаров в вашем заказе привышает максимально добустимый объём "
+"для выбранного вами %s. %s"
+
+#: includes/class-wc-edostavka-checkout.php:515
+#, php-format
+msgid ""
+"The payment method <strong>%s</strong> disallowed for chosen %s point. To "
+"continue with your order, please choosing another %s point eather payment "
+"method or shipping method."
+msgstr ""
+"Метод оплаты <strong>%s</strong> недоступен для выбранного %s. Для "
+"продолжения оформления заказа, пожалуйста выберите другой %s либо метод "
+"оплаты или метод доставки."
+
+#: includes/class-wc-edostavka-checkout.php:544
+#, php-format
+msgid ""
+"<strong>Attention!</strong> Current currency of shop <strong>%s (%s)</"
+"strong> not match to setted currency for calculate shipping cost through CDEK"
+msgstr ""
+"<strong>Внимание!</strong> Основная валюта магазина <strong>%s (%s)</strong> "
+"не совпадает с установленной валютой для расчёта стоимости доставки через "
+"СДЭК"
+
+#: includes/class-wc-edostavka-checkout.php:545
+#, php-format
+msgid ""
+"Cost of CDEK delivery will be calculated in currency - <strong>%s (%s)</"
+"strong>"
+msgstr ""
+"Стоимость доставки СДЭК будет расчитана в валюте  - <strong>%s (%s)</strong>"
+
+#: includes/class-wc-edostavka-checkout.php:546
+#, php-format
+msgid "You can change this value on <a href=\"%s\">plugin settings %s</a>."
+msgstr ""
+"Вы можете поменять это значение в <a href=\"%s\">настройках плагина %s</a>."
+
+#: includes/class-wc-edostavka-checkout.php:560
+#, php-format
+msgid ""
+"Plugin %s disabled, because license key is not entered, entered incorrect, "
+"duration is expired or license activated for another domain"
+msgstr ""
+"Плагин %s выключен, потому что лицензионный ключ не введён, указан "
+"некорректно, срок действия ключа истёк или лицензионный ключ активирован для "
+"другого домена. "
+
+#: includes/class-wc-edostavka-checkout.php:561
+#, php-format
+msgid ""
+"To fix it, go to <a href=\"%s\">Woodev licenses page</a> and enter your "
+"actual license key for current web-site."
+msgstr ""
+"Что бы это исправить, перейдите на <a href=\"%s\">страницу лицензий Woodev</"
+"a>и введите ваш актуальный лицензионный ключ для данного сайта."
+
+#: includes/class-wc-edostavka-checkout.php:635
+msgid "The $order variable is not an object of the WC_Order class."
+msgstr "Переменная $order не является объектом класса WC_Order"
+
+#: includes/class-wc-edostavka-checkout.php:697
+#, php-format
+msgid "Details of the chosen %s"
+msgstr "Информация о выбранном %s"
+
+#: includes/class-wc-edostavka-checkout.php:697
+msgctxt "Предложный падеж"
+msgid "pick-up point"
+msgstr "пункте выдачи"
+
+#: includes/class-wc-edostavka-checkout.php:697
+msgctxt "Предложный падеж"
+msgid "postamat"
+msgstr "постамате"
+
+#: includes/class-wc-edostavka-checkout.php:719
+msgid "Delivery status of CDEK"
+msgstr "Статус доставки СДЭК"
+
+#: includes/class-wc-edostavka-cron.php:49
+#, php-format
+msgid "Every %s minutes"
+msgstr "Каждые %s минут"
+
+#: includes/class-wc-edostavka-integration.php:405 includes/functions.php:772
+msgid "Common box"
+msgstr "Общая упаковка"
+
+#: includes/class-wc-edostavka-integration.php:413 includes/functions.php:771
+msgctxt "Name of item box"
+msgid "Box"
+msgstr "Упаковка"
+
+#: includes/class-wc-edostavka-integration.php:707
+msgid "Reason"
+msgid_plural "Reasons"
+msgstr[0] "Причина"
+msgstr[1] "Причины"
+msgstr[2] "Причин"
+
+#: includes/class-wc-edostavka-order.php:52
+#, php-format
+msgid "The order status of CDEK was change from %s to %s"
+msgstr "Статус заказа СДЭК был изменён с %s на %s"
+
+#: includes/class-wc-edostavka-order.php:59
+#, php-format
+msgid "The order status of CDEK was change to %s"
+msgstr "Статус заказа СДЭК изменился на %s"
+
+#: includes/class-wc-edostavka-order.php:121
+#, php-format
+msgid ""
+"Shipment point is not set on <a href=\"%s\" target=\"_blank\">method "
+"settings</a>."
+msgstr ""
+"Пункт отгрузки не установлен в <a href=\"%s\" target=\"_blank\">настройках "
+"метода</a>."
+
+#: includes/class-wc-edostavka-order.php:132
+#, php-format
+msgid ""
+"Sender city is not set on <a href=\"%s\" target=\"_blank\">method settings</"
+"a>."
+msgstr ""
+"Город отправитель не установлен в <a href=\"%s\" target=\"_blank"
+"\">настройках метода</a>."
+
+#: includes/class-wc-edostavka-order.php:138
+#, php-format
+msgid ""
+"Your address to drop order is not set on <a href=\"%s\" target=\"_blank"
+"\">method settings</a>."
+msgstr ""
+"Адрес для отгрузки заказов не установлен в <a href=\"%s\" target=\"_blank"
+"\">настройках метода</a>."
+
+#: includes/class-wc-edostavka-order.php:149
+msgid "Delivery point is not set to this order."
+msgstr "Для данного заказа не был выбран пункт выдачи."
+
+#: includes/class-wc-edostavka-order.php:162
+msgid "Delivery address is not set to this order."
+msgstr "Адрес доставки для этого заказа не был указан."
+
+#: includes/class-wc-edostavka-order.php:238
+#, php-format
+msgid "Error occurred in process export the order: %s"
+msgstr "В процессе расчёта стоимости доставки через СДЭК произошла ошибка. %s"
+
+#: includes/class-wc-edostavka-order.php:242
+#, php-format
+msgid "Failed to export the order %s. Error: %s"
+msgstr "Не удалось экспортировать заказ %s. Ошибка: %s"
+
+#: includes/class-wc-edostavka-order.php:287
+#, php-format
+msgid ""
+"The order was marked as \"%s\" automatically, because it delivered to "
+"recipient."
+msgstr ""
+"Заказ был помечен как \"%s\" автоматически, так как его доставили получателю."
+
+#: includes/class-wc-edostavka-order.php:319
+#, php-format
+msgid "Failed to get remote order data. Error: %s"
+msgstr "Не удалось получить данные заказа. Ошибка: %s"
+
+#: includes/class-wc-edostavka-order.php:344
+#, php-format
+msgid "Failed to remove the order %s from CDEK. Error: %s"
+msgstr "Не удалось удалить заказ %s из СДЭК. Ошибка: %s"
+
+#: includes/class-wc-edostavka-order.php:377 includes/functions.php:53
+msgid "N/A"
+msgstr "Не определён"
+
+#: includes/class-wc-edostavka-shipping-method.php:598
+#, php-format
+msgid "An error occurred in processing calculate shipping cost by CDEK. %s"
+msgstr "В процессе расчёта стоимости доставки через СДЭК произошла ошибка. %s"
+
+#: includes/class-wc-edostavka-shipping-method.php:605
+#, php-format
+msgid ""
+"The error \"%s\" might be called because server of CDEK is failed. You can "
+"disable CDEK shipping methods until it will be fixed."
+msgstr ""
+"Ошибка \"%s\" могла быть вызвана из-за сбоев на сервере СДЭК. Вы можете "
+"навремя отключить методы доставки СДЭК, пока проблема не будет исправлена."
+
+#: includes/class-wc-edostavka-shipping-method.php:662
+#, php-format
+msgid "Error. Unable to get shipping rate(s) for %s instance id %d."
+msgstr "Ошибка. Невозможно получить метод(ы) для %s с id %d"
+
+#: includes/class-wc-edostavka-shipping-method.php:781
+#, php-format
+msgid ""
+"This shipping method will not working, because the licence key is expired or "
+"it entered incorrect. Please, go to <a href=\"%s\">page of plugin licences</"
+"a> to enter actual licence key."
+msgstr ""
+"Данный метод доставки не будет работать, так как лицензионный ключ "
+"закончился или он указан неверно. Пожалуйста, перейдите <a href=\"%s\">на "
+"страницу лицензий плагинов</a> что бы ввести действующий лицензионный ключ."
+
+#: includes/emails/abstract-wc-edostavka-email.php:124
+#, php-format
+msgid "Available placeholders: %s"
+msgstr ""
+
+#: includes/emails/abstract-wc-edostavka-email.php:128
+msgid "Message text"
+msgstr "Текст сообщения"
+
+#: includes/emails/abstract-wc-edostavka-email.php:131
+#, php-format
+msgid "Enter message that will be showing on email body. %s"
+msgstr "Введите текст сообщения который будет отображаться в теле письма. %s"
+
+#: includes/emails/class-wc-edostavka-delivered-email.php:14
+msgid "CDEK - order is delivered"
+msgstr "СДЭК - заказ доставлен"
+
+#: includes/emails/class-wc-edostavka-delivered-email.php:15
+msgid ""
+"Notification of the administrator about the successful delivery of the order "
+"to the customer."
+msgstr "Уведомление администратора об успешной доставке заказа клиенту."
+
+#: includes/emails/class-wc-edostavka-delivered-email.php:56
+msgid "[{site_title}]: Order #{order_number} is delivered"
+msgstr "[{site_title}] - Заказ #{order_number} доставлен успешно"
+
+#: includes/emails/class-wc-edostavka-delivered-email.php:60
+msgid "Congratulation! Order #{order_number} was successfully delivered."
+msgstr "Поздравляем! Заказ №{order_number} успешно доставлен."
+
+#: includes/emails/class-wc-edostavka-delivered-email.php:64
+msgid ""
+"Order #{order_number} on your website <a href=\"{site_url}\" target=\"_blank"
+"\">{site_title}</a> was successfully delivered. Now, you can touch with the "
+"client and take details."
+msgstr ""
+"Заказ №{order_number} на вашем сайте <a href=\"{site_url}\" target=\"_blank"
+"\">{site_title}</a> был успешно доставлен. Сейчас вы можете связаться с "
+"вашим клиентом для получения информации о заказе/доставке."
+
+#: includes/emails/class-wc-edostavka-not-delivered-email.php:14
+msgid "CDEK - order is not delivered"
+msgstr "СДЭК - заказ не доставлен"
+
+#: includes/emails/class-wc-edostavka-not-delivered-email.php:15
+msgid ""
+"Notification of the administrator about the failed delivery of the order to "
+"the customer."
+msgstr "Уведомление администратора о неудачной доставке заказа покупателю."
+
+#: includes/emails/class-wc-edostavka-not-delivered-email.php:48
+msgid "[{site_title}]: Order #{order_number} is not delivered"
+msgstr "[{site_title}] - Заказ #{order_number} не был доставлен"
+
+#: includes/emails/class-wc-edostavka-not-delivered-email.php:52
+msgid "Unfortunately, order #{order_number} was not delivered."
+msgstr "К сожалению, заказ № {order_number} не был доставлен."
+
+#: includes/emails/class-wc-edostavka-not-delivered-email.php:56
+msgid "Order #{order_number} was not delivered to the customer."
+msgstr ""
+"Заказ №{order_number} не был вручён покупателю. Причины уточняйте у вашего "
+"менеджера СДЭК."
+
+#: includes/emails/class-wc-edostavka-tracking-email.php:16
+msgid "CDEK - send tracking number"
+msgstr "СДЭК - отпавка номера отслеживания"
+
+#: includes/emails/class-wc-edostavka-tracking-email.php:17
+msgid ""
+"Tracking number emails sent to customers when order has been exported to "
+"CDEK successfully."
+msgstr ""
+"Письмо с номером отслеживания отправляется покупателю когда заказ был "
+"успешно экспортирован в СДЭК."
+
+#: includes/emails/class-wc-edostavka-tracking-email.php:68
+msgid "[{site_title}] - Order #{order_number} was exported to CDEK."
+msgstr "[{site_title}] - Заказ #{order_number} был передан в СДЭК."
+
+#: includes/emails/class-wc-edostavka-tracking-email.php:72
+msgid "Your order #{order_number} has been assigned a tracking number."
+msgstr "Вашему заказу #{order_number} был присвоен номер отслеживания."
+
+#: includes/emails/class-wc-edostavka-tracking-email.php:76
+msgid ""
+"Your order #{order_number} on web-site <a href=\"{site_url}\" target=\"_blank"
+"\">{site_title}</a> has been exported to <a href=\"https://cdek.ru/\" target="
+"\"_blank\">CDEK delivery service</a> with tracking number {tracking_code}. "
+"You can track your order status <a href=\"https://www.cdek.ru/ru/tracking?"
+"order_id={tracking_code}\">on the CDEK website</a>."
+msgstr ""
+"Ваш заказ #{order_number} на сайте <a href=\"{site_url}\" target=\"_blank"
+"\">{site_title}</a> был передан <a hre=\"https://cdek.ru/\" target=\"_blank"
+"\">в курьерскую службу СДЭК</a> с номером отслеживания {tracking_code}. Вы "
+"можете следить за статусом отправления <a href=\"https://www.cdek.ru/ru/"
+"tracking?order_id={tracking_code}\">на сайте СДЭК</a>."
+
+#: includes/emails/class-wc-edostavka-tracking-email.php:80
+msgid ""
+"Thanks for shopping with us. If you have any problems with delivery, please "
+"let us know."
+msgstr ""
+"Спасибо что покупаете у нас. Если у вас возникнут проблемы с доставкой, "
+"пожалуйста, дайте нам знать."
+
+#: includes/functions.php:526
+msgid "Box XS"
+msgstr "Упаковка XS"
+
+#: includes/functions.php:533
+msgid "Box S"
+msgstr "Упаковка S"
+
+#: includes/functions.php:540
+msgid "Box M"
+msgstr "Упаковка M"
+
+#: includes/functions.php:547
+msgid "Box L"
+msgstr "Упаковка L"
+
+#: includes/functions.php:554
+msgid "Box 500G"
+msgstr "Упаковка 500гр."
+
+#: includes/functions.php:561
+msgid "Box 1 KG"
+msgstr "Упаковка 1 кг."
+
+#: includes/functions.php:568
+msgid "Box 2 KG"
+msgstr "Упаковка 2 кг."
+
+#: includes/functions.php:575
+msgid "Box 3 KG"
+msgstr "Упаковка 3 кг."
+
+#: includes/functions.php:582
+msgid "Box 5 KG"
+msgstr "Упаковка 5 кг."
+
+#: includes/functions.php:589
+msgid "Box 10 KG"
+msgstr "Упаковка 10 кг."
+
+#: includes/functions.php:596
+msgid "Box 15 KG"
+msgstr "Упаковка 15 кг."
+
+#: includes/functions.php:603
+msgid "Box 20 KG"
+msgstr "Упаковка 20 кг."
+
+#: includes/functions.php:610
+msgid "Box 30 KG"
+msgstr "Упаковка 30 кг."
+
+#: includes/functions.php:621
+msgctxt "Cdek order status"
+msgid "New"
+msgstr "Новый"
+
+#: includes/functions.php:622
+msgctxt "Cdek order status"
+msgid "Accepted"
+msgstr "Принят"
+
+#: includes/functions.php:623
+msgctxt "Cdek order status"
+msgid "Created"
+msgstr "Создан"
+
+#: includes/functions.php:624
+msgctxt "Cdek order status"
+msgid "Delivered"
+msgstr "Доставлен"
+
+#: includes/functions.php:625
+msgctxt "Cdek order status"
+msgid "Not delivered"
+msgstr "Не вручён"
+
+#: includes/functions.php:626
+msgctxt "Cdek order status"
+msgid "Canceled by manager"
+msgstr "Отменён менеджером"
+
+#: includes/functions.php:627
+msgctxt "Cdek order status"
+msgid "Incorrect order"
+msgstr "Некорректный заказ"
+
+#: includes/functions.php:628 includes/functions.php:629
+msgctxt "Cdek order status"
+msgid "Accepted by the sender's warehouse"
+msgstr "Принят на склад отправителя"
+
+#: includes/functions.php:630
+msgctxt "Cdek order status"
+msgid "Issued for delivery in the sender's city"
+msgstr "Выдан на отправку в г. отправителе"
+
+#: includes/functions.php:631
+msgctxt "Cdek order status"
+msgid "Returned to the sender's warehouse"
+msgstr "Возвращен на склад отправителя"
+
+#: includes/functions.php:632
+msgctxt "Cdek order status"
+msgid "Handed over to the carrier in the sender's city"
+msgstr "Сдан перевозчику в г. отправителе"
+
+#: includes/functions.php:633
+msgctxt "Cdek order status"
+msgid "Received in the sending city"
+msgstr "Встречен в г. отправителе"
+
+#: includes/functions.php:634
+msgctxt "Cdek order status"
+msgid "Received in destination city"
+msgstr "Встречен в г. получателе"
+
+#: includes/functions.php:635
+msgctxt "Cdek order status"
+msgid "Shipped to the transit city"
+msgstr "Отправлен в г. транзит"
+
+#: includes/functions.php:636
+msgctxt "Cdek order status"
+msgid "Received in the transit city"
+msgstr "Встречен в г. транзите"
+
+#: includes/functions.php:637
+msgctxt "Cdek order status"
+msgid "Accepted by the transit warehouse"
+msgstr "Принят на склад транзита"
+
+#: includes/functions.php:638
+msgctxt "Cdek order status"
+msgid "Returned to the transit warehouse"
+msgstr "Возвращен на склад транзита"
+
+#: includes/functions.php:639
+msgctxt "Cdek order status"
+msgid "Issued for delivery in the transit city"
+msgstr "Выдан на отправку в г. транзите"
+
+#: includes/functions.php:640
+msgctxt "Cdek order status"
+msgid "Handed over to the carrier in the transit city"
+msgstr "Сдан перевозчику в г. транзите"
+
+#: includes/functions.php:641
+msgctxt "Cdek order status"
+msgid "Sent to the sender city"
+msgstr "Отправлен в г. отправитель"
+
+#: includes/functions.php:642
+msgctxt "Cdek order status"
+msgid "Shipped to the receiver's city"
+msgstr "Отправлен в г. получатель"
+
+#: includes/functions.php:643
+msgctxt "Cdek order status"
+msgid "Received in the receiver's city"
+msgstr "Получено в городе получателя"
+
+#: includes/functions.php:644
+msgctxt "Cdek order status"
+msgid "Accepted by the delivery warehouse"
+msgstr "Принят на склад доставки"
+
+#: includes/functions.php:645
+msgctxt "Cdek order status"
+msgid "Accepted by the warehouse for pickup"
+msgstr "Принят на склад до востребования"
+
+#: includes/functions.php:646
+msgctxt "Cdek order status"
+msgid "Issued for delivery"
+msgstr "Выдан на доставку"
+
+#: includes/functions.php:647
+msgctxt "Cdek order status"
+msgid "Returned to the delivery warehouse"
+msgstr "Возвращен на склад доставки"
+
+#: includes/functions.php:648
+msgctxt "Cdek order status"
+msgid "Customs clearance in the country of departure"
+msgstr "Таможенное оформление в стране отправления"
+
+#: includes/functions.php:649
+msgctxt "Cdek order status"
+msgid "Sent to destination country"
+msgstr "Отправлено в страну назначения"
+
+#: includes/functions.php:650
+msgctxt "Cdek order status"
+msgid "Handed over to transit carrier"
+msgstr "Передано транзитному перевозчику"
+
+#: includes/functions.php:651
+msgctxt "Cdek order status"
+msgid "Customs clearance in the country of destination"
+msgstr "Таможенное оформление в стране назначения"
+
+#: includes/functions.php:652
+msgctxt "Cdek order status"
+msgid "Customs clearance completed"
+msgstr "Таможенное оформление завершено"
+
+#: includes/functions.php:653
+msgctxt "Cdek order status"
+msgid "Laid in postamat"
+msgstr "Заложен в постамат"
+
+#: includes/functions.php:654
+msgctxt "Cdek order status"
+msgid "Withdrawn from the post office by courier"
+msgstr "Изъят из постамата курьером"
+
+#: includes/functions.php:655
+msgctxt "Cdek order status"
+msgid "Withdrawn from the post office by the client"
+msgstr "Изъят из постамата клиентом"
+
+#: includes/functions.php:879
+msgid "Tracking code added"
+msgstr "Добавлен код отслеживания"
+
+#: includes/functions.php:889
+#, php-format
+msgid "Tracking code deleted: %s"
+msgstr "Код отслеживания удалён: %s"
+
+#: includes/webhooks/abstract-wc-edostavka-webhook.php:55
+#, php-format
+msgid "The %s webhook is disabled."
+msgstr "Этот %s вебхук отключён."
+
+#: includes/webhooks/abstract-wc-edostavka-webhook.php:67
+#, php-format
+msgid "[Webhook Error]: %s"
+msgstr "[Ошибка вебхука]: %s"
+
+#: includes/webhooks/abstract-wc-edostavka-webhook.php:84
+msgid "Invalid data."
+msgstr "Неверные данные."
+
+#: includes/webhooks/abstract-wc-edostavka-webhook.php:89
+msgid "Invalid resource."
+msgstr "Неверный тип"
+
+#: includes/webhooks/abstract-wc-edostavka-webhook.php:95
+msgid "Invalid webhook ID."
+msgstr "Неверный ID вебхука."
+
+#: includes/webhooks/abstract-wc-edostavka-webhook.php:174
+#, php-format
+msgid "Webhook Request Body: %s"
+msgstr "Тело запроса вебхука: %s"
+
+#: includes/webhooks/class-wc-edostavka-order-webhook.php:40
+msgid "Invalid request attributes"
+msgstr "Некорректные аттрибуты запроса"
+
+#: includes/webhooks/class-wc-edostavka-order-webhook.php:53
+#, php-format
+msgid "Order %s not found."
+msgstr "Заказ %s не найден."
+
+#: templates/emails/plain/tracking-code.php:11
+msgid "More details of your order is below"
+msgstr "Детали вашего заказа"
+
+#: templates/emails/tracking-code.php:12
+msgid "More details of your order is below."
+msgstr "Детали вашего заказа"
+
+#: templates/views/html-call-courier-modal.php:14
+#: templates/views/html-order-preview-modal.php:11
+msgid "Close modal panel"
+msgstr "Закрыть окно"
+
+#: templates/views/html-call-courier-modal.php:20
+msgid "Conditions for creating a courier invitation:"
+msgstr "Условия формирования заявки:"
+
+#: templates/views/html-call-courier-modal.php:22
+msgid "a courier cannot be invited to the same address on the same day"
+msgstr "на один адрес может быть не более одного вызова курьера в день"
+
+#: templates/views/html-call-courier-modal.php:23
+msgid "the recommended minimum time interval for courier visits is three hours"
+msgstr ""
+"рекомендуемый минимальный диапазон времени для приезда курьера не менее 3х "
+"часов"
+
+#: templates/views/html-call-courier-modal.php:30
+msgid "Orders"
+msgstr "Заказы"
+
+#: templates/views/html-call-courier-modal.php:32
+msgid "Choose orders"
+msgstr "Выбрать заказы"
+
+#: templates/views/html-call-courier-modal.php:49
+msgid "Date to awaiting"
+msgstr "Дата ожидания"
+
+#: templates/views/html-call-courier-modal.php:57
+msgid "Time from"
+msgstr "Время от"
+
+#: templates/views/html-call-courier-modal.php:64
+msgid "Time to"
+msgstr "Время до"
+
+#: templates/views/html-call-courier-modal.php:71
+msgid "Comment"
+msgstr "Комментарий"
+
+#: templates/views/html-call-courier-modal.php:81
+msgid "Add order to call a courier"
+msgstr "Создать заявку на вызов курера"
+
+#: templates/views/html-cron-update.php:11
+#: templates/views/html-order-meta-box.php:141
+#, php-format
+msgid "%s at %s"
+msgstr "%s в %s"
+
+#: templates/views/html-cron-update.php:18
+msgid "Update Orders"
+msgstr "Обновить заказы"
+
+#: templates/views/html-modal-map.php:16
+msgid "Choose Pick-up point"
+msgstr "Пункты выдачи СДЭК"
+
+#: templates/views/html-modal-map.php:19
+msgid "Close"
+msgstr "Закрыть"
+
+#: templates/views/html-modal-map.php:41
+msgid "Pay by Card"
+msgstr "Отплата картой"
+
+#: templates/views/html-modal-map.php:42
+msgid "Pay by Cash"
+msgstr "Оплата наличными"
+
+#: templates/views/html-modal-map.php:43
+msgid "Prepay only"
+msgstr "Только предоплата"
+
+#: templates/views/html-modal-map.php:47
+msgid "Fitting room available"
+msgstr "Наличие примерочной"
+
+#: templates/views/html-modal-map.php:51
+msgid "Pick-up here"
+msgstr "Забрать здесь"
+
+#: templates/views/html-modal-map.php:52
+msgid "Continue checkout"
+msgstr "Продолжить оформление заказа"
+
+#: templates/views/html-order-delivery-point.php:24
+msgid "Name:"
+msgstr "Название:"
+
+#: templates/views/html-order-delivery-point.php:28
+msgid "Address:"
+msgstr "Адресс:"
+
+#: templates/views/html-order-delivery-point.php:32
+msgid "Show address on the Yandex map"
+msgstr "Показать адрес на Яндекс карте"
+
+#: templates/views/html-order-delivery-point.php:38
+msgid "Description of location:"
+msgstr "Описание местоположения:"
+
+#: templates/views/html-order-delivery-point.php:44
+msgid "Pickup points note:"
+msgstr "Примечание по офису:"
+
+#: templates/views/html-order-delivery-point.php:50
+msgid "Phone:"
+msgid_plural "Phones:"
+msgstr[0] "Телефон:"
+msgstr[1] "Телефоны:"
+msgstr[2] "Телефоны:"
+
+#: templates/views/html-order-delivery-point.php:57
+msgid "and"
+msgstr "и"
+
+#: templates/views/html-order-delivery-point.php:64
+msgid "Office schedule:"
+msgstr "Режим работы:"
+
+#: templates/views/html-order-delivery-status.php:15
+msgid "Tracking number: "
+msgstr "Номер отслеживания:"
+
+#: templates/views/html-order-delivery-status.php:23
+msgid "Date"
+msgstr "Дата"
+
+#: templates/views/html-order-delivery-status.php:24
+msgid "Location"
+msgstr "Местоположение"
+
+#: templates/views/html-order-meta-box.php:114
+msgid "This order is not exported to CDEK yet."
+msgstr "Этот заказ ещё не был экспортирован в СДЭК."
+
+#: templates/views/html-order-meta-box.php:120
+msgid "Status:"
+msgstr "Статус:"
+
+#: templates/views/html-order-meta-box.php:129
+msgid "Tracking code:"
+msgstr "Номер отслеживания:"
+
+#: templates/views/html-order-meta-box.php:138
+msgid "Latest update:"
+msgstr "Последнее обновление:"
+
+#: templates/views/html-order-meta-box.php:147
+msgid "Status history:"
+msgstr "История статусов:"
+
+#: templates/views/html-order-preview-modal.php:9
+#, php-format
+msgid "Order #%s"
+msgstr "Заказ %s"
+
+#: woocommerce-edostavka.php:30 woocommerce-edostavka.php:359
+msgid "CDEK WooCommerce Shipping Method"
+msgstr "Метод доставки СДЭК для Woocommerce"
+
+#: woocommerce-edostavka.php:413
+msgid "The order was automatically exported to CDEK successfully."
+msgstr "Заказ был автоматически экспортирован в СДЭК успешно."
+
+#~ msgid "Product"
+#~ msgstr "Товар"
+
+#~ msgid "Complete"
+#~ msgstr "Завершить"
+
+#~ msgid "Edit"
+#~ msgstr "Редактировать"

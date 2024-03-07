@@ -1,0 +1,35 @@
+
+// Pixel -> rem
+@mixin font-size($px) {
+  $rem: $px/$htmlFontSize;
+  font-size: $rem + rem;
+}
+
+@mixin breakpoint-sm { // tablet port + mobile landscape
+  @media (max-width: map-get($breakpoins, sm)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md { // tablet landscape
+  @media (max-width: map-get($breakpoins, md)) {
+    @content;
+  }
+}
+
+@mixin trans($values...) {
+  @if length($values) == 0 {
+    // 'all .3s ease' as default value
+    $values: all 0.3s ease-in-out;
+  }
+
+  transition: $values;
+}
+
+
+@mixin pseudo($display: block, $position: absolute) {
+  position: $position;
+  display: $display;
+  content: '';
+}
+

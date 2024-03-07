@@ -1,0 +1,47 @@
+// Core variables
+$htmlFontSize: 18;
+
+$black: #000000;
+$white: #ffffff;
+$grey: #E5E5E5;
+
+// yellow
+$yellow_primary: #F9CE26;
+$yellow_light: #FCE793;
+// violet
+$violet_primary: #9401C8;
+$violet_light: #F0C8FE;
+$violet_dark: #73009B;
+$violet_middle: #D783F4;
+// blue
+$blue_primary: #62CCE3;
+$blue_light: #C5F4FE;
+// green
+$green_light: #D6F3D7;
+// Gradients
+$orange-pink: linear-gradient(90deg, #FDB20D 0%, #FE83DC 100%);
+$orange-purple: linear-gradient(90deg, #FDB20D 0%, #F558C9 100%);
+$orange-violet: linear-gradient(90deg, #FFB000 0%, #A808E0 100%);
+$red-pink: linear-gradient(90deg, #F7462D 0%, #F9337A 100%);
+$yellow-violet: linear-gradient(90deg, #F9CE26 0%, #A808E0 100%);
+$yellow-blue: linear-gradient(90deg, #FDB017 0%, #18D4FD 100%);
+
+$fonts-path: '/wp-content/themes/medialeaks_2k19/assets/public/fonts';
+$public-images-path: '/wp-content/themes/medialeaks_2k19/assets/public/img';
+
+// Social links
+$vk-brand: #4E7EC0;
+$facebook-brand: #2841B1;
+$twitter-brand: #32D6FD;
+$telegram-brand: #2EB2EE;
+$zen-brand: #FF0000;
+$ok-brand: #FD9D0D;
+
+
+$breakpoins: (
+  xs: 480px,
+  sm-mid: 640px,
+  sm: 880px,
+  md: 1024px,
+  lg: 1200px,
+);

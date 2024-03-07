@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Aviano Sans';
+    src: url('AvianoSans-Bol.eot');
+    src: url('AvianoSans-Bol.eot?#iefix') format('embedded-opentype'),
+        url('AvianoSans-Bol.woff2') format('woff2'),
+        url('AvianoSans-Bol.woff') format('woff'),
+        url('AvianoSans-Bol.ttf') format('truetype'),
+        url('AvianoSans-Bol.svg#AvianoSans-Bol') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aviano Sans';
+    src: url('AvianoSans-Thi.eot');
+    src: url('AvianoSans-Thi.eot?#iefix') format('embedded-opentype'),
+        url('AvianoSans-Thi.woff2') format('woff2'),
+        url('AvianoSans-Thi.woff') format('woff'),
+        url('AvianoSans-Thi.ttf') format('truetype'),
+        url('AvianoSans-Thi.svg#AvianoSans-Thi') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,12 @@
+[01-Sep-2023 21:35:37 UTC] PHP Fatal error:  Uncaught TypeError: json_decode(): Argument #1 ($json) must be of type string, array given in /var/www/fastuser/data/www/lazy.mm76.ru/wp-content/themes/mm76_ru/inc/profile.php:222
+Stack trace:
+#0 /var/www/fastuser/data/www/lazy.mm76.ru/wp-content/themes/mm76_ru/inc/profile.php(222): json_decode(Array, true)
+#1 /var/www/fastuser/data/www/lazy.mm76.ru/wp-includes/class-wp-hook.php(310): user_ajax_edit('')
+#2 /var/www/fastuser/data/www/lazy.mm76.ru/wp-includes/class-wp-hook.php(334): WP_Hook->apply_filters('', Array)
+#3 /var/www/fastuser/data/www/lazy.mm76.ru/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /var/www/fastuser/data/www/lazy.mm76.ru/wp-admin/admin-ajax.php(188): do_action('wp_ajax_user_aj...')
+#5 {main}
+  thrown in /var/www/fastuser/data/www/lazy.mm76.ru/wp-content/themes/mm76_ru/inc/profile.php on line 222
+[01-Sep-2023 21:42:13 UTC] PHP Deprecated:  Функция get_woocommerce_term_meta с версии 3.6 <strong>считается устаревшей</strong>! Используйте get_term_meta. in /var/www/fastuser/data/www/lazy.mm76.ru/wp-includes/functions.php on line 5453
+[01-Sep-2023 21:42:13 UTC] PHP Deprecated:  Функция get_woocommerce_term_meta с версии 3.6 <strong>считается устаревшей</strong>! Используйте get_term_meta. in /var/www/fastuser/data/www/lazy.mm76.ru/wp-includes/functions.php on line 5453
+[01-Sep-2023 21:42:13 UTC] PHP Deprecated:  Функция get_woocommerce_term_meta с версии 3.6 <strong>считается устаревшей</strong>! Используйте get_term_meta. in /var/www/fastuser/data/www/lazy.mm76.ru/wp-includes/functions.php on line 5453

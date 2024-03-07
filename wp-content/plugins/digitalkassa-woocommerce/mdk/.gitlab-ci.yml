@@ -1,0 +1,55 @@
+
+default:
+  tags:
+    - gitlab-runner-shell
+
+cache:
+  paths:
+    - vendor/
+
+stages:
+  - analysis
+  - test
+
+pre-job:
+  stage: .pre
+  script:
+    - docker -v
+    - docker-compose -v
+    - mkdir logs -m=777
+    - mkdir coverage-report-html -m=777
+    - docker-compose up --force-recreate --build -d
+    - docker-compose exec -T backend composer install
+    - docker-compose exec -T backend php -f /var/www/html/wait-db.php
+
+cs:
+  stage: analysis
+  script:
+    - docker-compose exec -T backend composer run cs
+
+lint:
+  stage: analysis
+  script:
+    - docker-compose exec -T backend composer run lint
+
+test unit:
+  stage: test
+  script:
+    - docker-compose exec -T backend php -d memory_limit=-1 vendor/bin/phpunit --colors=always --coverage-text --bootstrap tests/Unit/bootstrap.php tests/Unit/
+  coverage: '/\s+Lines:\s{2,}(\d+[,.]\d+%)/'
+
+test server:
+  stage: test
+  script:
+    - docker-compose exec -T backend composer run test-server
+
+test system:
+  stage: test
+  script:
+    - docker-compose exec -T backend composer run test-system
+
+post-job:
+  stage: .post
+  when: always
+  script:
+    - docker-compose down

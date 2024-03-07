@@ -1,0 +1,181 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-27 08:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: includes/class-wishlist-actions-handle.php:54
+#, php-format
+msgid "%s has been added to your wishlist"
+msgstr ""
+
+#: includes/class-wishlist-actions-handle.php:101
+#, php-format
+msgid "%s has been removed from your wishlist"
+msgstr ""
+
+#: includes/class-wishlist-shortcodes.php:40
+msgid "Add to wishlist"
+msgstr ""
+
+#. Description of the plugin
+msgid "An WooCommerce's extension for creating wishlists"
+msgstr ""
+
+#: includes/class-wishlist-shortcodes.php:41
+msgid "Browse wishlist"
+msgstr ""
+
+#: includes/class-wishlist.php:324
+msgid "Could not add this product to your wishlist"
+msgstr ""
+
+#: includes/class-wishlist.php:299
+msgid "Could not create new list"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://uix.store/"
+msgstr ""
+
+#: templates/wishlist/wishlist.php:81
+msgid "In stock"
+msgstr ""
+
+#: includes/class-wishlist-actions-handle.php:123
+msgid "Invalid product ID"
+msgstr ""
+
+#: templates/wishlist/wishlist.php:83
+msgid "Out of stock"
+msgstr ""
+
+#: includes/class-wishlist-admin.php:74
+msgid "Page content: [soo_wishlist]"
+msgstr ""
+
+#: includes/class-wishlist-install.php:115
+msgctxt "page_slug"
+msgid "wishlist"
+msgstr ""
+
+#: templates/wishlist/wishlist.php:26
+msgid "Price"
+msgstr ""
+
+#: templates/wishlist/wishlist.php:24
+msgid "Product"
+msgstr ""
+
+#: includes/class-wishlist-actions-handle.php:131
+msgid "Product is not exists"
+msgstr ""
+
+#: templates/wishlist/wishlist.php:56
+msgid "Remove this item"
+msgstr ""
+
+#: templates/wishlist/empty.php:22
+msgid "Return To Shop"
+msgstr ""
+
+#: includes/class-wishlist-admin.php:133
+msgid "Share by Email"
+msgstr ""
+
+#: templates/wishlist/share.php:14
+msgid "Share on"
+msgstr ""
+
+#: templates/wishlist/share.php:57
+msgid "Share on "
+msgstr ""
+
+#: includes/class-wishlist-admin.php:115
+msgid "Share on Facebook"
+msgstr ""
+
+#: includes/class-wishlist-admin.php:121
+msgid "Share on Google+"
+msgstr ""
+
+#: includes/class-wishlist-admin.php:127
+msgid "Share on Twitter"
+msgstr ""
+
+#: includes/class-wishlist-admin.php:92
+msgid "Show \"Add To Cart\" Button"
+msgstr ""
+
+#: includes/class-wishlist-admin.php:86
+msgid "Show Stock Status"
+msgstr ""
+
+#: includes/class-wishlist-admin.php:80
+msgid "Show Unit Price"
+msgstr ""
+
+#: includes/class-wishlist-admin.php:108
+msgid "Social Share"
+msgstr ""
+
+#. Name of the plugin
+msgid "Soo Wishlist"
+msgstr ""
+
+#: soo-wishlist.php:189
+msgid ""
+"Soo Wishlist is enabled but not effective. It requires WooCommerce in order "
+"to work."
+msgstr ""
+
+#: templates/wishlist/wishlist.php:29
+msgid "Stock status"
+msgstr ""
+
+#: includes/class-wishlist.php:136
+msgid "There is an error occur. Please try again."
+msgstr ""
+
+#: includes/class-wishlist.php:95
+msgid "This product is exists your wishlist"
+msgstr ""
+
+#: includes/class-wishlist-actions-handle.php:92
+msgid "This product is not exists in your wishlist"
+msgstr ""
+
+#: includes/class-wishlist.php:123
+msgid "This product is not exists your wishlist"
+msgstr ""
+
+#. Author of the plugin
+msgid "UIX Themes"
+msgstr ""
+
+#: includes/class-wishlist-admin.php:38 includes/class-wishlist-install.php:117
+msgid "Wishlist"
+msgstr ""
+
+#: includes/class-wishlist-admin.php:73
+msgid "Wishlist Page"
+msgstr ""
+
+#: includes/class-wishlist-admin.php:67
+msgid "Wishlist Pages"
+msgstr ""
+
+#: templates/wishlist/empty.php:16
+msgid "Your wishlist is currently empty."
+msgstr ""

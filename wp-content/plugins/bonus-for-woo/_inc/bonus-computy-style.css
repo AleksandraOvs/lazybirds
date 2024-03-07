@@ -1,0 +1,291 @@
+.computy_skidka_container {
+    max-width: 400px;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}
+.computy_skidka_form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.computy_skidka_link{
+    border-bottom: dashed 1px;
+    cursor: pointer;
+}
+#bfw_remove_cart_point{
+    background-image: url("../img/remove.svg");
+    font-size: 0;
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: right;
+    margin: -3px 0 0 5px;
+}
+#bfw_remove_cart_point:hover{
+    opacity: 0.8;
+}
+/*
+.related.products .how_mach_bonus,
+ .up-sells  .how_mach_bonus{
+    display: none;
+}*/
+.bonus_computy_account.add_coupon{
+    margin: 10px 0;
+}
+.coupon_form{
+    max-width: 100%;
+}
+.loading_coupon{
+    background-image:  url(../img/spiner.svg);
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+}
+.loading_coupon input{
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: default;
+}
+.bonus_computy_account.add_coupon .title{
+    font-weight: 500;
+    display: inline-block;
+}
+.related.products .bfw_social_links{
+    display: none;
+}
+.table-bfw th{border: 1px solid;padding: 5px}
+.table-bfw{border-collapse: collapse}
+.table-bfw thead {
+    font-weight: bold;
+}
+.table-bfw td{border: 1px solid;padding: 5px}
+#computy-bonus-message-cart::before{
+    background-image: url(../img/coin.svg);
+    font-family: auto, serif;
+    color: #0000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 18px;
+    left: 38px;
+    width: 15px;
+    margin: auto;
+}
+#copy_referal{
+    display: inline-block;
+    background: url(../img/copy.svg);
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    margin: 0 0 -7px 4px;
+    cursor: pointer;
+}
+#copy_good{
+    font-size: 12px;
+    padding: 10px;
+    color: #009688;
+}
+.bfw_social_link_item{
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+.bfw_ref_icon_vk{
+    background: url("../img/social/009-vk.svg");
+}
+.bfw_ref_icon_viber{
+    background: url("../img/social/viber.svg");
+}
+.bfw_ref_icon_fb{
+    background: url("../img/social/043-facebook.svg");
+}
+.bfw_ref_icon_tw{
+    background: url("../img/social/013-twitter.svg");
+}
+
+.bfw_ref_icon_tg{
+    background: url("../img/social/telegram.svg");
+    background-size: cover;
+}
+.bfw_ref_icon_whatsapp{
+    background: url("../img/social/007-whatsapp.svg");
+}
+.copy_referal_single{
+    display: inline-block;
+    background: url(../img/copy.svg);
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    cursor: pointer;
+}
+.goodcopy{
+    opacity: 0.5;
+}
+
+
+#bfw-progressbar {
+    background-color: #f3f3f3;
+    border-radius: 13px;
+    padding: 3px;
+}
+#bfw-progressbar > div {
+    background-color: #badb73;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+#bfw-progressbar > div > span{
+    font-size: 14px;
+    position: absolute;
+    top: -2px;
+    font-weight: bold;
+    color: #626262;
+    min-width: 50px;
+    width: max-content;
+}
+.bfw-progressbar-title{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 1.5;
+    color: #53a318;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.bfw-progress-bar{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+.bfw-progress-bar li {
+    flex: 2;
+    margin: 0;
+    position: relative;
+    padding: 0 0 16px 0;
+    font-size: .875rem;
+    line-height: 1.5;
+    color: #53a318;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: visible;
+    min-width: 0;
+    text-align: center;
+    border-bottom: 4px solid #e8e8e8;
+}
+.bfw-progress-bar li:first-child,
+.bfw-progress-bar li:last-child {
+    flex: 1;
+}
+.bfw-progress-bar li:last-child {
+    text-align: right;
+}
+.bfw-progress-bar li:before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #e8e8e8;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    position: absolute;
+    left: calc(50% - 6px);
+    bottom: -13px;
+    z-index: 3;
+    transition: all .2s ease-in-out;
+    box-sizing: unset;
+}
+.bfw-progress-bar li:first-child:before {
+    left: 0;
+}
+.bfw-progress-bar li:last-child:before {
+    right: 0;
+    left: auto;
+}
+.bfw-progress-bar span {
+    transition: opacity .3s ease-in-out;
+}
+.bfw-progress-bar li:not(.is-active) span {
+    opacity: 0;
+}
+.bfw-progress-bar .is-complete:not(:first-child):after,
+.bfw-progress-bar .is-active:not(:first-child):after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: -4px;
+    left: -50%;
+    z-index: 2;
+    border-bottom: 4px solid #53a318;
+}
+.bfw-progress-bar li:last-child span {
+    width: 200%;
+    display: inline-block;
+    position: absolute;
+    left: -100%;
+}
+
+.bfw-progress-bar .is-complete:last-child:after,
+.bfw-progress-bar .is-active:last-child:after {
+    width: 200%;
+    left: -100%;
+}
+
+.bfw-progress-bar .is-complete:before {
+    background-color:#53a318;
+}
+
+.bfw-progress-bar .is-active:before,
+.bfw-progress-bar li:hover:before,
+.bfw-progress-bar .is-hovered:before {
+    background-color: #fff;
+    border-color: #53a318;
+}
+.bfw-progress-bar li:hover:before,
+.bfw-progress-bar .is-hovered:before {
+    transform: scale(1.33);
+}
+
+.bfw-progress-bar li:hover span,
+.bfw-progress-bar li.is-hovered span {
+    opacity: 1;
+}
+
+.bfw-progress-bar:hover li:not(:hover) span {
+    opacity: 0;
+}
+
+.bfw-progress-bar .has-changes {
+    opacity: 1 !important;
+}
+.bfw-progress-bar .has-changes:before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: calc(50% - 4px);
+    bottom: -20px;
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%208%208%22%3E%3Cpath%20fill%3D%22%23ed1c24%22%20d%3D%22M4%200l4%208H0z%22%2F%3E%3C%2Fsvg%3E');
+}
+.computy_copyright{
+    text-align: right;
+    font-size: 12px;
+}
+.computy_copyright a:before{
+    content: '';
+    display: inline-block;
+    background: url(../img/logo-svg.svg) no-repeat;
+    background-size: contain;
+    width: 9px;
+    height: 18px;
+    margin: 0 0 -5px 0;
+
+}

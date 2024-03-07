@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run unit tests all",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "exec",
+                "-it",
+                "mdk-backend",
+                "/bin/bash",
+                "-c",
+                "composer run-script test-unit"
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run unit test current file",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "exec",
+                "-it",
+                "mdk-backend",
+                "/bin/bash",
+                "-c",
+                "vendor/bin/phpunit --colors=always --coverage-html coverage-report-html --bootstrap tests/Unit/bootstrap.php ${relativeFile}"
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}

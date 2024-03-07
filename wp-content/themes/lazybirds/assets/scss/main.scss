@@ -1,0 +1,218 @@
+
+@import '../src/core/vars';
+@import '../src/core/mixins';
+
+// @import '../src/components/header/header.scss';
+// // @import './src/core/_vars.scss';
+// // @import '././scss/main.scss';
+
+
+
+// // Pixel -> rem
+// @mixin font-size($px) {
+//   $rem: $px/$htmlFontSize;
+//   font-size: $rem + rem;
+// }
+
+// @mixin breakpoint-sm { // tablet port + mobile landscape
+//   @media (max-width: map-get($breakpoins, sm)) {
+//     @content;
+//   }
+// }
+
+// @mixin breakpoint-md { // tablet landscape
+//   @media (max-width: map-get($breakpoins, md)) {
+//     @content;
+//   }
+// }
+
+// @mixin trans($values...) {
+//   @if length($values) == 0 {
+//     // 'all .3s ease' as default value
+//     $values: all 0.3s ease-in-out;
+//   }
+
+//   transition: $values;
+// }
+
+
+// @mixin pseudo($display: block, $position: absolute) {
+//   position: $position;
+//   display: $display;
+//   content: '';
+// }
+
+
+
+// Core variables
+// $htmlFontSize: 16;
+
+// $black: #000000;
+// $white: #ffffff;
+// $grey: #E5E5E5;
+
+// yellow
+// $yellow_primary: #F9CE26;
+// $yellow_light: #FCE793;
+// violet
+// $violet_primary: #9401C8;
+// $violet_light: #F0C8FE;
+// $violet_dark: #73009B;
+// $violet_middle: #D783F4;
+// blue
+// $blue_primary: #62CCE3;
+// $blue_light: #C5F4FE;
+// green
+// $green_light: #D6F3D7;
+// Gradients
+// $orange-pink: linear-gradient(90deg, #FDB20D 0%, #FE83DC 100%);
+// $orange-purple: linear-gradient(90deg, #FDB20D 0%, #F558C9 100%);
+// $orange-violet: linear-gradient(90deg, #FFB000 0%, #A808E0 100%);
+// $red-pink: linear-gradient(90deg, #F7462D 0%, #F9337A 100%);
+// $yellow-violet: linear-gradient(90deg, #F9CE26 0%, #A808E0 100%);
+// $yellow-blue: linear-gradient(90deg, #FDB017 0%, #18D4FD 100%);
+
+// $fonts-path: '/wp-content/themes/medialeaks_2k19/assets/public/fonts';
+// $public-images-path: '/wp-content/themes/medialeaks_2k19/assets/public/img';
+
+// Social links
+// $vk-brand: #4E7EC0;
+// $facebook-brand: #2841B1;
+// $twitter-brand: #32D6FD;
+// $telegram-brand: #2EB2EE;
+// $zen-brand: #FF0000;
+// $ok-brand: #FD9D0D;
+
+
+// $breakpoins: (
+//   xs: 480px,
+//   sm-mid: 640px,
+//   sm: 880px,
+//   md: 1024px,
+//   lg: 1200px,
+// );
+
+
+
+*::-webkit-input-placeholder {
+    color: #B3B3B3;
+    opacity: .9;
+    font-family: 'Roboto-Light', sans-serif; 
+}
+*:-moz-placeholder {
+    color: #B3B3B3;
+    opacity: .9;
+    font-family: 'Roboto-Light', sans-serif; 
+}
+*::-moz-placeholder {
+    color: #B3B3B3;
+    opacity: .9;
+    font-family: 'Roboto-Light', sans-serif;
+}
+*:-ms-input-placeholder {
+    color: #B3B3B3;
+    opacity: .9;
+    font-family: 'Roboto-Light', sans-serif; 
+}
+
+
+/*html,*/
+html {
+    // font-size: $htmlFontSize;
+    @include font-size(18);
+}
+body {
+    font-family: 'Roboto-Light', sans-serif;
+    // font-size: $htmlFontSize;
+ 	@include font-size(18);
+    min-width: 320px;
+    height: 100%;
+    position: relative;
+    line-height: 1.6;
+    font-weight: normal;
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+    color: $black;
+}
+
+h1{
+    font-family: 'Roboto-Bold', sans-serif;
+    @include font-size(44);
+}
+h2{
+    font-family: 'Roboto-Bold', sans-serif;
+    @include font-size(29);
+}
+
+hr {
+	border:1px dashed #ccc;
+	height: .1px;
+	background-color: transparent;
+}
+.wrapper {
+	width: 100%;
+	max-width: 846px;
+	margin: 0 auto;
+}
+.logo__proto {
+	background-color: #C4C4C4;
+	padding: .5em 2em;
+	width: 200px;
+	margin: 1em auto;
+	text-align: center;
+}
+
+.banner__proto {
+	background-color: #C4C4C4;
+	width: 100%;
+	height: 371px;
+	margin: 1.3em auto .5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	@include font-size(70);
+}
+
+
+.nav-menu-main {
+	width: 100%;
+	margin: 4em auto;
+	display: flex;
+	align-items: center;
+	.menu-main {
+		width: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		align-content: center;
+		justify-content: space-between;
+		li {
+			a{
+				text-decoration: none;
+				display: block;
+				color: $black;
+				@include font-size(16);
+				text-transform:lowercase;
+			}
+		}
+	}	
+}
+
+
+
+
+/*
+* FOOTER
+*/
+.site-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4em 0;
+	a {
+		text-decoration: none;
+	}
+}
