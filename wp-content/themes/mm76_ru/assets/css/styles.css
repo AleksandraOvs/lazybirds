@@ -1663,7 +1663,7 @@ footer .container__footer .col a:hover {
   z-index: 30;
 }
 
-.woocommerce div.product .single_add_to_cart_button {
+/* .woocommerce div.product .single_add_to_cart_button {
   min-width: 300px !important;
     color: #fff !important;
     font-weight: 500 !important;
@@ -1672,7 +1672,7 @@ footer .container__footer .col a:hover {
     border:1px solid #003996;
     font-size: 16px;
     text-transform: uppercase;
-}
+} */
 
 .variations {
   display: block;
@@ -1741,11 +1741,11 @@ footer .container__footer .col a:hover {
   font-weight: 600;
 }
 
-.product .quantity {
+/* .product .quantity {
   display: none !important;
-}
+} */
 
-.single_add_to_cart_button {
+/* .single_add_to_cart_button {
   line-height: 60px;
   border: 0;
   min-width: 200px;
@@ -1755,7 +1755,7 @@ footer .container__footer .col a:hover {
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-}
+} */
 .single_add_to_cart_button:hover {
   cursor: pointer;
 }
@@ -1833,12 +1833,12 @@ footer .container__footer .col a:hover {
   top: unset;
 }
 
-.woocommerce-variation-add-to-cart {
+/* .woocommerce-variation-add-to-cart {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
-}
+} */
 .woocommerce-variation-add-to-cart .button.laz-wishlist {
   margin-left: 15px;
 }
@@ -2672,12 +2672,12 @@ a.forgot-password {
   margin-bottom: 30px;
 }
 
-.woocommerce div.product .variations_button {
+/* .woocommerce div.product .variations_button {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-start;
   align-items: center;
-}
+} */
 
 .woocommerce div.product .variations_button .button.laz-wishlist {
   align-self: center;
@@ -2921,10 +2921,10 @@ a.button.laz-wishlist.add-to-wishlist-button {
     width: auto;
     margin-left: 15px;
   }
-  .woocommerce div.product .variations_button .single_add_to_cart_button {
+  /* .woocommerce div.product .variations_button .single_add_to_cart_button {
     position: relative !important;
     max-width: unset !important;
-  }
+  } */
   .for-pc {
     display: none !important;
   }

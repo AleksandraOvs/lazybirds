@@ -631,3 +631,58 @@ $(function() {
     });
 
 });
+
+
+$(document).ready(function(){
+    let timeout = undefined
+  
+    function update_cart() {
+      if ( timeout !== undefined ) {
+          clearTimeout( timeout )
+        }
+  
+        timeout = setTimeout(function() {
+          $("[name='update_cart']").removeAttr('disabled')
+          $("[name='update_cart']").trigger("click")
+        }, 500)
+    }
+
+    $('.woocommerce').on('change', 'input.qty', update_cart)
+  
+    setInterval(function(){
+      $(".cart__counter").prop("onclick", null).off("click")
+  
+      $('.cart__counter').on( 'click', 'button.plus, button.minus', function(){
+        var qty = $( this ).siblings('.quantity').find( '.qty' )
+        var val = parseFloat(qty.val()) ? parseFloat(qty.val()) : '0'
+        var max = parseFloat(qty.attr( 'max' ))
+                  
+        var min = parseFloat(qty.attr( 'min' ))
+        var step = parseFloat(qty.attr( 'step' ))
+                  
+  
+        if ( $(this).is( '.plus' ) ) {
+          if ( max && ( max <= val ) ) {
+            qty.val( max );
+          } else {
+            qty.val( val + step );
+          }
+        } else {
+          if ( min && ( min >= val ) ) {
+            qty.val( min )
+          } else if ( val > 1 ) {
+            qty.val( val - step )
+          }
+        }
+      })
+  
+      $('.cart__counter-next').prop('onclick', null).off('click')
+      $('.cart__counter-next').click(update_cart) 
+  
+      $('.cart__counter-prev').prop('onclick', null).off('click')
+      $('.cart__counter-prev').click(update_cart)
+    }, 1000)
+  
+  });
+  
+  

@@ -461,3 +461,51 @@ function custom_empty_cart_message() {
     $html  = '<div class="col-12 offset-md-1 col-md-10"><p class="cart-empty">Твоя корзина пока пуста.</p></div>';
     echo $html;
 }
+
+add_filter( 'gettext', 'woocommerce_rename_coupon_field_on_cart', 10, 3 );
+add_filter( 'gettext', 'woocommerce_rename_coupon_field_on_cart', 10, 3 );
+// Меняем слово Купон на Промокод на странице корзины
+function woocommerce_rename_coupon_field_on_cart( $translated_text, $text, $text_domain ) {
+    // не меняет текст в админке
+    if ( is_admin() || 'woocommerce' !== $text_domain ) {
+        return $translated_text;
+    }
+    if ( 'Coupon:' === $text ) {
+        $translated_text = 'Промокод / сертификат:';
+    }
+ 
+    if ('Coupon has been removed.' === $text){
+        $translated_text = 'Промокод был удалён.';
+    }
+ 
+    if ( 'Apply coupon' === $text ) {
+        $translated_text = 'ОК';
+    }
+ 
+    if ( 'Coupon code' === $text ) {
+        $translated_text = 'Промокод';    
+    } 
+ 
+    return $translated_text;
+}
+ 
+// Меняем слово Купон на Промокод на странице заказа
+add_filter( 'woocommerce_checkout_coupon_message', 'woocommerce_rename_coupon_message_on_checkout' );
+function woocommerce_rename_coupon_message_on_checkout() {
+    return 'Есть промокод?' . ' <a href="#" class="showcoupon">' . __( 'Нажмите, чтобы ввести промокод', 'woocommerce' ) . '</a>';
+}
+ 
+add_filter('woocommerce_coupon_error', 'rename_coupon_label', 10, 3);
+add_filter('woocommerce_coupon_message', 'rename_coupon_label', 10, 3);
+function rename_coupon_label($err, $err_code=null, $something=null){
+ 
+    $err = str_ireplace("Coupon","Промокод ",$err);
+ 
+    return $err;
+}
+ 
+// В деталях заказа изменяем слово купон на Промокод применён
+add_filter( 'woocommerce_cart_totals_coupon_label', 'woocommerce_change_coupon_label',10, 3 );
+function woocommerce_change_coupon_label() {
+    echo 'Промокод применён';
+}
