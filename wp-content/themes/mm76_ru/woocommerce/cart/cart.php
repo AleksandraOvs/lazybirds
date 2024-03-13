@@ -44,7 +44,7 @@ do_action('woocommerce_before_cart'); ?>
             ?>
                     <li class="woocommerce-cart-form__cart-item <?php echo esc_attr(apply_filters('woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key)); ?>">
 
-                        <div class="product-main">
+                        <!-- <div class="product-main"> -->
                             <!-- <div class="product-thumbnail"> -->
                             <?php
                             $thumbnail = apply_filters('woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key);
@@ -52,7 +52,7 @@ do_action('woocommerce_before_cart'); ?>
                             if (!$product_permalink) {
                                 echo '' . $thumbnail; // PHPCS: XSS ok.
                             } else {
-                                printf('<a href="%s">%s</a>', esc_url($product_permalink), $thumbnail); // PHPCS: XSS ok.
+                                printf('<a class="product-thumb" href="%s">%s</a>', esc_url($product_permalink), $thumbnail); // PHPCS: XSS ok.
                             }
                             ?>
                             <!-- </div> -->
@@ -76,7 +76,7 @@ do_action('woocommerce_before_cart'); ?>
                                 }
                                 ?>
                             </div>
-                        </div>
+                        <!-- </div> -->
 
 
                         <div class="product-price" data-title="<?php esc_attr_e('Price', 'woocommerce'); ?>">

@@ -25,7 +25,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	
 
 	<!-- <table cellspacing="0" class="shop_table shop_table_responsive order-total-table"> -->
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
@@ -34,11 +33,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<th><?php _e( 'Total', 'konte' ); ?></th>
 			<td data-title="<?php esc_attr_e( 'Total', 'konte' ); ?>"><?php //wc_cart_totals_order_total_html(); ?></td>
 		</tr> -->
-
-		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
+		
 	<!-- </table> -->
 
 	<div class="wc-proceed-to-checkout">
+		<div class="cashback-text">
+			<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
+		</div>
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 	</div>
 
