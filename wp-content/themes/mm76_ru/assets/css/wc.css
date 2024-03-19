@@ -441,7 +441,7 @@ ul.woocommerce-cart-form__contents__summary__links li a:after {
     color: #17181d;
     font-size: 16px;
     padding: 0;
-    border: none;
+    border: transparent;
     /* width: auto; */
 }
 
