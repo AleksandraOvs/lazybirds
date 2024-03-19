@@ -445,6 +445,12 @@ ul.woocommerce-cart-form__contents__summary__links li a:after {
     /* width: auto; */
 }
 
+.coupon-apply .button:hover{
+    background:transparent;
+    border-color: transparent;
+    color: #ff81c9;
+}
+
 /*cart contents bottom*/
 
 .woocommerce-cart-form__contents__footer {
