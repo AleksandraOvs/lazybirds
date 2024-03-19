@@ -1418,10 +1418,12 @@ footer .container__footer .col a:hover {
   margin-top: 10px;
 }
 .breads * {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   color: #17181D;
 }
+
+
 .breads *.breadcrumb_last {
   position:relative;
   padding-bottom: 5px;
@@ -1442,7 +1444,10 @@ footer .container__footer .col a:hover {
     transition: transform .3s linear;
 }
 
-
+p#breadcrumbs span {
+  display: flex;
+  justify-content: flex-start;
+}
 
 .breads a {
   color: #17181D;
@@ -2997,9 +3002,6 @@ a.button.laz-wishlist.add-to-wishlist-button {
   .woocommerce-account .woocommerce {
     grid-template-columns: 100%;
   }
-  .breads * {
-    font-size: 13px;
-  }
 }
 @media (max-width: 768px) {
   .container__three {
@@ -3084,9 +3086,9 @@ a.button.laz-wishlist.add-to-wishlist-button {
   #breadcrumbs > span {
     font-size: 0;
   }
-  #breadcrumbs > span > * {
+  /* #breadcrumbs > span > * {
     display: none;
-  }
+  } */
   #breadcrumbs > span > *:nth-last-child(2) {
     font-size: 16px;
     display: flex;
