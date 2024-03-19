@@ -221,6 +221,7 @@ button.cart__counter-next {
     height: 20px;
     border: none;
     padding: 0;
+    cursor: pointer;
     background: transparent;
 }
 
