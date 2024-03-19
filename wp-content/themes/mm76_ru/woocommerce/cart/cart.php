@@ -24,11 +24,10 @@ do_action('woocommerce_before_cart'); ?>
     <?php do_action('woocommerce_before_cart_table'); ?>
     <div class="cart woocommerce-cart-form__contents">
         <ul class="woocommerce-cart-form__contents__head">
-            <li class="product-thumbnail">Наименование товара<?php //esc_html_e('Product', 'woocommerce'); ?></li>
-            <li class="product-name">Цена</li>
-            <li class="product-price">Количество<?php //esc_html_e('Price', 'woocommerce'); ?></li>
-            <li class="product-quantity">Сумма<?php //esc_html_e('Quantity', 'woocommerce'); ?></li>
-            <li class="product-subtotal"><?php //esc_html_e('Subtotal', 'woocommerce'); ?></li>
+            <li class="product-name">Наименование товара</li>
+            <li class="product-price">Цена<?php //esc_html_e('Price', 'woocommerce'); ?></li>
+            <li class="product-quantity">Количество<?php //esc_html_e('Quantity', 'woocommerce'); ?></li>
+            <li class="product-subtotal">Сумма<?php //esc_html_e('Subtotal', 'woocommerce'); ?></li>
             <!-- <li class="product-remove">&nbsp;</th> -->
         </ul>
 
@@ -223,6 +222,11 @@ do_action('woocommerce_before_cart'); ?>
      */
     do_action('woocommerce_cart_collaterals');
     ?>
+    <ul class="woocommerce-cart-form__contents__summary__links _mob">
+                <li><a href="/">Условия доставки</a></li>
+                <li><a href="/">Способы оплаты</a></li>
+                <li><a href="/">Возврат товара</a></li>
+            </ul>
 </div>
 
 <?php do_action('woocommerce_after_cart'); ?>

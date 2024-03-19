@@ -23,8 +23,9 @@ function mm76_render_login() {
  
 	// присваиваем содержимое формы переменной и затем возвращаем её, выводить через echo() мы не можем, так как это шорткод
 	$return = '<div class="mm76_login_form_tabs">
-        <a class="active">Войти</a>
-        <a href="'.get_the_permalink(648).'" class="">Зарегистрироваться</a>
+        <a class="active">Вход</a>
+		<span> / </span>
+        <a href="'.get_the_permalink(648).'" class="">Регистрация</a>
     </div>';
  
 	// если возникли какие-либо ошибки, отображаем их

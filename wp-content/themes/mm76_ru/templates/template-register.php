@@ -90,6 +90,7 @@ if ($user_ID) {
 
 <section class="login_form_container">
 
+
         <h1 class="titles">Личный кабинет</h1>
 
         <?php
@@ -134,8 +135,9 @@ if ($user_ID) {
             <div class="container">
 
                 <div class="mm76_login_form_tabs">
-                    <a href="<?= get_the_permalink(642); ?>" class="">Войти</a>
-                    <a class="active">Зарегистрироваться</a>
+                    <a href="<?= get_the_permalink(642); ?>" class="">Вход</a>
+                    <span>/</span>
+                    <a class="active">Регистрация</a>
                 </div>
 
                 <?php if(!isset($errors) || empty($errors)): ?>
