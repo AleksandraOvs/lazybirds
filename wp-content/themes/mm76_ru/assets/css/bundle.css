@@ -229,7 +229,7 @@ section {
 .woocommerce-product-details__short-description {
     font-size: 1rem!important
 }
-
+/* 
 h1.entry-title {
     font-size: 3.3rem!important
 }
@@ -237,14 +237,15 @@ h1.entry-title {
 h2 {
     font-size: 1.4rem!important
 }
+*/
 
 h3 {
-    font-size: 1.53rem!important;
-    font-weight: 600!important;
-    color: #003996;
-    text-transform: uppercase;
-    margin: 1em 0!important
-}
+    font-size: 24px;
+    font-weight: 400;
+    color: #161619;
+    /* text-transform: uppercase; */
+    margin: 1em 0;
+} 
 
 h5 {
     font-size: 1.13rem;
@@ -2394,13 +2395,13 @@ label.focused {
 }
 
 @media only screen and (max-width : 768px) {
-    body,html {
+    /* body,html {
         font-size:14px!important
-    }
+    } */
 
-    h1 {
+    /* h1 {
         font-size: 2.4rem!important
-    }
+    } */
 
     .animated {
         -webkit-transition-property: none!important;

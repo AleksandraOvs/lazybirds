@@ -567,6 +567,49 @@ $(function() {
         }
     });
 
+    var swiperFeatured = new Swiper(".swiperFeatured", {
+        spaceBetween: 16,
+        slidesPerView: 2.5,
+        grabCursor: true,
+        
+        //loop: true,
+        freeMode: true,
+        watchSlidesProgress: true,
+        // navigation: {
+        //     nextEl: ".swiperFeedback-control-prev",
+        //     prevEl: ".swiperFeedback-control-next",
+        // },
+        breakpoints:{
+            1200: {
+                slidesPerView: 4.5,
+                spaceBetween: 16,
+            },
+            1024: {
+                slidesPerView: 3.5,
+                spaceBetween: 16,
+                centeredSlides: false,
+                loop: false,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+            },
+            480: {
+                slidesPerView: 2.5,
+                spaceBetween: 16,
+            },
+            320: {
+                slidesPerView: 2.5,
+                spaceBetween: 16,
+                centeredSlides: true,
+                loop: true,
+              //  loop: true,
+            }
+
+
+        }
+    });
+
     if( $(".variations_form").length > 0 ) {
         setTimeout(function() {
             let variation_data = $(".variations_form").data('product_variations');

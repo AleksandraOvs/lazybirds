@@ -90,7 +90,7 @@ if ($user_ID) {
                     </p>
                     
                     <p class="login-submit">
-                        <input type="submit" id="submitbtn" name="submit" value="Сохранить" />
+                        <input type="submit" class="button" id="submitbtn" name="submit" value="Сохранить" />
                     </p>
 
             </form>

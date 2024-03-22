@@ -90,7 +90,6 @@ if ($user_ID) {
 
 <section class="login_form_container">
 
-
         <h1 class="titles">Личный кабинет</h1>
 
         <?php
@@ -141,9 +140,9 @@ if ($user_ID) {
                 </div>
 
                 <?php if(!isset($errors) || empty($errors)): ?>
-                <div class="tt-info" style="margin-top:40px;">
+                <!-- <div class="tt-info" style="margin-top:40px;">
                     Получи 1000 бонусов на счет за регистрацию (1 бонус = 1 рубль)
-                </div>
+                </div> -->
                 <?php endif; ?>
 
                 <form id="wp_signup_form" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
@@ -178,7 +177,7 @@ if ($user_ID) {
                         </p>
                         
                         <p class="login-submit">
-                            <input type="submit" id="submitbtn" name="submit" value="Зарегистрироваться" />
+                            <input class="button" type="submit" id="submitbtn" name="submit" value="Зарегистрироваться" />
                         </p>
 
                 </form>
