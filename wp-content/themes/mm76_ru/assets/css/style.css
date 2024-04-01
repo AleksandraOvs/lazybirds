@@ -113,6 +113,10 @@ h1 {
     margin: 0;
 }
 
+h1.slide-head_mob {
+    display: none;
+}
+
 .site-title h2 {
     font-size: 34px;
     text-transform: none;
@@ -203,7 +207,6 @@ header .topper_header {
 header .topper_header .th-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 16px;
     color: #003996;
 }
 
@@ -275,6 +278,28 @@ header .header__content .header-left {
 header .header__content .header-left .brg-menu-btn {
     width: 28px;
     margin-right: 20px;
+}
+
+a.brg-menu-btn {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    background: url(../img/svg/burger.svg) no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all .3s linear;
+}
+
+
+a.brg-menu-btn._open {
+    background: url(../img/svg/cancel.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: all .3s linear;
 }
 
 header .header__content .header-left .brg-menu-btn span {
@@ -2032,6 +2057,31 @@ p.login-remember label {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    header nav ul {
+        align-items: flex-start;
+    }
+
+    .header-center {
+        width: 60%;
+    }
+
+    .header-center {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 3;
+    }
+    .header__actions__search.is_active {
+        width: 80%;
+    }
+
+    header .header__content .header-right a.icon {
+        width: 30px;
+        height: 30px;
+    }
+
+
     header .header__content .header-right a.icon {
         width: 26px;
         height: 26px;
@@ -2140,6 +2190,10 @@ p.login-remember label {
 }
 
 @media (min-width: 768px){
+
+    header .topper_header .th-text {
+        font-size: 12px;
+    }
 
     section.hero-section {
         margin-top: 30px;
@@ -2543,8 +2597,6 @@ a.swiperFeedback-slide-link img {
                 line-height: 105%;
                 margin: 0;
             }
-        }
-
         p#breadcrumbs {
             font-size: 14px;
         }
@@ -2554,30 +2606,7 @@ a.swiperFeedback-slide-link img {
             margin-top: 20px;
         }
         
-        header nav ul {
-            align-items: flex-start;
-        }
-    
-        .header-center {
-            width: 60%;
-        }
-    
-        .header-center {
-            position: fixed;
-            right: 0;
-            top: 0;
-            height: 100vh;
-            z-index: 3;
-        }
-        .header__actions__search.is_active {
-            width: 80%;
-        }
-    
-        header .header__content .header-right a.icon {
-            width: 30px;
-            height: 30px;
-        }
-    
+        
         a.search-icon-form .icon {
             width: 30px;
             height: 30px;
