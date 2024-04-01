@@ -62,7 +62,6 @@ function BFWPointsInSinglePage($prize,$percent,$id,$price_width_bonuses,$upto,$p
             if (!empty($val['addkeshback-exclude'])) {
                 $price_width_bonuses .= '<div class="how_mach_bonus">' . sprintf(__('Cashback: %s %s %s', 'bonus-for-woo'), $upto, $ball, (new BfwPoints())->howLabel($upto,$ball)) . '</div>';
             }
-
         } else {
             $price_width_bonuses .= '<div class="how_mach_bonus">' . sprintf(__('Cashback: %s %s %s', 'bonus-for-woo'), $upto, $ball, (new BfwPoints())->howLabel($upto,$ball)) . '</div>';
         }

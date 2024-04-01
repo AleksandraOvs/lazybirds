@@ -75,7 +75,9 @@ function mm76_render_login() {
 		)
 	);
  
-	$return .= '<a class="forgot-password" href="'.get_the_permalink( 651 ).'">Забыли свой пароль?</a></div>';
+	$return .= '<a class="forgot-password" href="'.get_the_permalink( 651 ).'">Забыли свой пароль?</a>
+	<a href="'. site_url('register') . '" class="register-link">Зарегистрироваться</a>
+	</div>';
  
 	// и наконец возвращаем всё, что получилось
 	return $return;

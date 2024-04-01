@@ -12,13 +12,13 @@
 
 get_header();
 ?>
-
+<section class="page-section">
+        <div class="cont">
 <?php
 if (!(is_account_page())) {
 ?>
 
-    <section class="mt-40">
-        <div class="cont">
+    
             <div class="breads">
                 <?php
                 if (function_exists('yoast_breadcrumb')) {
@@ -28,13 +28,11 @@ if (!(is_account_page())) {
             </div>
 
             <h1 class="title-page"><?php the_title(); ?></h1>
-        </div>
-    </section>
+       
 <?php
 }else {
     ?>
-    <section class="mt-40">
-        <div class="cont">
+    
     <div class="breads">
                 <?php
                 if (function_exists('yoast_breadcrumb')) {
@@ -42,20 +40,17 @@ if (!(is_account_page())) {
                 }
                 ?>
             </div>
-        </div>
-    </section>
+      
     <?php
 }
 ?>
-
-
-<section class="mt-40 mb-100">
-    <div class="cont">
-        <?= (get_the_ID() == 8 || get_the_ID() == 9 || get_the_ID() == 539 ? '' : '<div class="text-block">'); ?>
+ 
         <?php the_content(); ?>
-        <?= (get_the_ID() == 8 || get_the_ID() == 9 || get_the_ID() == 539 ? '' : '</div>'); ?>
-    </div>
-</section>
+        
+</div>
+    </section>
+
+       
 
 <?php
 get_footer();

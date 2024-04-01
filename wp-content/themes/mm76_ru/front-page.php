@@ -46,7 +46,7 @@
         
         <?php $block_sellers = get_field('blok_best_sellers'); ?>
         <div class="site-title bestsell-slider">
-            <?= $block_sellers['zagolovok_bloka']; ?>
+            <h2><?= $block_sellers['zagolovok_bloka']; ?></h2>
             <div class="swiperBestsellers-controls">
             <svg class="swiperBestsellers-control-prev" xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 100 40" fill="none">
                 <g clip-path="url(#clip0_150_1226)">
@@ -179,7 +179,8 @@
             <div class="section-header-desc">
                 <span>Кратко :&#41;</span>
             </div>
-            <div class="site-title">О нас</div>
+            <div class="site-title">
+                <h2>О нас</h2></div>
         </div>
 
         <div class="section-about-cont">
@@ -204,7 +205,7 @@
                         <span>Кратко :&#41;</span>
                     </div>
                     <div class="site-title">
-                        О нас
+                       <h2> О нас </h2>
                     </div>
                 </div>
                 <p class="about-text mob_hidden">Lazy Birds — это бренд созданный ленивыми пташками специально для ленивых пташек. Если ты так же как и мы любишь не только работать, но и отдыхать, то мы точно вместе надолго!)</p>

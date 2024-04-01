@@ -24,7 +24,7 @@ if ( ! $notices ) {
 }
 
 ?>
-<ul class="woocommerce-error" role="alert">
+<ul class="woo-notice woocommerce-error" role="alert">
 	<?php foreach ( $notices as $notice ) : ?>
 		<li<?php echo wc_get_notice_data_attr( $notice ); ?>>
 			<span class="svg-icon icon-success size-normal message-icon">

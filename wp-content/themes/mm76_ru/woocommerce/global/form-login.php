@@ -32,11 +32,11 @@ if ( is_user_logged_in() ) {
 
 	<p class="form-row form-row-first">
 		<label for="username"><?php esc_html_e( 'Username or email', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input type="text" class="input-text" name="username" id="username" autocomplete="username" />
+		<input type="text" class="input-text" placeholder="E-mail" name="username" id="username" autocomplete="username" />
 	</p>
 	<p class="form-row form-row-last">
 		<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-		<input class="input-text woocommerce-Input" type="password" name="password" id="password" autocomplete="current-password" />
+		<input class="input-text woocommerce-Input" placeholder="Пароль" type="password" name="password" id="password" autocomplete="current-password" />
 	</p>
 	<div class="clear"></div>
 
@@ -53,7 +53,7 @@ if ( is_user_logged_in() ) {
 	<p class="lost_password">
 		<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
 	</p>
-
+	
 	<div class="clear"></div>
 
 	<?php do_action( 'woocommerce_login_form_end' ); ?>

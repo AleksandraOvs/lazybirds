@@ -68,6 +68,19 @@ global $product, $post;
 				<a href="<?php echo $product->get_permalink() ?>"><?php echo $product->get_title() ?></a>
 			</td>
 
+			<td>
+				<?php
+			$attr = $product->get_attributes() ; // Получаем атрибуты товара
+  
+  foreach ($attr as $key => $value) {
+	   echo wc_attribute_label( $value['name'] ) . ": "; // Выводим наименование атрибута
+	   foreach ( $value->get_terms() as $pa ) { // Выборка значения заданного атрибута
+			echo '<b> '.$pa->name.'</b> '; // Выводим значение атрибута
+	   }
+  }
+  ?>
+			</td>
+
 			<?php if ( $options['show_price'] == 'yes' ) : ?>
 				<td class="product-price">
 					<?php echo $product->get_price_html() ?>

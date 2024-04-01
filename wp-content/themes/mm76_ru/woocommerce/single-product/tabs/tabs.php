@@ -30,7 +30,7 @@ $product_tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
 if ( ! empty( $product_tabs ) ) : ?>
 
-	<div class="woocommerce-tabs wc-tabs-wrapper">
+	<div class="woocommerce-tabs wc-tabs-wrapper" id="woocommerce-tabs">
 		<ul class="tabs wc-tabs" role="tablist">
 			<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
 				<li class="<?php echo esc_attr( $key ); ?>_tab" id="tab-title-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">
@@ -54,3 +54,6 @@ if ( ! empty( $product_tabs ) ) : ?>
 	</div>
 
 <?php endif; ?>
+
+
+					

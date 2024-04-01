@@ -13,7 +13,7 @@ get_header();
 $oid = get_queried_object();
 ?>
 
-<section class="mt-40">
+<section class="page-section">
     <div class="cont">
 
     <div class="breads <?= (is_product() ? 'left' : ''); ?>">
@@ -38,12 +38,6 @@ $oid = get_queried_object();
         }
     ?>
 
-    </div>
-</section>
-
-<section class="mt-40 mb-100">
-    <div class="cont">
-        
         <?php woocommerce_content(); ?>
 
     </div>

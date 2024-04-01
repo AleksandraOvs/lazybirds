@@ -89,14 +89,21 @@ if ($user_ID) {
 <?php get_header(); ?>
 
 <section class="login_form_container">
-
+    <div class="cont">
+    <div class="breads">
+            <?php
+            if (function_exists('yoast_breadcrumb')) {
+                yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+            }
+            ?>
+        </div>
         <h1 class="titles">Личный кабинет</h1>
 
         <?php
             if( isset($_GET['success']) && $_GET['success'] = 1 ):
         ?>
 
-            <div class="cont">
+            
 
                 <div class="container__success">
                     <div class="center-icon">
@@ -124,8 +131,6 @@ if ($user_ID) {
                         <div class="text">Обратно в Личный кабинет</div>
                     </a>
                 </div>
-
-            </div>
 
         <?php
             else:
@@ -156,19 +161,16 @@ if ($user_ID) {
                         <div class="email_requests"></div>
 
                         <p class="login-mm76">
-                            <input type="text" name="email" id="email" value="<?= isset( $_REQUEST['email'] ) ? $_REQUEST['email']  : (isset($_GET['email']) ? $_GET['email'] : '') ?>" class="<?= (isset( $errors['email'] ) ? 'invalid' : ''); ?>" required>
-                            <span>E-mail</span>
+                            <input type="text" name="email" id="email" placeholder="E-mail" value="<?= isset( $_REQUEST['email'] ) ? $_REQUEST['email']  : (isset($_GET['email']) ? $_GET['email'] : '') ?>" class="<?= (isset( $errors['email'] ) ? 'invalid' : ''); ?>" required>
                         </p>
 
                         <p class="login-mm76">
-                            <input type="text" name="uname" id="uname" value="<?= isset( $_REQUEST['uname'] ) ? $_REQUEST['uname']  : '' ?>" required>
-                            <span>Имя</span>
+                            <input type="text" name="uname" placeholder="Имя" id="uname" value="<?= isset( $_REQUEST['uname'] ) ? $_REQUEST['uname']  : '' ?>" required>
                             <span class="error"><?= isset( $errors['uname'] ) ? $errors['uname']  : '' ?></span>
                         </p>
 
                         <p class="login-mm76">
-                            <input type="text" name="surname" id="surname" value="<?= isset( $_REQUEST['surname'] ) ? $_REQUEST['surname']  : '' ?>" required>
-                            <span>Фамилия</span>
+                            <input type="text" name="surname" placeholder="Фамилия" id="surname" value="<?= isset( $_REQUEST['surname'] ) ? $_REQUEST['surname']  : '' ?>" required>
                             <span class="error"><?= isset( $errors['surname'] ) ? $errors['surname']  : '' ?></span>
                         </p>
 
@@ -186,7 +188,7 @@ if ($user_ID) {
         <?php
             endif;
         ?>
-
+    </div>
 </section>
 
 <?php

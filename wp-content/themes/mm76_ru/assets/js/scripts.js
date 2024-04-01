@@ -196,7 +196,7 @@ $(function() {
             if( $(this).hasClass('left__box_hidden') ) {
                 px = '-290px';
             } else {
-                px = '-500px';
+                px = '-700px';
             }
 
         }
@@ -225,7 +225,7 @@ $(function() {
                 if( $(this).hasClass('left__box_hidden') ) {
                     px = '-290px';
                 } else {
-                    px = '-500px';
+                    px = '-700px';
                 }
 
             }

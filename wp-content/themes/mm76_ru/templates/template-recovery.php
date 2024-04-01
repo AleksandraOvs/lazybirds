@@ -124,8 +124,7 @@ if ($user_ID) {
                     <?php endif; ?>
 
                     <p class="login-mm76">
-                        <input type="email" name="email" id="email2" value="<?= isset($_GET['email']) ? $_GET['email']  : '' ?>" class="<?= (isset($errors['pass']) ? 'invalid' : ''); ?>" required>
-                        <span>Ваш E-Mail</span>
+                        <input type="email" name="email" id="email2" placeholder="E-Mail" value="<?= isset($_GET['email']) ? $_GET['email']  : '' ?>" class="<?= (isset($errors['pass']) ? 'invalid' : ''); ?>" required>
                     </p>
 
                     <p class="login-submit">

@@ -85,8 +85,7 @@ if ($user_ID) {
                     <?php endif; ?>
 
                     <p class="login-mm76">
-                        <input type="password" name="paassword" id="paassword" value="<?= isset( $_REQUEST['paassword'] ) ? $_REQUEST['paassword']  : '' ?>" class="<?= (isset( $errors['pass'] ) ? 'invalid' : ''); ?>" required>
-                        <span>Ваш пароль</span>
+                        <input type="password" name="paassword" placeholder="Ваш пароль" id="paassword" value="<?= isset( $_REQUEST['paassword'] ) ? $_REQUEST['paassword']  : '' ?>" class="<?= (isset( $errors['pass'] ) ? 'invalid' : ''); ?>" required>
                     </p>
                     
                     <p class="login-submit">

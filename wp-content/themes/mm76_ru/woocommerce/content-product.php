@@ -50,7 +50,8 @@ $product_id =  $product->get_id();
 			echo '<div class="offer_perc">-'. $maximumper . '%</div>';
 		}
 	?>
-	<?php
+
+		<?php
 		$wl = new Soo_Wishlist_List();
 		if( $wl->in_wishlist( $product ) !== false ) {
 			?>
@@ -71,6 +72,7 @@ $product_id =  $product->get_id();
 			<?php
 		}
 	?>
+	
 	<a class="productThumb-link" href="<?= get_the_permalink( $product->get_id() ); ?>">
 	<?php
 	/**

@@ -25,9 +25,12 @@ do_action('woocommerce_before_cart'); ?>
     <div class="cart woocommerce-cart-form__contents">
         <ul class="woocommerce-cart-form__contents__head">
             <li class="product-name">Наименование товара</li>
-            <li class="product-price">Цена<?php //esc_html_e('Price', 'woocommerce'); ?></li>
-            <li class="product-quantity">Количество<?php //esc_html_e('Quantity', 'woocommerce'); ?></li>
-            <li class="product-subtotal">Сумма<?php //esc_html_e('Subtotal', 'woocommerce'); ?></li>
+            <li class="product-price">Цена<?php //esc_html_e('Price', 'woocommerce'); 
+                                            ?></li>
+            <li class="product-quantity">Количество<?php //esc_html_e('Quantity', 'woocommerce'); 
+                                                    ?></li>
+            <li class="product-subtotal">Сумма<?php //esc_html_e('Subtotal', 'woocommerce'); 
+                                                ?></li>
             <!-- <li class="product-remove">&nbsp;</th> -->
         </ul>
 
@@ -43,7 +46,7 @@ do_action('woocommerce_before_cart'); ?>
             ?>
                     <li class="woocommerce-cart-form__cart-item <?php echo esc_attr(apply_filters('woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key)); ?>">
 
-                        <!-- <div class="product-main"> -->
+                        <div class="product-main">
                             <!-- <div class="product-thumbnail"> -->
                             <?php
                             $thumbnail = apply_filters('woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key);
@@ -75,7 +78,7 @@ do_action('woocommerce_before_cart'); ?>
                                 }
                                 ?>
                             </div>
-                        <!-- </div> -->
+                        </div>
 
 
                         <div class="product-price" data-title="<?php esc_attr_e('Price', 'woocommerce'); ?>">
@@ -162,25 +165,47 @@ do_action('woocommerce_before_cart'); ?>
         <?php do_action('woocommerce_cart_contents'); ?>
 
         <div class="woocommerce-cart-form__contents__bottom">
-            <ul class="woocommerce-cart-form__contents__summary__links">
-                <li><a href="/">Условия доставки</a></li>
-                <li><a href="/">Способы оплаты</a></li>
-                <li><a href="/">Возврат товара</a></li>
-            </ul>
+            <div class="woocommerce-cart-form__contents__bottom__info">
+                <ul class="woocommerce-cart-form__contents__summary__links">
+                    <li><a href="/">Условия доставки</a></li>
+                    <li><a href="/">Способы оплаты</a></li>
+                    <li><a href="/">Возврат товара</a></li>
+                </ul>
 
-            <?php if (wc_coupons_enabled()) { ?>
-                <div class="coupon">
-                    <label for="coupon_code"><?php esc_html_e('Coupon:', 'woocommerce'); ?></label>
+                <div class="woocommerce-cart-form__contents__bottom__for-users">
+                    <?php
+                    if (is_user_logged_in()) {
+                        echo '<p>У тебя 1000 баллов</p>
+  <p>В этом заказе можно списать 1000 баллов</p>';
+                    } else {
+                        echo '<p class="cart-contents-bottom__for-users">Чтобы применить и/или начислить кэшбек необходимо <a href="' . site_url('login') . '">войти</a> или <a href="' . site_url('register') . '">зарегистрироваться</a></p>';
+                    }
+                    ?>
+                </div>
+            </div>
+
+
+
+
+            <?php //if (wc_coupons_enabled()) { 
+            ?>
+            <!-- <div class="coupon">
+                    <label for="coupon_code"><?php //esc_html_e('Coupon:', 'woocommerce'); 
+                                                ?></label>
 
                     <div class="coupon-apply">
-                        <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e('Coupon code', 'woocommerce'); ?>" />
+                        <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php //esc_attr_e('Coupon code', 'woocommerce'); 
+                                                                                                                        ?>" />
 
-                        <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e('Apply coupon', 'woocommerce'); ?>"><?php esc_html_e('Apply coupon', 'woocommerce'); ?></button>
+                        <button type="submit" class="button" name="apply_coupon" value="<?php //esc_attr_e('Apply coupon', 'woocommerce'); 
+                                                                                        ?>"><?php esc_html_e('Apply coupon', 'woocommerce'); ?></button>
                     </div>
 
-                    <?php do_action('woocommerce_cart_coupon'); ?>
-                </div>
-            <?php } ?>
+                    <?php //do_action('woocommerce_cart_coupon'); 
+                    ?>
+                </div> -->
+            <?php //} 
+            ?>
 
             <div class="cart-totals">
                 <div class="cart-subtotal">
@@ -195,7 +220,7 @@ do_action('woocommerce_before_cart'); ?>
             </div>
         </div>
 
-        <button type="submit" class="button" name="update_cart" value="<?php esc_attr_e('Update cart', 'woocommerce'); ?>"><?php esc_html_e('Update cart', 'woocommerce'); ?></button>
+        <button type="submit" class="button update_cart" name="update_cart" value="<?php esc_attr_e('Update cart', 'woocommerce'); ?>"><?php esc_html_e('Update cart', 'woocommerce'); ?></button>
 
 
         <?php do_action('woocommerce_cart_actions'); ?>
@@ -223,10 +248,10 @@ do_action('woocommerce_before_cart'); ?>
     do_action('woocommerce_cart_collaterals');
     ?>
     <ul class="woocommerce-cart-form__contents__summary__links _mob">
-                <li><a href="/">Условия доставки</a></li>
-                <li><a href="/">Способы оплаты</a></li>
-                <li><a href="/">Возврат товара</a></li>
-            </ul>
+        <li><a href="/">Условия доставки</a></li>
+        <li><a href="/">Способы оплаты</a></li>
+        <li><a href="/">Возврат товара</a></li>
+    </ul>
 </div>
 
 <?php do_action('woocommerce_after_cart'); ?>

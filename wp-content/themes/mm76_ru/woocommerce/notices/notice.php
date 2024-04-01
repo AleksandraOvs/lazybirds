@@ -26,10 +26,7 @@ if ( ! $notices ) {
 ?>
 
 <?php foreach ( $notices as $notice ) : ?>
-	<div class="woocommerce-info"<?php echo wc_get_notice_data_attr( $notice ); ?>>
-		<span class="svg-icon icon-success size-normal message-icon">
-			<i class="fa-regular fa-circle-question"></i>
-		</span>
+	<div class="woo-notice woocommerce-info"<?php echo wc_get_notice_data_attr( $notice ); ?>>
 		<?= $notice['notice']; ?>
 		<span class="svg-icon icon-close size-normal close-message">
 			<i class="fa-solid fa-xmark"></i>

@@ -29,7 +29,7 @@ function translate_str($translated) {
     $translated = str_ireplace('Product', 'Продукт', $translated);
     $translated = str_ireplace('Stock status', 'Наличие', $translated);
     $translated = str_ireplace('In stock', 'В наличии', $translated);
-    // $translated = str_ireplace('Cashback: ', 'Кэшбэк:', $translated);
+    //$translated = str_ireplace('Cashback: ', 'Твой кешбэк за эту покупку:', $translated);
     // $translated = str_ireplace('up to', ' до', $translated);
      return $translated;
 }
@@ -67,6 +67,16 @@ function refresh_payment_methods(){
     <?php
 }
 
+/***
+ * удалить краткое описание из админки 
+ */
+
+ function remove_short_description() {
+    remove_meta_box( 'postexcerpt', 'product', 'normal');
+}
+add_action('add_meta_boxes', 'remove_short_description', 999);
+
+
 /**
  * # Поменять название у кнопки 
  */
@@ -103,6 +113,26 @@ function share_action() {
 }
 
 /**
+ * # Отключаем табы в карточке товара, будем использовать свои  
+ */
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 100 );
+function woo_remove_product_tabs( $tabs ) {
+   /** # Отключаем закладку Описание Elementor */  
+   unset( $tabs['description'] );       
+   /** # Отключаем закладку Отзывы */  
+   unset( $tabs['reviews'] );
+   /** # Отключаем закладку Дополнительная информация */               
+   unset( $tabs['additional_information'] );
+
+   return $tabs;
+}
+
+/***
+ * Отключает похожие товары
+ */
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
+
+/**
  * # Добавляем WishList к кнопке купить  
  */
 add_action( 'woocommerce_before_add_to_cart_button', 'add_laz_wishlist', 10);
@@ -122,15 +152,23 @@ function laz_wishlist(){
     $product_title = $product->get_title();  
     /** # Получаем слаг товара */
     $product_slug = $product->get_slug();  
+    $product_atts = $product->get_attributes();
     /** # Иконка */
-    $iheart   =  get_stylesheet_directory_uri() . '/assets/img/svg/heart.svg';  
-    $iheart2   =  get_stylesheet_directory_uri() . '/assets/img/svg/heart_fill.svg';  
+    $iheart   =  '<svg width="39" height="33" viewBox="0 0 39 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M28.4973 24.9746C24.222 28.7188 19.849 31.1518 19.25 31.4754C18.651 31.1518 14.278 28.7188 10.0027 24.9746C5.49194 21.0244 1.50042 15.9705 1.5 10.6571C1.50296 8.2294 2.46866 5.90198 4.18532 4.18532C5.90198 2.46866 8.22941 1.50296 10.6571 1.5C13.7676 1.50024 16.4164 2.83043 18.0505 5.00673L19.25 6.60432L20.4495 5.00673C22.0836 2.83043 24.7324 1.50024 27.8429 1.5C30.2706 1.50296 32.598 2.46866 34.3147 4.18532C36.0315 5.90217 36.9973 8.22994 37 10.6579C36.9992 15.971 33.0078 21.0246 28.4973 24.9746Z" stroke="#FF81C9" stroke-width="3"/>
+    </svg>
+    ';
+    $iheart2   =  '<svg width="40" height="34" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M39.25 11.1562C39.25 23.1875 21.4111 32.9259 20.6514 33.3281C20.4512 33.4358 20.2274 33.4922 20 33.4922C19.7726 33.4922 19.5488 33.4358 19.3486 33.3281C18.5889 32.9259 0.75 23.1875 0.75 11.1562C0.753184 8.33101 1.87692 5.62241 3.87466 3.62466C5.87241 1.62692 8.58101 0.503184 11.4062 0.5C14.9555 0.5 18.063 2.02625 20 4.60609C21.937 2.02625 25.0445 0.5 28.5938 0.5C31.419 0.503184 34.1276 1.62692 36.1253 3.62466C38.1231 5.62241 39.2468 8.33101 39.25 11.1562Z" fill="#FF81C9"/>
+    </svg>
+    ';  
 
     $wl = new Soo_Wishlist_List();
 
     if( $wl->in_wishlist( $product ) !== false ) {
         $wishlist = sprintf(
             '  
+            <div class="wishlist-added">
              <a href="%1$s" 
              data-product_id="%2$s" 
              data-product_type="variable" 
@@ -138,15 +176,18 @@ function laz_wishlist(){
              rel="nofollow">
                %3$s
              </a>
+             <p>Добавлено в <a href="' . site_url('wishlist') . '">Избранное</a></p>
+             </div>
             ',
             '/wishlist/',
             $product_id,
-            $icon ="<img width=30 src='$iheart2'>",
+            $icon = $iheart2,
             // $wcwl_count_products =  soow_count_products() == 0 ? " ":  "<span class='show_count wishlist-count'>" .soow_count_products(). "</span>"  
         );
     } else {
         $wishlist = sprintf(
             '  
+            <div class="wishlist-notadded">
              <a href="%1$s" 
              data-product_id="%2$s" 
              data-product_type="variable" 
@@ -154,10 +195,12 @@ function laz_wishlist(){
              rel="nofollow">
                %3$s
              </a>
+             <p>Добавить в <a href="' . site_url('wishlist') . '">Избранное</a></p>
+             </div>
             ',
             $add_wishlist_url = '/shop/' . $product_slug . '/?add_to_wishlist=' . $product_id,
             $product_id,
-            $icon ="<img width=30 src='$iheart'>",
+            $icon = $iheart,
             // $wcwl_count_products =  soow_count_products() == 0 ? " ":  "<span class='show_count wishlist-count'>" .soow_count_products(). "</span>"  
         );
     }
@@ -295,98 +338,6 @@ function product_gallery() {
     }
 }*/
 
-/**
- * # Отключаем табы в карточке товара, будем использовать свои  
- */
-add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 100 );
-function woo_remove_product_tabs( $tabs ) {
-   /** # Отключаем закладку Описание Elementor */  
-   unset( $tabs['description'] );       
-   /** # Отключаем закладку Отзывы */  
-   unset( $tabs['reviews'] );
-   /** # Отключаем закладку Дополнительная информация */               
-   unset( $tabs['additional_information'] );
-
-   return $tabs;
-}
-
-/**
- * # Новые вкладки табы 
- */
-add_action( 'woocommerce_after_single_product_summary', 'woo_product_tabs_content', 10  );
-function woo_product_tabs_content() {
-    global $product;
-    global $post;   
-
-    /** # Получаем ID товара */
-    $product_id = $product->get_id();  
-    $product_tabs = [
-        'tab-description' => 'Описание',
-        'tab-product-care'=>'Уход',
-        // 'tab-product-reviews'=>'Отзывы',
-    ];
-
-    $comments_number =  get_comments_number('0', '1', '%'); 
-
-    $out_product_tabs = "";
-    $out_product_tabs .= "<ul class='product-tabs' role='tablist'>";
-    $count = 0;
-    foreach ($product_tabs as $tab ) {
-         $count++;
-
-         if ($count == 1) {
-            $out_product_tabs .= "<li class='product-tab is-active' aria-controls='tab-$count'>$tab</li>";
-         }
-         elseif($count == 2) {
-            $out_product_tabs .= "<li class='product-tab' aria-controls='tab-$count'>$tab</li>";
-         }
-         // elseif($count == 3) {
-         //    $out_product_tabs .= "<li class='product-tab' id='tab-review' aria-controls='tab-$count'>$tab ($comments_number)</li>";
-         // }
-    }
-    $out_product_tabs .= "</ul>";
-
-    /** # Вкладка  — Описание товара (Элементор) */
-    $description_content  = apply_filters( 'the_content', get_the_content() );
-
-    /** # Вкладка  — Уход */
-    //$product_care   =  wpautop(carbon_get_the_post_meta('cbf_product_care'));
-    $product_care = get_field('uhod', $product_id);
-
-    /** # Вкладка отзывы */
-    //$reviews =  add_product_reviews($product_id);
-
-    $product_tabs_content = [
-        'tab-content-description' => $description_content,
-        'tab-content-product-care' => $product_care,
-        // 'tab-content-product-reviews' => $reviews,
-    ];            
-    $out_product_tabs_content = "";
-    $out_product_tabs_content .= "<div class='product-tabs-content '>";
-
-    $count=0;
-    if ($product_tabs_content) {
-        
-        foreach ($product_tabs_content as $key => $tab_content) {
-            $count++;
-            if ($count == 1){
-                $out_product_tabs_content .= "<div class='product-tab-entry-content is-active $key' id='$key' aria-controls='tab-$count'> $tab_content </div>";
-            }elseif($count == 2){
-                $out_product_tabs_content .= "<div class='product-tab-entry-content $key' id='$key' aria-controls='tab-$count'> $tab_content </div>";
-            }
-            // elseif($count == 3){
-            //     $out_product_tabs_content .= "<div class='product-tab-entry-content $key' id='$key' aria-controls='tab-$count'> $tab_content </div>";
-            // }                        
-        }
-    }
-
-    $out_product_tabs_content .= "</div>";
-    echo '<div class="product-content wrapper">';
-    echo $out_product_tabs;
-    echo $out_product_tabs_content;
-    comment_form();
-    echo '</div>';
-};
 
 /**
  * # Удалить купоны на странице чекаут 
@@ -458,7 +409,7 @@ function add_whish_in_profile( $menu_links ){
 remove_action( 'woocommerce_cart_is_empty', 'wc_empty_cart_message', 10 );
 add_action( 'woocommerce_cart_is_empty', 'custom_empty_cart_message', 10 );
 function custom_empty_cart_message() {
-    $html  = '<div class="col-12 offset-md-1 col-md-10"><p class="cart-empty">Твоя корзина пока пуста.</p></div>';
+    $html  = '<div class="empty-cart"><p>Твоя корзина пока пуста.</p></div>';
     echo $html;
 }
 
@@ -508,4 +459,13 @@ function rename_coupon_label($err, $err_code=null, $something=null){
 add_filter( 'woocommerce_cart_totals_coupon_label', 'woocommerce_change_coupon_label',10, 3 );
 function woocommerce_change_coupon_label() {
     echo 'Промокод применён';
+}
+
+add_filter('gettext', 'translate_text');
+add_filter('ngettext', 'translate_text');
+ 
+function translate_text($translated) {
+$translated = str_ireplace('Подытог', 'Сумма', $translated);
+$translated = str_ireplace('Возможно Вас также заинтересует&hellip;', 'Вместе с этим товаром покупают', $translated);
+return $translated;
 }
