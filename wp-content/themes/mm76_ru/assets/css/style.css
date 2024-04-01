@@ -681,6 +681,10 @@ div#loadmore {
     display: none;
 }
 
+.bestsellers .cont .mt-30 {
+    margin-top: 30px;
+}
+
 /*SWIPERS*/
 section.section-feedback.mt-100 .cont {
     width: 100%;
