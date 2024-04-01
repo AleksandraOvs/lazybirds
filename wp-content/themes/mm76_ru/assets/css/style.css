@@ -118,10 +118,12 @@ h1.slide-head_mob {
 }
 
 .site-title h2 {
-    font-size: 34px;
+    font-size: 40px;
     text-transform: none;
     font-weight: 400;
     color: var(--bgray);
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 h3{
@@ -662,6 +664,9 @@ h1.slide-head {
   .collections-grid.tablet-vis {
     display: none;
 }
+div#loadmore {
+    margin-top: 30px;
+}
   
   /*BESTSELLERS*/
 
@@ -1027,16 +1032,20 @@ h1.slide-head_mob {
 }
 
 .section-about-cont__list{
+    display: grid;
+    row-gap: 20px;
     list-style: none;
     margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 0;
 }
 
 .section-about-cont__list li{
     padding-left: 15%;
     padding-right: 0;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 2%;
+    padding-bottom: 20px;
 }
 
 ul.section-about-cont__list .aboutList {
@@ -1271,6 +1280,7 @@ section.section-collections .cont .section-header {
 label p.input-row__desc {
     margin: 0;
     margin-top: 0;
+    font-size: 18px;
 }
 
 .form__feed form .r-form .f-ddescr {
@@ -1353,6 +1363,13 @@ label p.input-row__desc {
     align-items: flex-start;
   }
 
+  .form__feed form .r-form label input {
+    width: 21px;
+    height: 21px;
+    border: 0.5px solid #8EBCEE;
+    margin-right: 7px;
+}
+
 
 /*FAQ*/
 
@@ -1360,6 +1377,10 @@ label p.input-row__desc {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+}
+
+.section-faq-l .site-title h2 {
+    margin-bottom: 40px;
 }
 
 .section-faq-l {
@@ -2414,6 +2435,7 @@ a.swiperFeedback-slide-link img {
         background: url(../img/second.jpg) no-repeat;
         background-size: cover;
         margin-top: 30px;
+        margin-bottom: 40px;
     }
     /* 
     .slide-content-top {

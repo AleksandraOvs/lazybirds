@@ -179,8 +179,8 @@
             <div class="section-header-desc">
                 <span>Кратко :&#41;</span>
             </div>
-            <div class="site-title">
-                <h2>О нас</h2></div>
+            
+                <h2>О нас</h2>
         </div>
 
         <div class="section-about-cont">
@@ -345,10 +345,11 @@
 <section class="section-faq mb-100 mt-100">
     <div class="cont section-faq__inner">   
         <div class="section-faq-l">
-             <div class="site-title">
-            Частые вопросы
+            <div class="site-title">
+                <h2>Частые вопросы</h2>
             </div>
-            <p>Несколько строчек, подзаголовок</p>
+             
+            
             <?php
                     $faqs = get_field('faq_items');
                     if( $faqs ) {  
