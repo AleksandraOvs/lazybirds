@@ -348,7 +348,6 @@
              <div class="site-title">
             Частые вопросы
             </div>
-            <p>Несколько строчек, подзаголовок</p>
             <?php
                     $faqs = get_field('faq_items');
                     if( $faqs ) {  
