@@ -1250,6 +1250,12 @@ ul.woocommerce-cart-form__contents__summary__links._mob {
   margin-top: 0;
   font-size: 34px;
 }
+
+.title-page.my-account, .title-page.my-account-orders, .my-account-edit {
+  text-align: center;
+  display: flex;
+  font-size: 34px;
+}
 }
 
 @media (max-width: 768px){
