@@ -51,14 +51,11 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 								<a href="<?php echo esc_url( $order->get_view_order_url() ); ?>">
 									<?php echo esc_html( _x( '#', 'hash before order number', 'woocommerce' ) . $order->get_order_number() ); ?>
 								</a>
-								<td class="product-thumb">
-    <?php $thumb = get_the_post_thumbnail_url($item['product_id'], 'shop_catalog'); ?>
-    <?php
-        if(!empty($thumb)) {
-           echo "<img src='{$thumb}'/>";
-        }
-    ?>
-</td>
+								<?php
+								if( is_a($product, 'WC_Product') ) {
+   echo $product->get_image('thumbnail');
+}
+?>
 							<?php elseif ( 'order-date' === $column_id ) : ?>
 								<time datetime="<?php echo esc_attr( $order->get_date_created()->date( 'c' ) ); ?>"><?php echo esc_html( wc_format_datetime( $order->get_date_created() ) ); ?></time>
 
