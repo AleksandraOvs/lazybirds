@@ -256,10 +256,31 @@ ul.products li.product .product-thumbnail-zoom {
   /*PRODUCT CARD*/
 
   .product {
+    position: relative;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 20px;
     align-items: flex-start;
+}
+
+.product .onsale {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  left: 10px;
+}
+
+.product .onsale {
+  position: absolute;
+  display: block;
+  background-image: url(../img/svg/stroke.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 10px;
+  z-index: 5;
+  top: 10px;
+  left: 10px;
 }
 
 h1.product_title {
