@@ -1245,6 +1245,11 @@ ul.woocommerce-cart-form__contents__summary__links._mob {
   display: grid;
   grid-template-columns: 40% 18% 18% 18% 6%;
 }
+
+.page-section .cont .woocommerce .woocommerce-MyAccount-content h2.title-page {
+  margin-top: 0;
+  font-size: 34px;
+}
 }
 
 @media (max-width: 768px){
