@@ -201,7 +201,7 @@ header .topper_header {
     transition: transform .3s linear;
 }
 
-.header-right a:hover{
+.header-right a.icon:hover{
     transform: scale(1.2);
     transition: transform .3s linear;
 }
@@ -2116,7 +2116,8 @@ p.login-remember label {
         position: fixed;
     transform: translateX(100%);
     opacity: 0;
-    width: 40%;
+    width: 60%;
+    z-index:25;
     right: 0;
     height: 100%;
     padding: 20% 15px 5% 15px;
@@ -2136,6 +2137,7 @@ p.login-remember label {
         padding: 0;
         flex-direction: column;
         display: flex;
+        row-gap: 10px;
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
@@ -2909,6 +2911,10 @@ a.swiperFeedback-slide-link img {
         .size-table ul li {
             width: auto;
             text-align: center;
+        }
+
+        ul.size-table_head li {
+            padding: 15px 10px;
         }
     }
     

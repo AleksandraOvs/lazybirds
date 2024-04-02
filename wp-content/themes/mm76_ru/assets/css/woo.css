@@ -2,7 +2,6 @@
 /*WOO PAGE*/
 .woocommerce {
   position: relative;
-  padding-top: 40px;
 }
 
 .woocommerce .return-to-shop {
@@ -654,6 +653,7 @@ li.wcboost-variation-swatches__item.not-aviable.selected span{
 
 .tab-head h3 {
   margin: 0;
+  font-size: 18px;
 }
 
 .tab-head__button {
@@ -1246,7 +1246,7 @@ section.page-section .cont .product .summary.entry-summary .additional-product-i
 .woocommerce-variation-add-to-cart {
   position: fixed;
   width: 100%;
-  z-index: 20;
+  z-index: 2;
   bottom:30px;
   margin-top: 20px;
   display: flex;
@@ -1372,5 +1372,9 @@ ul.woocommerce-cart-form__contents__summary__links{
 
 .cart-collaterals .wc-proceed-to-checkout .checkout-button.button{
   width:100%;
+}
+
+.tab-head h3 {
+  font-size: 16px;
 }
 }
