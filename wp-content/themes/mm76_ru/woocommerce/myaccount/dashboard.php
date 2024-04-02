@@ -29,7 +29,7 @@ $allowed_html = array(
 );
 ?>
 
-<h1 class="title-page my-account"><?php the_title(); ?></h1>
+<h2 class="title-page my-account"><?php the_title(); ?></h2>
 <div class="hello_users_account">
 	<?php
 	printf(
