@@ -820,7 +820,7 @@ div#woocommerce-tabs .tab-head {
   margin-top: 60px;
 }
 
-h1.title-page.my-account:after{
+h2.title-page.my-account:after{
   content:'';
   display: block;
   width: 85px;
