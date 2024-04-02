@@ -21,6 +21,8 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 
+<h2 class="title-page my-account-orders">Мои заказы<?php //echo apply_filters( 'woocommerce_my_account_my_orders_title', esc_html__( 'Recent orders', 'woocommerce' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
+
 <?php if ( $has_orders ) : ?>
 
 	<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
@@ -96,8 +98,6 @@ do_action( 'woocommerce_before_account_orders', $has_orders ); ?>
 	<?php endif; ?>
 
 <?php else : ?>
-
-	<h2 class="title-page my-account-orders">Мои заказы<?php //echo apply_filters( 'woocommerce_my_account_my_orders_title', esc_html__( 'Recent orders', 'woocommerce' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
 
 	<?php //wc_print_notice( esc_html__( 'No order has been made yet.', 'woocommerce' ) . ' <a class="woocommerce-Button button' . esc_attr( $wp_button_class ) . '" href="' . esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ) . '">' . esc_html__( 'Browse products', 'woocommerce' ) . '</a>', 'notice' ); // phpcs:ignore WooCommerce.Commenting.CommentHooks.MissingHookComment ?>
 	<p style="text-align: center; margin:0; margin-top:50px;">
