@@ -1661,6 +1661,10 @@ section.page-section .cont .title-page {
     color: var(--bgray);
 }
 
+.page-section .cont .woocommerce .woocommerce-MyAccount-content h2.title-page {
+    margin-top: 0;
+}
+
 
 /*MY ACCOUNT*/
 
