@@ -396,6 +396,15 @@ section.page-section .cont .product .summary.entry-summary {
   flex-direction: column;
 }
 
+.summary.entry-summary form.cart {
+  display: flex;
+  align-items: center;
+}
+
+.summary.entry-summary form.cart .cart__counter{
+  display: none;
+}
+
 /*--cart counter*/
 
 /**
