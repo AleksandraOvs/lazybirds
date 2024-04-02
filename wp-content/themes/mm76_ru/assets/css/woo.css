@@ -396,14 +396,10 @@ section.page-section .cont .product .summary.entry-summary {
   flex-direction: column;
 }
 
-.summary.entry-summary form.cart {
+/* .summary.entry-summary form.cart {
   display: flex;
   align-items: center;
-}
-
-.summary.entry-summary form.cart .cart__counter{
-  display: none;
-}
+} */
 
 /*--cart counter*/
 
@@ -508,6 +504,11 @@ button.cart__counter-next svg {
     position: relative;
     vertical-align: -0.2em;
 }
+
+.summary.entry-summary form.cart .cart__counter{
+  display: none;
+}
+
 
 .entry-summary .product_meta {
   display: none;
