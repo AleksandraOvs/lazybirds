@@ -273,7 +273,7 @@ ul.products li.product .product-thumbnail-zoom {
 .product .onsale {
   position: absolute;
   font-family: "Eskal";
-  font-size: 14px;
+  font-size: 40px;
   color: var(--blue);
     display: block;
     background-image: url(../img/svg/stroke.svg);
