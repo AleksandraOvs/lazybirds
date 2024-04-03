@@ -1436,7 +1436,7 @@ label p.input-row__desc {
 }
 
 #faq .faq-question-head h3{
-    font-size: 24px;
+    font-size: 20px;
     text-transform: none;
     font-weight: 400 !important;
     margin: 0 !important;
@@ -2828,6 +2828,10 @@ a.swiperFeedback-slide-link img {
         .title-fdb:after {
             width: 60px;
             height: 60px
+        }
+
+        #faq .faq-question-head h3{
+            font-size: 18px;
         }
     
         a.logo_footer {
