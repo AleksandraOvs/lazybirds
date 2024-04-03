@@ -1658,6 +1658,7 @@ ul.size-table_s li, ul.size-table_m li, ul.size-table_l li{
 
 section.page-section .cont .title-page {
     margin-top: 40px;
+    margin-bottom: 40px;
     color: var(--bgray);
 }
 
