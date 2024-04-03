@@ -2222,9 +2222,9 @@ p.login-remember label {
 
 @media (min-width: 768px){
 
-    header .topper_header .th-text {
+    /* header .topper_header .th-text {
         font-size: 12px;
-    }
+    } */
 
     section.hero-section {
         margin-top: 30px;
