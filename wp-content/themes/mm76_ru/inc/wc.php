@@ -71,10 +71,10 @@ function refresh_payment_methods(){
  * удалить краткое описание из админки 
  */
 
- function remove_short_description() {
-    remove_meta_box( 'postexcerpt', 'product', 'normal');
-}
-add_action('add_meta_boxes', 'remove_short_description', 999);
+//  function remove_short_description() {
+//     remove_meta_box( 'postexcerpt', 'product', 'normal');
+// }
+// add_action('add_meta_boxes', 'remove_short_description', 999);
 
 
 /**
