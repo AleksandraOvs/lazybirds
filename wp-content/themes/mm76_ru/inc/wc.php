@@ -29,7 +29,7 @@ function translate_str($translated) {
     $translated = str_ireplace('Product', 'Продукт', $translated);
     $translated = str_ireplace('Stock status', 'Наличие', $translated);
     $translated = str_ireplace('In stock', 'В наличии', $translated);
-    //$translated = str_ireplace('Cashback: ', 'Твой кешбэк за эту покупку:', $translated);
+    $translated = str_ireplace('Cashback: ', 'Твой кешбэк за эту покупку:', $translated);
     // $translated = str_ireplace('up to', ' до', $translated);
      return $translated;
 }

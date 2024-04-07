@@ -516,10 +516,10 @@ $(function() {
         },
         breakpoints:{
             1024: {
-                slidesPerView: 5
+                slidesPerView: 4.5
             },
             768: {
-                slidesPerView: 3.2
+                slidesPerView: 3.5
             }
         }
     });
