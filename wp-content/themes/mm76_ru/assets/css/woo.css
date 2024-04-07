@@ -656,6 +656,10 @@ section.page-section .cont .product .summary.entry-summary .price{
     font-weight: 500;
 }
 
+.how_mach_bonus {
+  margin-top: 20px;
+}
+
 li.wcboost-variation-swatches__item.not-aviable.selected {
   background: var(--blue);
 }
