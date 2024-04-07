@@ -180,7 +180,7 @@
                 <span>Кратко :&#41;</span>
             </div>
             
-                <h2>О нас</h2>
+                <h2 class="site-title">О нас</h2>
         </div>
 
         <div class="section-about-cont">
@@ -226,7 +226,7 @@
     <div class="cont">
     <div class="section-header">
         <div class="site-title title-fdb">
-            <h2>Каждый отзыв мы ценим и бережно храним</h2>
+            <h2>Каждый отзыв мы&nbsp;ценим и&nbsp;бережно храним</h2>
         </div>
     </div>
     

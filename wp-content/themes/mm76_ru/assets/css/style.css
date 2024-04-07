@@ -919,7 +919,8 @@ h1.slide-head_mob {
     font-family: 'Eskal';
     color: #003996;
     font-size: 40px;
-    text-align:center;
+    text-align: center;
+    line-height: 1.6;
 }
 
 /*ABOUT*/
@@ -1114,8 +1115,8 @@ a.brg-menu-btn {
 }
 
 .section-header-desc.collections {
-    width: 330px;
-    height: 70px;
+    width: 350px;
+    height: 60px;
     top:-20px;
     left: 220px;
 }
@@ -1588,7 +1589,6 @@ ul.footer__menu {
 
   .footer-desc span{
     font-size: 30px;
-    transform: translateY(10px);
 }
 
 .p-title{
@@ -1994,10 +1994,17 @@ p.login-remember label {
     }
 
     .site-title, .site-title h2 {
-        font-size: 34px !important;
-    }
+        font-size: 34px;
+        font-weight: 400;
+        margin: 0;
+    } 
+
     .title-fdb{
         justify-content: space-between;
+    }
+
+    .site-title.title-fdb h2 {
+        width: 80%;
     }
 
     form.form__feed-form {
@@ -2061,6 +2068,9 @@ p.login-remember label {
 }
 
 @media (max-width: 992px){
+    body._fixed {
+        overflow: hidden;
+    }
     a.brg-menu-btn {
         display: flex;
     }
@@ -2145,7 +2155,7 @@ p.login-remember label {
         row-gap: 10px;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     ul#menu-mainmenu li:not(:last-child){
@@ -2735,6 +2745,7 @@ a.swiperFeedback-slide-link img {
         p.about-text.mob_vis {
             padding-right: 15px;
             padding-left: 15px;
+            margin-bottom: 30px;
         }
     
         .section-about-cont-leftPhotos {
@@ -2829,6 +2840,19 @@ a.swiperFeedback-slide-link img {
 
         #faq .faq-question-head h3{
             font-size: 18px;
+        }
+
+        .section-faq__inner {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-faq-l {
+            padding-top: 0;
+        }
+
+        .section-faq-r {
+            margin-top: 40px;
         }
     
         a.logo_footer {
