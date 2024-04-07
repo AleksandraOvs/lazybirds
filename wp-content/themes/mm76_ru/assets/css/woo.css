@@ -384,7 +384,6 @@ li.wcboost-variation-swatches__item.wcboost-variation-swatches__item-s.not-aviab
 }
 
 .wcboost-variation-swatches__name {
-  text-indent: -9999em;
   color: var(--blue);
   font-size:14px;
   display: block;
