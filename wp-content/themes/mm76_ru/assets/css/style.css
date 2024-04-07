@@ -2273,10 +2273,6 @@ width: 100%;
     font-size: 15px;
 }
 
-.form__feed form input[type=submit] {
-    padding: 10px;
-}
-
 .form__feed form .r-form .f-btn {
     font-size: 14px;
     text-transform: none;
@@ -2286,9 +2282,9 @@ width: 100%;
     padding: 0 0 7px
 }
 
-.form__feed form input[type=submit]{
+/* .form__feed form input[type=submit]{
     margin-right: 16px;
-}
+} */
 
 .f-btn__inner {
     justify-content: flex-start;
