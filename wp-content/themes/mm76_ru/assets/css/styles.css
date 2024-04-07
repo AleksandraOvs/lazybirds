@@ -2878,7 +2878,7 @@ a.button.laz-wishlist.add-to-wishlist-button {
   flex-wrap: wrap;
 }
 .card-content .p-price .how_mach_bonus {
-  display: none !important;
+  /* display: none !important; */
   flex-grow: 1;
   width: 100%;
   text-align: center;
