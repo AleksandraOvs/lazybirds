@@ -223,7 +223,7 @@ p.error404-desc {
 
 /*HEADER*/
 header .topper_header {
-    background: rgba(255, 190, 223, 1);
+    background: var(--pink);
     z-index: 5;
     padding: 10px 0;
     text-align: center;
