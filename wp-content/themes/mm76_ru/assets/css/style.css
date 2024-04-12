@@ -4,6 +4,7 @@
     --bgray: #17181D;
     --blue: #002053;
     --pink: #E9CEDB;
+    --light: #FFFBF4;
     ;
 }
 
@@ -62,7 +63,7 @@ body * {
 }
 
 body {
-    background-color: #fffef8;
+    background-color: #FFFBF4;
 }
 
 main {
