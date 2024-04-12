@@ -2,8 +2,9 @@
 
 :root {
     --bgray: #17181D;
-    --blue: #003996;
-    --pink: #FF81C9;
+    --blue: #002053;
+    --pink: #E9CEDB;
+    ;
 }
 
 .fancybox__container {
@@ -1456,7 +1457,7 @@ p#breadcrumbs {
   /*FOOTER*/
   footer {
     padding-top: 25px;
-    border-top: 4px solid #FF81C9;
+    border-top: 4px solid var(--pink);
     margin-top: 0;
     overflow-x: hidden;
 }
