@@ -51,7 +51,7 @@ global $product, $post;
 					echo apply_filters(
 						'soo_wishlist_item_remove_link',
 						sprintf(
-							'<a href="%s" class="remove" title="%s" data-product_id="%s">&times;</a>',
+							'<a href="%s" class="remove" title="%s" data-product_id="%s"><span>remove</span></a>',
 							esc_url( Soo_Wishlist()->get_remove_url( $item['id'] ) ),
 							esc_html__( 'Remove this item', 'soow' ),
 							esc_attr( $product->get_id() )
@@ -62,7 +62,7 @@ global $product, $post;
 				</td>
 			<?php endif; ?>
 			<div class="product-thumbnail">
-				<a href="<?php echo $product->get_permalink() ?>"><?php echo $product->get_image() ?></a>
+				<a href="<?php echo $product->get_permalink() ?>"><?php echo $product->get_image('medium') ?></a>
 			</div>
 
 			<div class="wish-product-summary">
