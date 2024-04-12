@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="wc-proceed-to-checkout">
 		<div class="cashback-text">
-			<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
+			<?php //do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
 		</div>
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 	</div>

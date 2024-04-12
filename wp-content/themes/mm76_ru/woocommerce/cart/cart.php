@@ -175,7 +175,7 @@ do_action('woocommerce_before_cart'); ?>
                 <div class="woocommerce-cart-form__contents__bottom__for-users">
                     <?php
                     if (is_user_logged_in()) {
-                        echo '<p>У тебя 1000 баллов</p>
+                        echo '<p>У тебя ' . do_shortcode('[bfw_points]') . ' баллов</p>
   <p>В этом заказе можно списать 1000 баллов</p>';
                     } else {
                         echo '<p class="cart-contents-bottom__for-users">Чтобы применить и/или начислить кэшбек необходимо <a href="' . site_url('login') . '">войти</a> или <a href="' . site_url('register') . '">зарегистрироваться</a></p>';

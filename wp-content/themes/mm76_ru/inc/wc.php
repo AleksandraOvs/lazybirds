@@ -469,3 +469,12 @@ $translated = str_ireplace('Подытог', 'Сумма', $translated);
 $translated = str_ireplace('Возможно Вас также заинтересует&hellip;', 'Вместе с этим товаром покупают', $translated);
 return $translated;
 }
+
+// Перехватываем
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+// Наша перехваченная функция - $fields проходит через фильтр!
+function custom_override_checkout_fields( $fields ) {
+     $fields['order']['order_comments']['placeholder'] = 'Мой новый текст в примечании к товару';
+     return $fields;
+}

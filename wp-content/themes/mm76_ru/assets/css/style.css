@@ -2,8 +2,9 @@
 
 :root {
     --bgray: #17181D;
-    --blue: #003996;
-    --pink: #FF81C9;
+    --blue: #002053;
+    --pink: #E9CEDB;
+    --light: #FFFBF4;
 }
 
 .fancybox__container {
@@ -61,7 +62,7 @@ body * {
 }
 
 body {
-    background-color: #fffef8;
+    background-color: #fff;
 }
 
 main {
@@ -157,7 +158,7 @@ a:hover {
 .btn, .button {
     font-size: 16px;
     font-weight: 500;
-    color: #fff;
+    color: var(--blue);
     border-radius: 30px;
     text-transform: none;
     text-align: center;
@@ -167,14 +168,14 @@ a:hover {
     padding: 12px 24px;
     line-height: 1.2;
     border:1px solid var(--blue);
-    background-color: var(--blue);
+    background-color: transparent;
     cursor: pointer;
     transition: all 0.4s linear;
   }
   .btn:hover, .button:hover {
     cursor: pointer;
-    background: var(--pink);
-    border-color: var(--pink);
+    background: var(--blue);
+    border-color: var(--blue);
     color: #fff;
     transition: all 0.3s linear;
   }
@@ -190,7 +191,7 @@ a:hover {
 
 /*HEADER*/
 header .topper_header {
-    background: rgba(255, 190, 223, 1);
+    background: var(--pink);
     z-index: 5;
     padding: 10px 0;
     text-align: center;
@@ -209,7 +210,7 @@ header .topper_header {
 header .topper_header .th-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    color: #003996;
+    color: var(--blue);
 }
 
 header nav {
@@ -259,7 +260,7 @@ header nav ul li.current-menu-item a:after {
 }
 
 header .header__content {
-    margin: 15px 0;
+    padding: 15px 0;
     display: grid;
     justify-content: space-between;
     align-items: center;
@@ -447,6 +448,10 @@ a.search-icon-form .icon svg {
     height: 100%;
 }
 
+header {
+    background: var(--light);
+}
+
 .header__actions__search {
     display: none;
 }
@@ -484,7 +489,8 @@ header .cont .header__content .header-right .input__hidden {
 /*HERO*/
 
 section.hero-section {
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    background: var(--light);
 }
 
 .hero__inner {
@@ -670,6 +676,12 @@ div#loadmore {
   
   /*BESTSELLERS*/
 
+  section.bestsellers.mt-100 {
+    background: var(--light);
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
   .site-title.bestsell-slider {
     display: flex;
     justify-content: space-between;
@@ -686,6 +698,13 @@ div#loadmore {
 }
 
 /*SWIPERS*/
+
+section.section-feedback.mt-100 {
+    background: var(--light);
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
 section.section-feedback.mt-100 .cont {
     width: 100%;
     padding: 0;
@@ -860,7 +879,7 @@ a.swiperFeedback-slide-link img {
 }
 
 .slide-desc{
-    color: #003996;
+    color: var(--blue);
 }
 
 .slide-flex .slide-flex-right{
@@ -917,7 +936,7 @@ h1.slide-head_mob {
 .section-header-desc span, .footer-desc span {
     display: block;
     font-family: 'Eskal';
-    color: #003996;
+    color: #002053;
     font-size: 40px;
     text-align: center;
     line-height: 1.6;
@@ -1081,6 +1100,16 @@ a.brg-menu-btn {
     display: none;
 }
 
+.section-about-cont-right .btn {
+    margin-top: 50px;
+}
+
+section.section-about.mt-100 {
+    background: var(--light);
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
 /*FEEDBACK*/
 
 .title-fdb{
@@ -1145,6 +1174,12 @@ a.brg-menu-btn {
     flex-wrap: wrap;
     justify-content: center;
     grid-gap: 16px;
+}
+
+section.section-collections.mt-100 {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background: var(--light);
 }
 
 section.section-collections .cont .section-header {
@@ -2238,12 +2273,11 @@ p.login-remember label {
     } */
 
     section.hero-section {
-        margin-top: 30px;
+        margin-top: 0;
     }
     
-
     .section-header-desc {
-        left: 150px;
+        left: 250px;
     }
 
     .section-header-desc:before {

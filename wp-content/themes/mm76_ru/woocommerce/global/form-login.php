@@ -25,21 +25,21 @@ if ( is_user_logged_in() ) {
 
 ?>
 <form class="woocommerce-form woocommerce-form-login login" method="post" <?php echo ( $hidden ) ? 'style="display:none;"' : ''; ?>>
-
+	<div class="login-toggle">
 	<?php do_action( 'woocommerce_login_form_start' ); ?>
 
-	<?php echo ( $message ) ? wpautop( wptexturize( $message ) ) : ''; // @codingStandardsIgnoreLine ?>
+	<div class="login-description"><?php echo ( $message ) ? wpautop( wptexturize( $message ) ) : ''; // @codingStandardsIgnoreLine ?></div>
 
 	<p class="form-row form-row-first">
-		<label for="username"><?php esc_html_e( 'Username or email', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+		<!-- <label for="username"><?php //esc_html_e( 'Username or email', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label> -->
 		<input type="text" class="input-text" placeholder="E-mail" name="username" id="username" autocomplete="username" />
 	</p>
 	<p class="form-row form-row-last">
-		<label for="password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+		<!-- <label for="password"><?php //esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label> -->
 		<input class="input-text woocommerce-Input" placeholder="Пароль" type="password" name="password" id="password" autocomplete="current-password" />
 	</p>
 	<div class="clear"></div>
-
+	
 	<?php do_action( 'woocommerce_login_form' ); ?>
 
 	<p class="form-row">
@@ -57,5 +57,5 @@ if ( is_user_logged_in() ) {
 	<div class="clear"></div>
 
 	<?php do_action( 'woocommerce_login_form_end' ); ?>
-
+</div>
 </form>
