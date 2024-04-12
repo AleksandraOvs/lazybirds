@@ -180,8 +180,39 @@ a:hover {
     color: #fff;
     transition: all 0.3s linear;
   }
-
   
+  /*404*/
+
+  .error-404-content p, .error-404-content span {
+    font-family: 'Eskal';
+    color: var(--pink);
+}
+
+.error-404-content p {
+    font-size: 18vw;
+    line-height: 0.5em;
+    text-align: center;
+}
+
+.error-404-content span{
+    display: block;
+    font-size: 44px;
+    text-align: center;
+}
+
+
+p.error404-desc {
+    text-align: center;
+    font-size: 18px;
+    width: 60%;
+    margin: 20px auto 0;
+}
+
+.error-404 .btn {
+    margin: 40px auto 0;
+    text-align: center;
+    display: block;
+}
 /*CONTAINER*/
 .cont {
     width: 1400px;
@@ -2628,6 +2659,14 @@ a.swiperFeedback-slide-link img {
     }
 
     @media (max-width: 576px){
+        .error-404-content p {
+            font-size: 25vw;
+        }
+
+        p.error404-desc {
+            font-size: 16px;
+            width: 100%;
+        }
         /* html *, body * {
             font-size: 14px;
         } */
