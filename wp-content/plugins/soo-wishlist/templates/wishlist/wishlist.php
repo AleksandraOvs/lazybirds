@@ -14,25 +14,25 @@ global $product, $post;
 
 <?php do_action( 'soo_wishlist_before_list', $list ); ?>
 
-<table class="shop_table shop_table_responsive wishlist_table" cellspacing="0">
-	<thead>
+<ul class="shop_table shop_table_responsive wishlist_table" cellspacing="0">
+	<!-- <thead>
 	<tr>
-		<?php if ( Soo_Wishlist()->can_edit( $list ) ) : ?>
+		<?php //if ( Soo_Wishlist()->can_edit( $list ) ) : ?>
 			<th class="product-remove">&nbsp;</th>
-		<?php endif; ?>
+		<?php //endif; ?>
 		<th class="product-thumbnail">&nbsp;</th>
-		<th class="product-name"><?php esc_html_e( 'Product', 'soow' ); ?></th>
-		<?php if ( $options['show_price'] == 'yes' ) : ?>
-			<th class="product-price"><?php esc_html_e( 'Price', 'soow' ); ?></th>
-		<?php endif; ?>
-		<?php if ( $options['show_stock_status'] == 'yes' ) : ?>
-			<th class="product-stock-status"><?php esc_html_e( 'Stock status', 'soow' ); ?></th>
-		<?php endif; ?>
-		<?php if ( $options['show_button'] == 'yes' ) : ?>
+		<th class="product-name"><?php //esc_html_e( 'Product', 'soow' ); ?></th>
+		<?php //if ( $options['show_price'] == 'yes' ) : ?>
+			<th class="product-price"><?php //esc_html_e( 'Price', 'soow' ); ?></th>
+		<?php //endif; ?>
+		<?php //if ( $options['show_stock_status'] == 'yes' ) : ?>
+			<th class="product-stock-status"><?php //esc_html_e( 'Stock status', 'soow' ); ?></th>
+		<?php //endif; ?>
+		<?php //if ( $options['show_button'] == 'yes' ) : ?>
 			<th class="product-add-to-cart">&nbsp;</th>
-		<?php endif; ?>
+		<?php //endif; ?>
 	</tr>
-	</thead>
+	</thead> -->
 
 	<?php foreach ( $list->items as $key => $item ) : ?>
 		<?php
@@ -44,7 +44,7 @@ global $product, $post;
 		}
 		?>
 
-		<tr class="product-item">
+		<li class="product-item">
 			<?php if ( Soo_Wishlist()->can_edit( $list ) ) : ?>
 				<td class="product-remove">
 					<?php
@@ -61,34 +61,23 @@ global $product, $post;
 					?>
 				</td>
 			<?php endif; ?>
-			<td class="product-thumbnail">
+			<div class="product-thumbnail">
 				<a href="<?php echo $product->get_permalink() ?>"><?php echo $product->get_image() ?></a>
-			</td>
-			<td class="product-name">
+			</div>
+
+			<div class="wish-product-summary">
+<div class="product-name">
 				<a href="<?php echo $product->get_permalink() ?>"><?php echo $product->get_title() ?></a>
-			</td>
+				</div>
 
-			<td>
-				<?php
-			$attr = $product->get_attributes() ; // Получаем атрибуты товара
-  
-  foreach ($attr as $key => $value) {
-	   echo wc_attribute_label( $value['name'] ) . ": "; // Выводим наименование атрибута
-	   foreach ( $value->get_terms() as $pa ) { // Выборка значения заданного атрибута
-			echo '<b> '.$pa->name.'</b> '; // Выводим значение атрибута
-	   }
-  }
-  ?>
-			</td>
-
-			<?php if ( $options['show_price'] == 'yes' ) : ?>
-				<td class="product-price">
+				<div class="wish-product-summary__price">
+						<?php if ( $options['show_price'] == 'yes' ) : ?>
+				<div class="product-price">
 					<?php echo $product->get_price_html() ?>
-				</td>
-			<?php endif; ?>
+						</div>
 
-			<?php if ( $options['show_stock_status'] == 'yes' ) : ?>
-				<td class="product-stock-status">
+						<?php if ( $options['show_stock_status'] == 'yes' ) : ?>
+				<div class="product-stock-status">
 					<?php
 					if ( $product->is_in_stock() ) {
 						esc_html_e( 'In stock', 'soow' );
@@ -96,21 +85,48 @@ global $product, $post;
 						esc_html_e( 'Out of stock', 'soow' );
 					}
 					?>
-				</td>
+				</div>
 			<?php endif; ?>
 
-			<?php if ( $options['show_button'] == 'yes' ) : ?>
-				<td class="product-add-to-cart">
+
+			<?php endif; ?>
+				</div>
+
+				<?php if ( $options['show_button'] == 'yes' ) : ?>
+				<div class="product-add-to-cart">
 					<?php
 					if ( $product->is_in_stock() && $product->is_purchasable() ) {
 						woocommerce_template_loop_add_to_cart();
 					}
 					?>
-				</td>
+				</div>
 			<?php endif; ?>
-		</tr>
+
+			</div>
+
+			
+
+			
+				<?php
+// 			$attr = $product->get_attributes() ; // Получаем атрибуты товара
+  
+//   foreach ($attr as $key => $value) {
+// 	   echo wc_attribute_label( $value['name'] ) . ": "; // Выводим наименование атрибута
+// 	   foreach ( $value->get_terms() as $pa ) { // Выборка значения заданного атрибута
+// 			echo '<b> '.$pa->name.'</b> '; // Выводим значение атрибута
+// 	   }
+//   }
+  ?>
+			
+
+		
+
+			
+
+			
+				</li>
 	<?php endforeach; ?>
-</table>
+				</ul>
 
 <?php do_action( 'soo_wishlist_after_list', $list ); ?>
 

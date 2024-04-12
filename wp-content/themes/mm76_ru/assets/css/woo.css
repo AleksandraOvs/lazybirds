@@ -86,6 +86,40 @@ a.wishlist_card.laz-wishlist.add-to-wishlist-button.added{
     transition: all .3s linear;
 } */
 
+.wishlist-empty {
+  text-align: center;
+}
+
+.wishlist-empty svg {
+  width: 70px;
+  height: 70px;
+}
+
+.wishlist-empty p {
+  margin-top: 30px;
+}
+
+/*WISH Grid*/
+
+ul.shop_table.shop_table_responsive.wishlist_table {
+  display: flex;
+  gap: 1%;
+  justify-content:center;
+  gap: 16px;
+  list-style: none;
+}
+
+ul.shop_table.shop_table_responsive.wishlist_table li{
+  width: 24%;
+}
+
+
+
+
+.woocommerce-page.woocommerce-wishlist main .page-section .cont h1 {
+  text-align: center;
+}
+
 .container__three .card-content a.productThumb-link {
     display: block;
     height: 400px;
@@ -1338,6 +1372,13 @@ section.page-section .cont .woocommerce {
 }
 
 @media (max-width: 576px){
+  
+.woocommerce.soo-wishlist .return-to-shop a {
+  width: 100%;
+  margin-top: 40px;
+}
+
+
   .woo-notice.woocommerce-message {
     border: 1px solid #FF81C9;
     background: #fff;
