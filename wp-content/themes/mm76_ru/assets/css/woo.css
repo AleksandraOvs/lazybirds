@@ -82,7 +82,7 @@ a.wishlist_card.laz-wishlist.add-to-wishlist-button.added{
 }
 
 .card-content .wishlist_card:hover svg path {
-    fill: #FF81C9;
+    fill: var(--pink);
     transition: all .3s linear;
 } */
 
@@ -802,7 +802,7 @@ li.wcboost-variation-swatches__item.not-aviable.selected span{
 }
 
 .ui-accordion-header-active .tab-head__button svg path, .ui-accordion-header-active .tab-head__button svg path {
-  fill: #FF81C9;
+  fill: var(--pink);
   transition: all .3s linear;
 }
 
@@ -1036,7 +1036,7 @@ ul.woocommerce-cart-form__contents__list {
   grid-template-columns: 40% 16% 12% 25% 7%;
   padding-bottom: 20px;
   padding-top: 20px;
-  border-bottom: 2px solid #ff81c9;
+  border-bottom: 2px solid var(--pink);
 }
 
 li.woocommerce-cart-form__cart-item.cart_item .product-main {
@@ -1187,7 +1187,7 @@ ul.woocommerce-cart-form__contents__summary__links._mob {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat; */
-  border: 1px solid #FF81C9;
+  border: 1px solid var(--pink);
   background:#fff;
     padding: 25px 30px;
     width: auto;
@@ -1200,7 +1200,7 @@ ul.woocommerce-cart-form__contents__summary__links._mob {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat; */
-  border: 1px solid #FF81C9;
+  border: 1px solid var(--pink);
   background:#fff;
     padding: 15px;
     width: auto;
@@ -1327,7 +1327,7 @@ ul.woocommerce-cart-form__contents__summary__links._mob {
     grid-template-columns: 40% 18% 18% 18% 6%;
     padding-bottom: 20px;
     padding-top: 20px;
-    border-bottom: 2px solid #ff81c9;
+    border-bottom: 2px solid var(--pink);
 }
 .woocommerce-cart-form__contents__head {
   display: grid;
@@ -1440,7 +1440,7 @@ ul.shop_table.shop_table_responsive.wishlist_table li {
 
 
   .woo-notice.woocommerce-message {
-    border: 1px solid #FF81C9;
+    border: 1px solid var(--pink);
     background: #fff;
     padding: 25px 30px;
     width: auto;
