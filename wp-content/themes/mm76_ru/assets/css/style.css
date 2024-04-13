@@ -950,7 +950,7 @@ h1.slide-head_mob {
 .section-header-desc span, .footer-desc span {
     display: block;
     font-family: 'Eskal';
-    color: #003996;
+    color: var(--blue);
     font-size: 40px;
     text-align: center;
     line-height: 1.6;
