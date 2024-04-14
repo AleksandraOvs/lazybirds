@@ -76,7 +76,7 @@ section{
 }
 
 section.page-section {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 
@@ -1809,11 +1809,259 @@ p.login-remember label {
     background: rgba(0, 0, 0, 0.6);
     z-index: 20;
   }
+
+  /*ABOUT PAGE*/
+
+  section.page-section.about-page .cont .title-page {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.about-page__content p{
+    font-size:24px;
+    line-height: 140%;
+    text-align:center;
+}
+
+.mb-40{
+    margin-bottom: 40px;
+}
   
+.mt-140{
+    margin-top: 140px;
+}
+
+.about-page__content{
+    padding: 5% 18%;
+    position: relative;
+    background: url(../img/svg/paper-bg.svg) no-repeat;
+    background-size: contain;
+    background-position: top;
+}
+
+.about-page__content svg {
+    position: absolute;
+    right: 25%;
+    top: 20px;
+    /* width: 63px;
+    height: 60px; */
+}
+
+.p-travel{
+    position: relative;
+    display: inline-block;
+}
+
+span.p-travel:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transform: scale(1);
+    width: 100%;
+    height: 7px;
+    background: url(../img/svg/word-stroke.svg);
+    background-repeat: repeat-x;
+    background-position: center;
+    bottom: -3px;
+    transition: transform .3s linear;
+}
+
+/* .p-travel:before{
+    content: 'тут можно взять небольшую паузу и немного погрустить…)';
+    font-family: 'Eskal', serif;
+    position: absolute;
+    width: 365px;
+    top: -90px;
+    transform: rotate(5deg);
+    color: var(--blue);
+    font-size: 30px;
+    line-height: 111%;
+} */
+
+.about-page__content__desc{
+    position: relative;
+    width: 100%;
+    /* padding: 50px 0 90px; */
+    display: flex;
+    justify-content: center;
+}
+
+.cont .about-page__content  .about-page__content__desc p{
+    position: absolute;
+    top: 20px;
+    right: -70px;
+    transform: rotate(7deg);
+    width: 335px;
+    font-family: 'Eskal', serif;
+    color: var(--blue);
+    font-size: 30px;
+    line-height: 111%;
+}
+
+.about-page__content__desc p:before {
+    content: '';
+    width: 80px;
+    height: 80px;
+    left: 0;
+    bottom: -50px;
+    transform: rotate(-40deg);
+    display: block;
+    position: absolute;
+    background: url(../img/svg/blue-arrow.svg) no-repeat;
+    background-size: contain;
+
+} 
+.divider-140{
+    position:relative;
+    height: 140px;
+    display:block;
+} 
+/* .about-page__content:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+   
+} */
+
+.blue-bird{
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    /* bottom: 0; */
+    top: 20px;
+    left: 12%;
+    background: url(../img/svg/blue-bird.svg) no-repeat;
+    background-size: contain;
+}
+
+.blue-bird:after {
+    content: '';
+    width: 73px;
+    height: 60px;
+    right: -90px;
+    bottom: -30px;
+    display: block;
+    background: url(../img/svg/blue-arrow2.svg) no-repeat;
+    background-size: contain;
+    position: absolute;
+}
+
+.word-lazybirds{
+    position: relative;
+}
+
+.word-lazybirds:after{
+    content:'';
+    width:100%;
+    height: 8px;
+    background:url(../img/svg/word-stroke2.svg) no-repeat;
+    background-size:contain;
+    display:block;
+    position:absolute;
+    left:0;
+    bottom:-5px;
+}
+
+.bright-colors{
+    position:relative;
+    display:inline-block;
+}
+
+.bright-colors:before {
+    content: '';
+    width: 190px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    background: url(../img/svg/bright-colors-border.svg) no-repeat;
+    background-size: contain;
+    top: -5px;
+    left: -10px;
+}
+
+.bright-colors:after{
+    content: 'нам хватает серости на улице, особенно зимой';
+    width: 330px;
+    height: 66px;
+    left: -100px;
+    top: 50px;
+    font-size: 30px;
+    font-family: 'Eskal';
+    color: var(--blue);
+    position: absolute;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+
+.last-p{
+    position:relative;
+}
+
+.last-p:before {
+    content: '';
+    width: 48px;
+    height: 58px;
+    background: url(../img/svg/corona.svg) no-repeat;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    top: -60px;
+    left:50px;
+}
+
+.mb-100{
+    margin-bottom: 100px;
+}
+
+.about-page__content.part2 {
+    position:relative;
+    background: url(../img/svg/paper-bg2.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: -70px;
+    padding: 10% 18%;
+}
+
+.about-page__content.part2:before{
+    content: '';
+    width: 45px;
+    height: 88px;
+    display: block;
+    position: absolute;
+    background: url(../img/svg/stick1.svg) no-repeat;
+    top: -20px;
+    right: 15%;
+}
+
+.about-page__content.part2:after{
+    content: '';
+    width: 67px;
+    height: 78px;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    background: url(../img/svg/stick2.svg) no-repeat;
+}
+
+p.table_vis{
+    display:none;
+}
 
   @media (min-width: 1440px){
     .slide-flex .slide-flex-right{
       font-size: 68px;
+    }
+  }
+
+  @media (max-width: 1250px){
+    .about-page__content {
+        padding: 5% 15%;
     }
   }
 
@@ -1849,6 +2097,10 @@ p.login-remember label {
 
     .site-title {
         font-size: 34px;
+    }
+
+    .about-page__content {
+        padding: 5% 20%;
     }
 
     /* p {
@@ -1905,6 +2157,65 @@ p.login-remember label {
     height: 460px;
 }
 
+.about-page__content p {
+    font-size: 18px;
+}
+
+.cont .about-page__content .about-page__content__desc p {
+    font-size: 24px;
+}
+
+.cont .about-page__content .about-page__content__desc p {
+    transform: rotate(7deg);
+    width: 270px;
+}
+
+.cont .about-page__content .about-page__content__desc p {
+    position: absolute;
+    top: 30px;
+    right: -50px;
+}
+
+.bright-colors:before {
+    content: '';
+    width: 150px;
+    height: 50px;
+}
+
+.about-page__content.part2:after {
+    content: '';
+    width: 67px;
+    height: 78px;
+    display: block;
+    position: absolute;
+    left: 7%;
+    bottom: 50px;
+
+  }
+}
+
+@media (max-width: 1380px){
+    .last-p {
+        position: relative;
+    }
+
+    .bright-colors:after {
+        content: 'нам хватает серости на улице, особенно зимой';
+        width: 330px;
+        height: 66px;
+        font-size: 30px;
+        font-family: 'Eskal';
+        color: var(--blue);
+        position: absolute;
+        bottom: -80px;
+        left: -100px;
+    }
+
+    .cont .about-page__content .about-page__content__desc p {
+        position: absolute;
+        top: 20px;
+        /* right: 0; */
+    }
 }
 
 @media (max-width: 1024px){
@@ -2098,6 +2409,58 @@ p.login-remember label {
         gap: 0.8%;
         margin-top: 1%;
     }
+
+    .about-page__content__desc {
+        display: none;
+    }
+
+    span.p-travel:after{
+        display:none;
+    }
+
+    .mt-140{
+        margin-top: 60px;
+    }
+
+    .mb-100{
+        margin-bottom: 60px;
+    }
+
+    .bright-colors:after{
+        display: none;
+    }
+
+    .bright-colors:before{
+        display:none;
+    }
+
+    .last-p:before {
+        right: 0;
+    }
+
+    .blue-bird {
+        width: 47px;
+        height: 47px;
+        top: 20px;
+        left: 25%;
+    }
+
+    .blue-bird:after {
+        content: '';
+        width: 47px;
+        height: 35px;
+        right: -60px;
+        bottom: 0;
+        display: block;
+        background: url(../img/svg/blue-arrow2.svg) no-repeat;
+        background-size: contain;
+        position: absolute;
+    }
+
+    .divider-140 {
+        position: relative;
+        height: 70px;
+    }
 }
 
 @media (max-width: 992px){
@@ -2205,6 +2568,14 @@ p.login-remember label {
 
     /* a.brg-menu-btn._open span:nth-child(2) */
 
+    .about-page__content p {
+        font-size: 14px;
+    }
+
+    .about-page__content {
+        padding: 5% 25%;
+    }
+
     .footer-docs__widget .footer-docs__item .wp-block-columns {
         flex-direction: column;
         justify-content: flex-end;
@@ -2262,6 +2633,28 @@ p.login-remember label {
         width: 181px;
         height: 82px;
     }
+
+    section.page-section.about-page .cont {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .about-page__content {
+        padding: 7% 20%;
+        background-size: 120%;
+    }
+
+    .about-page__content.part2 {
+        position: relative;
+        background: url(../img/svg/paper-bg2.svg) no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-top: -20px;
+    }
+
+
+
 }
 
 @media (min-width: 768px){
@@ -2351,6 +2744,27 @@ width: 100%;
     width: 90%;
 }
 
+/* .about-page__content {
+    padding: 5% 15%;
+} */
+
+.about-page__content svg {
+    position: absolute;
+    right: 10%;
+    top: 20px;
+    width: 51px;
+    height: 48px;
+}
+
+.about-page__content.part2:after {
+    content: '';
+    width: 67px;
+    height: 78px;
+    display: block;
+    position: absolute;
+    left: 7%;
+    bottom: 0;
+}
 }
 
 @media (max-width: 767px){
@@ -2467,6 +2881,11 @@ a.swiperFeedback-slide-link img {
 .swiper.swiperFeedback .swiper-wrapper .swiperFeedback-slide a {
     position: relative;
     height: 620px;
+}
+
+.about-page__content svg {
+    position: absolute;
+    right: 20px;
 }
 
 }
@@ -2655,7 +3074,54 @@ a.swiperFeedback-slide-link img {
         right: unset;
         bottom: -80px;
     }
+
+    section.page-section.about-page .cont .breads {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     
+    section.page-section.about-page .cont .title-page {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .about-page__content {
+        padding: 7% 20%;
+        background-size: 120%;
+    }
+
+    .about-page__content {
+        padding: 5%;
+    }
+
+    }
+
+    @media (max-width: 662px){
+        .about-page__content {
+            padding: 7% 7% 20% 7%;
+            background-size: cover;
+        }
+
+        .about-page__content.part2 {
+            position: relative;
+            background: none;
+            background-size: contain;
+            background-position: center;
+            margin-top: -20px;
+        }
+
+        .about-page__content.part2:before,
+        .about-page__content.part2:after{
+            display:none;
+        }
+
+        .about-page__content.part2 {
+            display:none;
+        }
+        p.table_vis{
+            display: block;
+            margin-top:60px;
+        }
     }
 
     @media (max-width: 576px){
@@ -2986,6 +3452,12 @@ a.swiperFeedback-slide-link img {
         ul.size-table_head li {
             padding: 15px 10px;
         }
+
+        .about-page__content svg {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
     }
     
     @media (max-width: 480px){
@@ -3044,6 +3516,11 @@ a.swiperFeedback-slide-link img {
         .card-collection {
             height: 520px;
         }
+
+        .about-page__content {
+            padding: 15% 5%;
+            background-size: cover;
+        }
     }
     
     @media (max-width: 768px){
@@ -3052,3 +3529,25 @@ a.swiperFeedback-slide-link img {
             gap: 8px;
         }
     }
+
+    @media (min-width: 1400px){
+
+
+        .cont .about-page__content  .about-page__content__desc p{
+            position: absolute;
+            top: 20px;
+            right: -100px;
+            transform: rotate(7deg);
+            width: 335px;
+            font-family: 'Eskal', serif;
+            color: var(--blue);
+            font-size: 30px;
+            line-height: 111%;
+        }
+
+        .about-page__content {
+            padding: 5% 20% 15%;
+        }
+
+    }
+    
