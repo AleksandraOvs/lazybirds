@@ -97,7 +97,7 @@ p{
 input{
     width: 100%;
     border: none;
-    border-bottom: 2px solid var(--blue);
+    border-bottom: 1px solid var(--blue);
     background: none;
     padding: 13px 0;
     font-size: 20px;
@@ -242,7 +242,7 @@ header .topper_header {
 header .topper_header .th-text {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    color: #003996;
+    color: var(--blue);
 }
 
 header nav {
@@ -1691,7 +1691,7 @@ ul.size-table_s li, ul.size-table_m li, ul.size-table_l li{
 
 section.page-section .cont .title-page {
     margin-top: 40px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     color: var(--bgray);
 }
 
