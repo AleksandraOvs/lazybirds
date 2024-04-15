@@ -81,7 +81,7 @@ if ($user_ID) {
             ?>
         </div>
 
-        <!-- <h1 class="titles">Восстановление пароля</h1> -->
+        <h1 class="titles">Восстановление пароля</h1>
 
         <?php
         if (isset($_GET['success']) && $_GET['success'] = 1) :
@@ -124,7 +124,7 @@ if ($user_ID) {
                     <?php endif; ?>
 
                     <p class="login-mm76">
-                        <input type="email" name="email" id="email2" placeholder="E-Mail" value="<?= isset($_GET['email']) ? $_GET['email']  : '' ?>" class="<?= (isset($errors['pass']) ? 'invalid' : ''); ?>" required>
+                        <input type="email" name="email" id="email2" placeholder="Ваш E-Mail" value="<?= isset($_GET['email']) ? $_GET['email']  : '' ?>" class="<?= (isset($errors['pass']) ? 'invalid' : ''); ?>" required>
                     </p>
 
                     <p class="login-submit">
@@ -132,16 +132,16 @@ if ($user_ID) {
                     </p>
 
                 </form>
-                <div class="container__success">
+                <!-- <div class="container__success">
                     <a class="center-link" style="margin-top:0;" href="<?= get_home_url() ?>/login/">
                         <div class="icon">
                             <svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.939339 10.9393ZM49 10.5L2 10.5V13.5L49 13.5V10.5Z" fill="#8EBCEE" />
                             </svg>
                         </div>
-                        <div class="text">Обратно в Личный кабинет</div>
+                        <div class="text">Обратно в Личный кабинет</div> 
                     </a>
-                </div>
+                </div> -->
             </div>
 
         <?php
