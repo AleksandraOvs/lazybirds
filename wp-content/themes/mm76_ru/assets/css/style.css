@@ -1713,6 +1713,7 @@ section.login_form_container {
 .login_form_container .titles {
     font-size: 40px;
     text-align: center;
+    margin-top: 40px;
 }
 
 .login_form_container .mm76_login_form_tabs {
