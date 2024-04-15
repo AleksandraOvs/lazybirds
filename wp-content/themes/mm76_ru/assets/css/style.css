@@ -2603,7 +2603,7 @@ p.table_vis{
         overflow: hidden;
     }
     a.brg-menu-btn {
-        display: flex;
+        display: block;
     }
 
     a.search-icon-form .icon {
