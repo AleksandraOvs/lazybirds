@@ -2129,7 +2129,7 @@ span.p-travel:after {
     background-size: contain;
     background-position: center;
     margin-top: -100px;
-    padding: 5% 15% 10%;
+    padding: 5% 15% 10% 20%;
 }
 
 .delivery-page__content.del-part3:before{
