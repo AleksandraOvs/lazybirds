@@ -8,10 +8,16 @@
 
 .woocommerce .return-to-shop {
   margin-top: 20px;
+  margin-bottom:40px;
 }
 
 @media (max-width: 576px){
   
+  .woocommerce .empty-cart {
+    text-align: center;
+    padding-top: 40px;
+  }
+
 }
 
 /*CATALOG PAGE*/
@@ -1921,6 +1927,13 @@ section.page-section .cont .product .summary.entry-summary .additional-product-i
 .woocommerce-variation-add-to-cart .wishlist-notadded p,
 .woocommerce-variation-add-to-cart .wishlist-added p {
   display: none;
+}
+
+section.page-section .cont .title-page {
+  margin-top: 40px;
+  /* margin-bottom: 40px; */
+  color: var(--bgray);
+  margin-bottom: 40px;
 }
 
 .woocommerce-variation-add-to-cart {
