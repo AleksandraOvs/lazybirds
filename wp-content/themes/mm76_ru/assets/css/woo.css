@@ -191,7 +191,7 @@ ul.shop_table.shop_table_responsive.wishlist_table li a.remove{
     text-align: left;
     text-transform: none;
     font-size: 16px;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     line-height: normal;
 }
 
@@ -265,7 +265,6 @@ ul.products li.product .product-thumbnail-zoom {
 .card-content .p-price {
     display: block;
     padding-top: 0;
-    margin-top: 10px;
     text-align: left;
     color: #17181D;
     font-size: 16px;

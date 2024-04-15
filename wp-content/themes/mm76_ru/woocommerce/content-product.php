@@ -113,12 +113,14 @@ $product_id =  $product->get_id();
 			?>
 		</div>
 	</a>
+	<div class="card-content__price">
 	<div class="p-title">
 		<?= $product->get_title(); ?>
 	</div>
 
 	<div class="p-price">
 		<?= $product->get_price_html(); ?>
+	</div>
 	</div>
 
 </article>

@@ -87,8 +87,12 @@ $product_id =  $product->get_id();
 		<div class="swiper-button-next"></div>
 		<div class="swiper-button-prev"></div>
 	</div>
-	<a href="<?= get_the_permalink( $product->get_id() ); ?>" class="p-title"><?= $product->get_title(); ?></a>
+
+	<div class="card-content__price">
+		<a href="<?= get_the_permalink( $product->get_id() ); ?>" class="p-title"><?= $product->get_title(); ?></a>
 	<div class="p-price">
 		<?= $product->get_price_html(); ?>
 	</div>
+	</div>
+	
 </article>

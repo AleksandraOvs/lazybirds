@@ -615,6 +615,12 @@ h1.slide-head {
     transition: all 0.3s;
   }
 
+  .card-content__price{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top:16px;
+  }
+
   .card-content .p-title {
     display: block;
       font-weight: 400;
@@ -622,20 +628,21 @@ h1.slide-head {
       text-align: left;
       text-transform: none;
       font-size: 16px;
-      margin-top:15px;
       line-height: normal;
   }
   .card-content .p-price {
     display: block;
-      padding-top: 0;
-      /* margin-top:10px; */
-      text-align: left;
-      color: #17181D;
-      font-size: 16px;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
+    padding-top: 0;
+    /* margin-top: 10px; */
+    text-align: right;
+    color: #17181D;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
   }
+
   .card-content .p-price * {
     text-align: center;
     font-size: 16px;
@@ -2292,7 +2299,7 @@ p.table_vis{
     height: 460px;
 }
 
-.about-page__content p {
+.about-page__content p, .delivery-page__content p {
     font-size: 18px;
 }
 
