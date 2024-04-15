@@ -243,8 +243,8 @@ img.product-mainThumb {
 .product-hover img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain;
+    object-position: center;
 }
 
 
@@ -1785,7 +1785,6 @@ form.computy_skidka_form .form-row {
 @media (max-width: 1024px){
   .container__three.fours {
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
 }
 
 .woocommerce-product-gallery .woocommerce-product-gallery__wrapper {
@@ -2233,5 +2232,9 @@ li.order-review__list__item.cart_item span.woocommerce-Price-amount.amount {
   } */
   ul.shop_table.shop_table_responsive.wishlist_table li {
     width: 100%;
+}
+.container__three .card-content a.productThumb-link {
+  display: block;
+  height: 200px;
 }
 }

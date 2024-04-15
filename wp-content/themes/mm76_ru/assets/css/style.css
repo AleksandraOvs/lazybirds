@@ -657,11 +657,6 @@ h1.slide-head {
     justify-content: flex-end;
 }
 
-.card-content .p-price * {
-    text-align: center;
-    font-size: 16px;
-}
-
 .card-content .p-price del {
     color: #838889;
     font-size: 12px;
@@ -2998,7 +2993,7 @@ width: 100%;
 @media (max-width: 767px) {
     .container__three.fours {
         grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        gap: 40px;
     }
 
     .page-section .cont .woocommerce .woocommerce-MyAccount-content h2.title-page {
@@ -3682,6 +3677,35 @@ width: 100%;
 
     .section-faq-l {
         padding-top: 0;
+    }
+
+    .container__three.fours {
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 40px; */
+        column-gap: 16px;
+        row-gap: 40px;
+    }
+
+    .card-content__price {
+        display: block;
+    }
+
+    .card-content .p-price{
+        justify-content: flex-start;
+    }
+
+    .card-content .p-title{
+        font-size:14px;
+    }
+
+    .card-content .p-price {
+        justify-content: flex-start;
+        margin-top: 20px;
+        
+    }
+
+    .card-content .p-price span{
+        font-size: 14px;
     }
 
     .section-faq-r {
