@@ -1723,6 +1723,14 @@ section.login_form_container {
     margin-top: 15px;
 }
 
+
+p.errno {
+    text-align: center;
+    margin-top: 20px;
+    color: #f57171;
+  }
+  
+
 .login_form_container #loginform, .login_form_container #wp_signup_form {
     margin: 40px auto 0;
     width: 400px;
@@ -1812,15 +1820,39 @@ p.login-remember label {
 
   /*ABOUT PAGE*/
 
-  section.page-section.about-page .cont .title-page {
+  section.page-section.about-page .cont .title-page,
+  section.page-section.delivery-page .cont .title-page {
     text-align: center;
     margin-bottom: 70px;
 }
 
-.about-page__content p{
+.about-page__content p, .delivery-page__content p{
     font-size:24px;
     line-height: 140%;
     text-align:center;
+}
+
+.delivery-page__content h4 {
+    text-align: center;
+    font-size: 34px;
+    font-family: 'Eskal';
+    font-weight: 400;
+    color: var(--blue);
+}
+
+.delivery-page__content h4 {
+    text-align: center;
+    width: 312px;
+    height: 42px;
+    line-height:1.6;
+    margin: 0 auto;
+    background:url(../img/svg/h4-stroke.svg) no-repeat;
+    background-position: center;
+}
+
+.delivery-page__content p {
+    text-align: left;
+    margin-top: 45px;
 }
 
 .mb-40{
@@ -1831,13 +1863,76 @@ p.login-remember label {
     margin-top: 140px;
 }
 
-.about-page__content{
+.about-page__content, .delivery-page__content{
     padding: 5% 18%;
     position: relative;
     background: url(../img/svg/paper-bg.svg) no-repeat;
     background-size: contain;
     background-position: top;
 }
+
+.delivery-page__content {
+    margin: 0 auto;
+    width: 100%;
+    padding: 5% 15% 10% 20%;
+    z-index: 2;
+}
+
+.delivery-page__content.del-part2 p {
+    margin-top: 0;
+}
+
+.delivery-page__content.del-part2 {
+    background: url(../img/svg/paper-bg3.svg) no-repeat;
+    background-size: contain;
+    background-position: top;
+    z-index: 1;
+    margin-top: -50px;
+}
+
+.delivery-page__content.del-part2 {
+    position: relative;
+    margin: -30px auto 0;
+    width: 100%;
+    padding: 5% 15% 10% 15%;
+    z-index: 1;
+}
+
+.delivery-page__content.del-part1:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 173px;
+    height: 137px;
+    background: url(../img/svg/stick3.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    bottom: -30px;
+    left: 10%;
+    z-index: 4;
+}
+
+.delivery-page__content.del-part1:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 173px;
+    height: 137px;
+    background: url(../img/svg/stick4.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    bottom: -30px;
+    right: 10%;
+    z-index: 4;
+}
+
+.delivery-page__content.del-part2 h5 {
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top:40px;
+}
+
+
 
 .about-page__content svg {
     position: absolute;

@@ -1007,6 +1007,49 @@ li.woocommerce-MyAccount-navigation-link a{
   margin-top: 20px;
 }
 
+form.woocommerce-form.woocommerce-form-login.login .form-row .woocommerce-form__label.woocommerce-form__label-for-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+}
+
+form.woocommerce-form.woocommerce-form-login.login .form-row .woocommerce-form__label.woocommerce-form__label-for-checkbox input {
+  width: 18px;
+  height: 18px;
+}
+
+form.woocommerce-form.woocommerce-form-login.login .form-row-first{
+  margin:20px auto 0;
+  width:60%;
+}
+
+form.woocommerce-form.woocommerce-form-login.login .form-row-last{
+  margin:20px auto 0;
+  width:60%;
+}
+
+form.woocommerce-form.woocommerce-form-login.login .lost_password{
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+form.woocommerce-form.woocommerce-form-login.login .form-row-first label,
+form.woocommerce-form.woocommerce-form-login.login .form-row-last label{
+  display:none;
+}
+
+form.woocommerce-form.woocommerce-form-login.login .form-row-first input,
+form.woocommerce-form.woocommerce-form-login.login .form-row-last span input{
+  padding: 7px 0;
+    font-size: 16px;
+}
+
+form.woocommerce-form.woocommerce-form-login.login .form-row .woocommerce-button.button {
+  margin: 20px auto 10px;
+  display: block;
+}
+
 /*CART*/
 
 .woocommerce-cart-form__contents__head {
@@ -1116,6 +1159,11 @@ li.woocommerce-cart-form__cart-item.cart_item .product-remove {
 
 .woocommerce-cart-form__contents__bottom__for-users p {
   text-align: right;
+}
+
+p.cart-contents-bottom__for-users a {
+  text-decoration: underline;
+  color: var(--blue);
 }
 
 .woocommerce-cart-form__contents__bottom .cart-totals{
@@ -1461,11 +1509,8 @@ ul#shipping_method li input {
 
 .payment_box.payment_method_dolyamepayment {
   position: absolute;
-  top: 20%;
-  /* background: #ffff;
-  padding: 10px 25px;
-  border: 1px solid var(--pink);
-  border-radius: 15px; */
+  top: 50px;
+  width: 40%;
 }
 
 .payment_box.payment_method_dolyamepayment p{
@@ -1535,7 +1580,13 @@ button.wc-edostavka-choose-delivery-point {
   justify-content: flex-end;
 }
 
-.woo-notice.woocommerce-message, .woocommerce-cart-notice {
+.woocommerce-form-login-toggle {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.woo-notice.woocommerce-message, .woocommerce-cart-notice, .woo-notice.woocommerce-info {
   /* background-image: url(../img/svg/notice-border.svg);
   background-size: contain;
   background-position: center;
@@ -1646,6 +1697,10 @@ button.wc-edostavka-choose-delivery-point {
 .woocommerce-cart-notice.woocommerce-cart-notice-minimum-amount.woocommerce-info.bfw-how-match-cashback {
   align-self: flex-end;
   width: 50%;
+}
+
+ul.woo-notice.woocommerce-error li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 div#computy-bonus-message-cart {
@@ -1799,8 +1854,13 @@ ul.wc_payment_methods.payment_methods.methods .wc_payment_method.payment_method_
   top: unset;
   right: unset;
   order: 3;
+  width: 100%;
+  margin-top: 20px;
 }
 
+.wc_payment_methods.payment_methods .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__features-list{
+  margin-top:0 !important;
+}
 .digi-dolyame-scheme__description-details {
   display: none;
 }
@@ -1812,6 +1872,10 @@ ul.digi-dolyame-scheme__features-list {
 li.digi-dolyame-scheme__item-features {
   border: none !important;
   padding: 0 !important;
+}
+
+.woo-notice.woocommerce-error {
+  width: 100%;
 }
 }
 
