@@ -1823,7 +1823,7 @@ p.login-remember label {
   section.page-section.about-page .cont .title-page,
   section.page-section.delivery-page .cont .title-page {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
 .about-page__content p, .delivery-page__content p{
@@ -1926,7 +1926,8 @@ p.login-remember label {
     z-index: 4;
 }
 
-.delivery-page__content.del-part2 h5 {
+.delivery-page__content.del-part2 h5,
+.delivery-page__content.del-part3 h5 {
     font-size: 24px;
     margin-bottom: 0;
     margin-top:40px;
@@ -2121,6 +2122,44 @@ span.p-travel:after {
     margin-top: -70px;
     padding: 10% 18%;
 }
+
+.delivery-page__content.del-part3 {
+    position: relative;
+    background: url(../img/svg/paper-bg2.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: -100px;
+    padding: 5% 15% 10%;
+}
+
+.delivery-page__content.del-part3:before{
+    content: '';
+    width: 69px;
+    height: 129px;
+    display: block;
+    position:absolute;
+    z-index:6;
+    top:0;
+    right: 10%;
+    background:url(../img/svg/stick1.svg) no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+
+.delivery-page__content.del-part3:after{
+    content: '';
+    width: 69px;
+    height: 129px;
+    display: block;
+    position:absolute;
+    z-index:7;
+    bottom:20px;
+    left: 10%;
+    background:url(../img/svg/stick2.svg) no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+
 
 .about-page__content.part2:before{
     content: '';
