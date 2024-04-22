@@ -161,7 +161,7 @@ a:hover {
 .button {
     font-size: 16px;
     font-weight: 500;
-    color: var(--blue);
+    color: #fff;
     border-radius: 30px;
     text-transform: none;
     text-align: center;
@@ -171,7 +171,7 @@ a:hover {
     padding: 12px 24px;
     line-height: 1.2;
     border: 1px solid var(--blue);
-    background-color: transparent;
+    background-color: var(--blue);
     cursor: pointer;
     transition: all 0.4s linear;
 }
@@ -743,7 +743,7 @@ div#loadmore {
 }
 
 .bestsellers .cont .mt-30 {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 /*SWIPERS*/
@@ -774,7 +774,7 @@ section.section-feedback.mt-100 .cont {
 .swiperBestsellers-control-next:hover path,
 .swiperFeedback-control-next:hover path,
 .swiperFeedback-control-prev:hover path {
-    fill: #FF81C9;
+    fill: var(--pink);
     transition: all .3s linear;
 }
 
@@ -3008,8 +3008,8 @@ width: 100%;
         height: 48px;
     }
 
-    .page-section .cont .woocommerce .woocommerce-MyAccount-content h2.title-page{
-        margin-top:40px;
+    .page-section .cont .woocommerce .woocommerce-MyAccount-content h2.title-page {
+        margin-top: 40px;
     }
 
     .login_form_container .titles {
@@ -3598,8 +3598,7 @@ width: 100%;
     }
 
     ul.section-about-cont__list .aboutList {
-        background-position: left center;
-        background-size: 40px;
+    background-size: 32px;
     }
 
     .section-about-cont__list li {
@@ -3614,7 +3613,19 @@ width: 100%;
         margin-bottom: 10px;
     }
 
+    .section-about-cont__list li {
+        padding-left: 15%;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .section-about-cont-right .btn {
+        margin-top: 60px;
+    }
+
     .section-about-cont__list {
+        row-gap: 16px;
         width: 100%;
         list-style: none;
         margin: 0 auto;
@@ -3690,21 +3701,21 @@ width: 100%;
         display: block;
     }
 
-    .card-content .p-price{
+    .card-content .p-price {
         justify-content: flex-start;
     }
 
-    .card-content .p-title{
-        font-size:14px;
+    .card-content .p-title {
+        font-size: 14px;
     }
 
     .card-content .p-price {
         justify-content: flex-start;
         margin-top: 20px;
-        
+
     }
 
-    .card-content .p-price span{
+    .card-content .p-price span {
         font-size: 14px;
     }
 
@@ -3812,6 +3823,9 @@ width: 100%;
 }
 
 @media (max-width: 480px) {
+    header .topper_header .th-text {
+        font-size: 12px;
+    }
 
     .header-center {
         padding-top: 160px;
@@ -3871,6 +3885,10 @@ width: 100%;
     .about-page__content {
         padding: 15% 5%;
         background-size: cover;
+    }
+
+    .card-content__price {
+        margin-top: 0;
     }
 }
 
